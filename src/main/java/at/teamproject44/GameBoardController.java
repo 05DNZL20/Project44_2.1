@@ -15,6 +15,7 @@ public class GameBoardController implements Initializable {
     PlayerController pc = null;
     static Gameboard gameboardP1 = null;
     static Gameboard gameboardP2 = null;
+    boolean turnP1 = true;
 
     @FXML
     Rectangle re00, re01, re02, re03, re04, re05, re06, re07, re08, re09,
@@ -27,7 +28,6 @@ public class GameBoardController implements Initializable {
             re70, re71, re72, re73, re74, re75, re76, re77, re78, re79,
             re80, re81, re82, re83, re84, re85, re86, re87, re88, re89,
             re90, re91, re92, re93, re94, re95, re96, re97, re98, re99;
-
     @FXML
     Rectangle rp00, rp01, rp02, rp03, rp04, rp05, rp06, rp07, rp08, rp09,
             rp10, rp11, rp12, rp13, rp14, rp15, rp16, rp17, rp18, rp19,
@@ -39,15 +39,11 @@ public class GameBoardController implements Initializable {
             rp70, rp71, rp72, rp73, rp74, rp75, rp76, rp77, rp78, rp79,
             rp80, rp81, rp82, rp83, rp84, rp85, rp86, rp87, rp88, rp89,
             rp90, rp91, rp92, rp93, rp94, rp95, rp96, rp97, rp98, rp99;
-
     @FXML
     Label lbl_p1, lbl_p2, lbl_information;
-
     @FXML
     HBox hbx_ptwo1, hbx_ptwo2, hbx_ptwo3, hbx_ptwo4, hbx_ptwo5, hbx_ptwo6, hbx_ptwo7, hbx_ptwo8, hbx_ptwo9, hbx_ptwo10,
             hbx_pone1, hbx_pone2, hbx_pone3, hbx_pone4, hbx_pone5, hbx_pone6, hbx_pone7, hbx_pone8, hbx_pone9, hbx_pone10;
-
-    boolean turnP1 = true;
 
     private void disableP1Board() {
         hbx_pone1.setDisable(true);
@@ -61,7 +57,6 @@ public class GameBoardController implements Initializable {
         hbx_pone9.setDisable(true);
         hbx_pone10.setDisable(true);
     }
-
     private void disableP2Board() {
         hbx_ptwo1.setDisable(true);
         hbx_ptwo2.setDisable(true);
@@ -74,7 +69,6 @@ public class GameBoardController implements Initializable {
         hbx_ptwo9.setDisable(true);
         hbx_ptwo10.setDisable(true);
     }
-
     private void enableP1Board() {
         hbx_pone1.setDisable(false);
         hbx_pone2.setDisable(false);
@@ -87,7 +81,6 @@ public class GameBoardController implements Initializable {
         hbx_pone9.setDisable(false);
         hbx_pone10.setDisable(false);
     }
-
     private void enableP2Board() {
         hbx_ptwo1.setDisable(false);
         hbx_ptwo2.setDisable(false);
