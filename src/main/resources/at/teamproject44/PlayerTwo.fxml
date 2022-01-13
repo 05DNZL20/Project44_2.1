@@ -148,7 +148,7 @@
             <children>
                 <Label layoutX="228.0" layoutY="42.0" text="Name: " AnchorPane.leftAnchor="228.0" AnchorPane.topAnchor="42.0" />
                 <TextField fx:id="txt_name" accessibleText="Player 2" layoutX="266.0" layoutY="38.0" promptText="Player 2" />
-            <Label layoutX="303.0" layoutY="64.0" text="(Please enter yout name first!)" AnchorPane.leftAnchor="245.0" AnchorPane.topAnchor="70.0" />
+            <Label layoutX="303.0" layoutY="64.0" text="(Please enter your name first!)" AnchorPane.leftAnchor="245.0" AnchorPane.topAnchor="70.0" />
             <Button fx:id="btn_save" layoutX="442.0" layoutY="38.0" mnemonicParsing="false" onAction="#click_save" text="Save Player" />
             </children>
         </AnchorPane>
