@@ -48,7 +48,7 @@ public class Gameboard {
     public boolean placeShipOnBoard(Ship ship, int x, int y, boolean alignment) {
         int length = ship.getType();
 
-        if (!alignment){
+       /* if (!alignment){
             if (!checkVertical(length,x,y)){
                 System.out.println("Nachbar");
                 return false;
@@ -58,7 +58,7 @@ public class Gameboard {
                 System.out.println("Nachbar");
                 return false;
             }
-        }
+        }*/
 
         if (x + length - 2 > 9 && !alignment) {
             System.out.println("Nicht mehr im Spielbereich");
