@@ -39,58 +39,74 @@ public class Gameboard {
      * @param ship Schiff das platziert wird.
      * @param x X_Koordinate.
      * @param y Y_Koordinate.
-     * @param vertical True wenn das Schiff vertical platziert wird.
+     * @param alignment True wenn das Schiff vertical platziert wird.
      * @return Wenn das Schiff platziert werden kann true sonst false.
      */
-    public boolean placeShipOnBoard(Ship ship, int x, int y, boolean vertical) {
+    public boolean placeShipOnBoard(Ship ship, int x, int y, boolean alignment) {
         int length = ship.getType();
 
-        if (vertical){
+        if (!alignment){
             if (!checkVertical(length,x,y)){
-                System.out.println("Nicht neben einem anderen Schiff platzieren");
+                System.out.println("Nachbar");
                 return false;
             }
         }else{
             if (!checkHorizontal(length,x,y)){
-                System.out.println("Nicht neben einem anderen Schiff platzieren");
+                System.out.println("Nachbar");
                 return false;
             }
         }
 
-        if (x + length - 2 > 9 && vertical) {
+        if (x + length - 2 > 9 && !alignment) {
             System.out.println("Nicht mehr im Spielbereich");
             return false;
-        } else if (y + length - 2 > 9 && !vertical) {
+        } else if (y + length - 2 > 9 && alignment) {
             System.out.println("Nicht mehr im Spielbereich");
             return false;
         }
-
-        if (vertical) {
+        if (!alignment) {
             for (int i = 0; i < length; i++) {
-                if (board[x + i][y] != null) {
+                if (x + i > 9) {
+                    System.out.println("Out of Array Range");
+                    return false;
+                } else if (board[x + i][y] != null) {
                     System.out.println("Platz schon belegt");
                     return false;
                 }
             }
         } else {
             for (int i = 0; i < length; i++) {
+                if (y + i > 9) {
+                    System.out.println("Out of Array Range");
+                    return false;
+                }
                 if (board[x][y + i] != null) {
                     System.out.println("Platz schon belegt");
                     return false;
                 }
             }
         }
-
-        if (vertical) {
+        if (!alignment) {
             for (int i = 0; i < length; i++) {
-                board[x + i][y] = ship;
+                if (x + i > 9) {
+                    System.out.println("Out of Array Range");
+                    return false;
+                } else {
+                    board[x + i][y] = ship;
+                }
             }
+            return true;
         } else {
             for (int i = 0; i < length; i++) {
-                board[x][y + i] = ship;
+                if (y + i > 9) {
+                    System.out.println("Out of Array Range");
+                    return false;
+                } else {
+                    board[x][y + i] = ship;
+                }
             }
+            return true;
         }
-        return true;
     }
 
     /**
@@ -129,13 +145,13 @@ public class Gameboard {
      * @return Liefert true zurück wenn das Schiff platziert werden kann sonst false.
      */
     private boolean checkVertical(int type,int x, int y){
-        if (x==10){
+        if (x==9){
             for (int i = 0; i<type;i++) {
-                if (board[x - 1][y + i] != null) {
+                if (board[x-1][y + i] != null) {
                     return false;
                 }
             }
-        }else if (x-1==0){
+        }else if (x==0){
             for (int i = 0; i<type;i++) {
                 if (board[x + 1][y + i] != null) {
                     return false;
@@ -151,11 +167,11 @@ public class Gameboard {
             }
         }
 
-        if (y==10){
+        if (y==9){
             if(board[x][y-1]!=null){
                 return false;
             }
-        }else if (y-1==0){
+        }else if (y==0){
             if (board[x][y+type]!=null){
                 return false;
             }
@@ -180,15 +196,15 @@ public class Gameboard {
      */
 
     private boolean checkHorizontal(int type,int x, int y){
-        if (y==10){
+        if (y==9){
             for (int i = 0; i<type;i++) {
-                if (board[x + i][y - 1] != null) {
+                if (board[x + i][y-1] != null) {
                     return false;
                 }
             }
-        }else if (y-1==0){
+        }else if (y==0){
             for (int i = 0; i<type;i++) {
-                if (board[x + i][y + 1] != null) {
+                if (board[x + i][y+1] != null) {
                     return false;
                 }
             }
@@ -202,11 +218,11 @@ public class Gameboard {
             }
         }
 
-        if (x==10){
+        if (x==9){
             if(board[x-1][y]!=null){
                 return false;
             }
-        }else if (x-1==0){
+        }else if (x==0){
             if (board[x+type][y]!=null){
                 return false;
             }
