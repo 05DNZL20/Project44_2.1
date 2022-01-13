@@ -5,7 +5,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-public class Test {
+public class GameBoardController {
     @FXML
     Rectangle re00,re01,re02,re03,re04,re05,re06,re07,re08,re09,
             re10,re11,re12,re13,re14,re15,re16,re17,re18,re19,

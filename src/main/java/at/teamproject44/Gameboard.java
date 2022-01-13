@@ -25,7 +25,8 @@ public class Gameboard {
      * Gameboard:
      * Konstruktor für die Klasse Gameboard.
      * Erstellt ein neues Objekt vom Typ Gameboard und weißt es einem Spieler zu.
-     * @param p  Spieler dem das Brett gehört.
+     *
+     * @param p Spieler dem das Brett gehört.
      */
     public Gameboard(Player p) {
         player = p;
@@ -33,15 +34,17 @@ public class Gameboard {
 
     /**
      * place_ship_on_board(Schiffart, x_koordinate, y_koordinate, Ausrichtung_auf_Spielbrett):
-     *     Platziert das Schiff auf dem Spielbrett.
-     *     Ausrichtung: True ist vertikal.
-     *                  False ist horizontal.
-     * @param ship Schiff das platziert wird.
-     * @param x X_Koordinate.
-     * @param y Y_Koordinate.
+     * Platziert das Schiff auf dem Spielbrett.
+     * Ausrichtung: True ist vertikal.
+     * False ist horizontal.
+     *
+     * @param ship      Schiff das platziert wird.
+     * @param x         X_Koordinate.
+     * @param y         Y_Koordinate.
      * @param alignment True wenn das Schiff vertical platziert wird.
      * @return Wenn das Schiff platziert werden kann true sonst false.
      */
+
     public boolean placeShipOnBoard(Ship ship, int x, int y, boolean alignment) {
         int length = ship.getType();
 
@@ -105,6 +108,7 @@ public class Gameboard {
                     board[x][y + i] = ship;
                 }
             }
+
             return true;
         }
     }
@@ -115,7 +119,8 @@ public class Gameboard {
      * Falls ja wird dem Schiff ein Leben abgezogen und mit einem Dummy Schiff ersetzt und es wird true zurückgeliefert.
      * Falls schon ein Dummy Schiff auf der Stelle liegt wird false zurückgeliefert.
      * Falls kein Schiff an der Stelle ist wird false zurückgeliefert.
-     * @param  x X_Koordinate
+     *
+     * @param x X_Koordinate
      * @param y Y_Koordinate
      * @return Liefert bei Treffer true zurück sonst false
      */
@@ -139,46 +144,47 @@ public class Gameboard {
     /**
      * checkVertical:
      * Überprüft bei einem verticalen Schiff ob neben dem zu platzierenden Schiff keine anderen Schiffe liegen.
+     *
      * @param type Schiffart - Länge
-     * @param x X_Koordinate
-     * @param y Y_Koordinate
+     * @param x    X_Koordinate
+     * @param y    Y_Koordinate
      * @return Liefert true zurück wenn das Schiff platziert werden kann sonst false.
      */
-    private boolean checkVertical(int type,int x, int y){
-        if (x==9){
-            for (int i = 0; i<type;i++) {
-                if (board[x-1][y + i] != null) {
+    private boolean checkVertical(int type, int x, int y) {
+        if (x == 9) {
+            for (int i = 0; i < type; i++) {
+                if (board[x - 1][y + i] != null) {
                     return false;
                 }
             }
-        }else if (x==0){
-            for (int i = 0; i<type;i++) {
+        } else if (x == 0) {
+            for (int i = 0; i < type; i++) {
                 if (board[x + 1][y + i] != null) {
                     return false;
                 }
             }
-        }else{
-            for (int i = 0; i<type;i++){
-                if (board[x-1][y+i]!=null){
+        } else {
+            for (int i = 0; i < type; i++) {
+                if (board[x - 1][y + i] != null) {
                     return false;
-                }else if (board[x+1][y+i]!=null){
+                } else if (board[x + 1][y + i] != null) {
                     return false;
                 }
             }
         }
 
-        if (y==9){
-            if(board[x][y-1]!=null){
+        if (y == 9) {
+            if (board[x][y - 1] != null) {
                 return false;
             }
-        }else if (y==0){
-            if (board[x][y+type]!=null){
+        } else if (y == 0) {
+            if (board[x][y + type] != null) {
                 return false;
             }
-        }else {
-            if(board[x][y-1]!=null){
+        } else {
+            if (board[x][y - 1] != null) {
                 return false;
-            }else if (board[x][y+type]!=null){
+            } else if (board[x][y + type] != null) {
                 return false;
             }
         }
@@ -189,47 +195,48 @@ public class Gameboard {
     /**
      * checkHorizontal:
      * Überprüft bei einem horizontalen Schiff ob neben dem zu platzierenden Schiff keine anderen Schiffe liegen.
+     *
      * @param type Schiffart - Länge
-     * @param x X_Koordinate
-     * @param y Y_Koordinate
+     * @param x    X_Koordinate
+     * @param y    Y_Koordinate
      * @return Liefert true zurück wenn das Schiff platziert werden kann sonst false.
      */
 
-    private boolean checkHorizontal(int type,int x, int y){
-        if (y==9){
-            for (int i = 0; i<type;i++) {
-                if (board[x + i][y-1] != null) {
+    private boolean checkHorizontal(int type, int x, int y) {
+        if (y == 9) {
+            for (int i = 0; i < type; i++) {
+                if (board[x + i][y - 1] != null) {
                     return false;
                 }
             }
-        }else if (y==0){
-            for (int i = 0; i<type;i++) {
-                if (board[x + i][y+1] != null) {
+        } else if (y == 0) {
+            for (int i = 0; i < type; i++) {
+                if (board[x + i][y + 1] != null) {
                     return false;
                 }
             }
-        }else{
-            for (int i = 0; i<type;i++){
-                if (board[x+i][y-1]!=null){
+        } else {
+            for (int i = 0; i < type; i++) {
+                if (board[x + i][y - 1] != null) {
                     return false;
-                }else if (board[x+i][y+1]!=null){
+                } else if (board[x + i][y + 1] != null) {
                     return false;
                 }
             }
         }
 
-        if (x==9){
-            if(board[x-1][y]!=null){
+        if (x == 9) {
+            if (board[x - 1][y] != null) {
                 return false;
             }
-        }else if (x==0){
-            if (board[x+type][y]!=null){
+        } else if (x == 0) {
+            if (board[x + type][y] != null) {
                 return false;
             }
-        }else {
-            if(board[x-1][y]!=null){
+        } else {
+            if (board[x - 1][y] != null) {
                 return false;
-            }else if (board[x+type][y]!=null){
+            } else if (board[x + type][y] != null) {
                 return false;
             }
         }

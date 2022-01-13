@@ -714,8 +714,16 @@ public class PlayerController {
         thisStage.close();
     }
 
-    public void click_finishp2(ActionEvent e) {
-        return;
+    public void click_finishp2(ActionEvent e) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("GameBoard.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage = new Stage();
+        primaryStage.setTitle("Battleship-GameBoard");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+        Stage thisStage = (Stage) btn_finishp2.getScene().getWindow();
+        thisStage.close();
     }
 
     public void selectShip(MouseEvent e) {
