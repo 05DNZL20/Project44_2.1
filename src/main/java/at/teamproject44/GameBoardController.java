@@ -2,6 +2,7 @@ package at.teamproject44;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -24,6 +25,9 @@ public class GameBoardController implements Initializable {
             re70, re71, re72, re73, re74, re75, re76, re77, re78, re79,
             re80, re81, re82, re83, re84, re85, re86, re87, re88, re89,
             re90, re91, re92, re93, re94, re95, re96, re97, re98, re99;
+
+    @FXML
+    Label lbl_p1,lbl_p2;
 
     public void shot(MouseEvent event) {
         if (event.getSceneY() > 90 && event.getSceneY() <= 120) {
@@ -858,12 +862,17 @@ public class GameBoardController implements Initializable {
         }
     }
 
+    public void setNameP1(String name){
+        lbl_p1.setText(name);
+    }
+    public void setNameP2(String name){
+        lbl_p2.setText(name);
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         PlayerController pc = new PlayerController();
         gameboardP1 = pc.getPlayer1();
         gameboardP2 = pc.getPlayer2();
-        System.out.println(gameboardP1.toString());
-        System.out.println(gameboardP2.toString());
     }
 }

@@ -8,7 +8,7 @@
    <center>
       <VBox maxWidth="300.0" minWidth="300.0" prefWidth="300.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="300.0" minHeight="20.0" minWidth="300.0" prefHeight="20.0" prefWidth="300.0" text="Player 1" />
+            <Label fx:id="lbl_p1" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="300.0" minHeight="20.0" minWidth="300.0" prefHeight="20.0" prefWidth="300.0" text="Player 1" />
             <HBox layoutX="10.0" layoutY="574.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="re00" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="12.0" y="14.0" />
@@ -150,7 +150,7 @@
                </children>
             </HBox>
             <VBox alignment="CENTER" prefHeight="50.0" prefWidth="50.0" />
-            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="300.0" minHeight="20.0" minWidth="300.0" prefHeight="20.0" prefWidth="300.0" text="Player 2" />
+            <Label fx:id="lbl_p2" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="300.0" minHeight="20.0" minWidth="300.0" prefHeight="20.0" prefWidth="300.0" text="Player 2" />
             <HBox layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="rp00" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
