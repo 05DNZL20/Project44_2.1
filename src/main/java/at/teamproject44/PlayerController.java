@@ -39,14 +39,20 @@ public class PlayerController {
 
     static Gameboard gameboardP1 = null;
     static Gameboard gameboardP2 = null;
-
     static Ship ship = null;
+    static String name1,name2;
 
     int x, y;
 
-    static String name1,name2;
-
     Parent root;
+
+    public String getName1(){
+        return name1;
+    }
+    public String getName2(){
+        return name2;
+    }
+
 
     public Gameboard getPlayer1(){
         return gameboardP1;
@@ -54,6 +60,7 @@ public class PlayerController {
     public Gameboard getPlayer2(){
         return gameboardP2;
     }
+
 
     private void generateShip() {
         if (sixship.getFill() == Color.BLUE) {
@@ -66,7 +73,6 @@ public class PlayerController {
             ship = new Ship(2, rbt_vertical.isSelected());
         }
     }
-
     private int getShipLength() {
         int length = 0;
         if (sixship.getFill() == Color.BLUE) {
@@ -80,7 +86,6 @@ public class PlayerController {
         }
         return length;
     }
-
     private void markShips(int nbr, String tmpString, String id) {
         for (int i = 0; i < getShipLength(); i++) {
             if (i != 0) {
@@ -395,7 +400,6 @@ public class PlayerController {
             }
         }
     }
-
     private void deletePlacedShip() {
         if (sixship.getFill() == Color.BLUE) {
             sixship.setVisible(false);
@@ -419,7 +423,6 @@ public class PlayerController {
             fourthtwoship.setVisible(false);
         }
     }
-
     private void XandY(MouseEvent e) {
         if (e.getSceneY() > 100 && e.getSceneY() <= 140) {
             y = 0;
@@ -655,6 +658,7 @@ public class PlayerController {
 
     }
 
+
     public void click_save1(ActionEvent e) {
         if (!txt_name.getText().isEmpty()) {
             name1 = txt_name.getText();
@@ -666,7 +670,6 @@ public class PlayerController {
         btn_save.setDisable(true);
         txt_name.setDisable(true);
     }
-
     public void click_save2(ActionEvent e) {
         if (!txt_name.getText().isEmpty()) {
             name2 = txt_name.getText();
@@ -678,7 +681,6 @@ public class PlayerController {
         btn_save.setDisable(true);
         txt_name.setDisable(true);
     }
-
     public void placeShipOne(MouseEvent e) {
         generateShip();
         XandY(e);
@@ -725,7 +727,6 @@ public class PlayerController {
             return;
         }
     }
-
     public void placeShipTwo(MouseEvent e) {
         generateShip();
         XandY(e);
@@ -772,7 +773,6 @@ public class PlayerController {
             return;
         }
     }
-
     public void click_finishp1(ActionEvent e) throws IOException {
         root = FXMLLoader.load(getClass().getResource("PlayerTwo.fxml"));
         Scene scene = new Scene(root);
@@ -784,14 +784,13 @@ public class PlayerController {
         Stage thisStage = (Stage) btn_finishp1.getScene().getWindow();
         thisStage.close();
     }
-
     public void click_finishp2(ActionEvent e) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("GameBoard.fxml"));
         root = loader.load();
 
         GameBoardController gbController = loader.getController();
-        gbController.setNameP1(name1);
-        gbController.setNameP2(name2);
+        /*gbController.setNameP1(name1);
+        gbController.setNameP2(name2);*/
 
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
@@ -802,7 +801,6 @@ public class PlayerController {
         Stage thisStage = (Stage) btn_finishp2.getScene().getWindow();
         thisStage.close();
     }
-
     public void selectShip(MouseEvent e) {
         if (btn_save.isDisabled()) {
             rbt_horizontal.setDisable(false);

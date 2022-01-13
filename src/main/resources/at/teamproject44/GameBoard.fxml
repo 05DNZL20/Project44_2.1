@@ -9,7 +9,7 @@
       <VBox maxWidth="300.0" minWidth="300.0" prefWidth="300.0" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="lbl_p1" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="300.0" minHeight="20.0" minWidth="300.0" prefHeight="20.0" prefWidth="300.0" text="Player 1" />
-            <HBox layoutX="10.0" layoutY="574.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_pone1" disable="true" layoutX="10.0" layoutY="574.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="re00" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="12.0" y="14.0" />
                   <Rectangle fx:id="re01" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" />
@@ -23,7 +23,7 @@
                   <Rectangle fx:id="re09" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_pone2" disable="true" layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="re10" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="1.0" />
                   <Rectangle fx:id="re11" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="1.0" />
@@ -37,7 +37,7 @@
                   <Rectangle fx:id="re19" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="1.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_pone3" disable="true" layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="re20" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="2.0" />
                   <Rectangle fx:id="re21" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="2.0" />
@@ -51,7 +51,7 @@
                   <Rectangle fx:id="re29" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="2.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="90.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_pone4" disable="true" layoutX="10.0" layoutY="90.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="re30" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="3.0" />
                   <Rectangle fx:id="re31" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="3.0" />
@@ -65,7 +65,7 @@
                   <Rectangle fx:id="re39" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="3.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_pone5" disable="true" layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="re40" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="4.0" />
                   <Rectangle fx:id="re41" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="4.0" />
@@ -79,7 +79,7 @@
                   <Rectangle fx:id="re49" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="4.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="90.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_pone6" disable="true" layoutX="10.0" layoutY="90.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="re50" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="5" />
                   <Rectangle fx:id="re51" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="5.0" />
@@ -93,7 +93,7 @@
                   <Rectangle fx:id="re59" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="5.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="120.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_pone7" disable="true" layoutX="10.0" layoutY="120.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="re60" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="6.0" />
                   <Rectangle fx:id="re61" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="6.0" />
@@ -107,7 +107,7 @@
                   <Rectangle fx:id="re69" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="6.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="150.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_pone8" disable="true" layoutX="10.0" layoutY="150.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="re70" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="7.0" />
                   <Rectangle fx:id="re71" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="7.0" />
@@ -121,7 +121,7 @@
                   <Rectangle fx:id="re79" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="7.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="240.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_pone9" disable="true" layoutX="10.0" layoutY="240.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="re80" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="8.0" />
                   <Rectangle fx:id="re81" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="8.0" />
@@ -135,7 +135,7 @@
                   <Rectangle fx:id="re89" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="8.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="270.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_pone10" disable="true" layoutX="10.0" layoutY="270.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="re90" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="9.0" />
                   <Rectangle fx:id="re91" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="9.0" />
@@ -151,7 +151,7 @@
             </HBox>
             <VBox alignment="CENTER" prefHeight="50.0" prefWidth="50.0" />
             <Label fx:id="lbl_p2" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="300.0" minHeight="20.0" minWidth="300.0" prefHeight="20.0" prefWidth="300.0" text="Player 2" />
-            <HBox layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_ptwo1" layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="rp00" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                   <Rectangle fx:id="rp01" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" />
@@ -165,7 +165,7 @@
                   <Rectangle fx:id="rp09" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="40.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_ptwo2" layoutX="10.0" layoutY="40.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="rp10" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                   <Rectangle fx:id="rp11" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
@@ -179,7 +179,7 @@
                   <Rectangle fx:id="rp19" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="70.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_ptwo3" layoutX="10.0" layoutY="70.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="rp20" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                   <Rectangle fx:id="rp21" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
@@ -193,7 +193,7 @@
                   <Rectangle fx:id="rp29" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="100.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_ptwo4" layoutX="10.0" layoutY="100.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="rp30" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                   <Rectangle fx:id="rp31" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
@@ -207,7 +207,7 @@
                   <Rectangle fx:id="rp39" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="130.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_ptwo5" layoutX="10.0" layoutY="130.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="rp40" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                   <Rectangle fx:id="rp41" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
@@ -221,7 +221,7 @@
                   <Rectangle fx:id="rp49" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="160.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_ptwo6" layoutX="10.0" layoutY="160.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="rp50" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                   <Rectangle fx:id="rp51" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
@@ -235,7 +235,7 @@
                   <Rectangle fx:id="rp59" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="190.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_ptwo7" layoutX="10.0" layoutY="190.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="rp60" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                   <Rectangle fx:id="rp61" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
@@ -249,7 +249,7 @@
                   <Rectangle fx:id="rp69" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="220.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_ptwo8" layoutX="10.0" layoutY="220.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="rp70" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                   <Rectangle fx:id="rp71" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
@@ -263,7 +263,7 @@
                   <Rectangle fx:id="rp79" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="250.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_ptwo9" layoutX="10.0" layoutY="250.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="rp80" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                   <Rectangle fx:id="rp81" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
@@ -277,7 +277,7 @@
                   <Rectangle fx:id="rp89" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="280.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
+            <HBox fx:id="hbx_ptwo10" layoutX="10.0" layoutY="280.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
                <children>
                   <Rectangle fx:id="rp90" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
                   <Rectangle fx:id="rp91" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
@@ -295,7 +295,10 @@
       </VBox>
    </center>
    <top>
-      <Pane prefHeight="70.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="70.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbl_information" layoutX="286.0" layoutY="27.0" />
+         </children></Pane>
    </top>
    <left>
       <Pane prefHeight="676.0" prefWidth="70.0" BorderPane.alignment="CENTER" />
