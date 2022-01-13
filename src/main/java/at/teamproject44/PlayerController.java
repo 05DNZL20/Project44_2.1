@@ -37,11 +37,21 @@ public class PlayerController {
     @FXML
     TextField txt_name;
 
-    Gameboard gameboard = null;
+    static Gameboard gameboardP1 = null;
+    static Gameboard gameboardP2 = null;
 
-    Ship ship = null;
+    static Ship ship = null;
 
     int x, y;
+
+    String name1,name2;
+
+    public Gameboard getPlayer1(){
+        return gameboardP1;
+    }
+    public Gameboard getPlayer2(){
+        return gameboardP2;
+    }
 
     private void generateShip() {
         if (sixship.getFill() == Color.BLUE) {
@@ -643,19 +653,31 @@ public class PlayerController {
 
     }
 
-    public void click_save(ActionEvent e) {
+    public void click_save1(ActionEvent e) {
         if (!txt_name.getText().isEmpty()) {
-            gameboard = new Gameboard(new Player(txt_name.getText()));
+            gameboardP1 = new Gameboard(new Player(txt_name.getText()));
             btn_save.setDisable(true);
             txt_name.setDisable(true);
         } else {
-            gameboard = new Gameboard(new Player(txt_name.getAccessibleText()));
+            gameboardP1 = new Gameboard(new Player(txt_name.getAccessibleText()));
             btn_save.setDisable(true);
             txt_name.setDisable(true);
         }
     }
 
-    public void placeShip(MouseEvent e) {
+    public void click_save2(ActionEvent e) {
+        if (!txt_name.getText().isEmpty()) {
+            gameboardP2 = new Gameboard(new Player(txt_name.getText()));
+            btn_save.setDisable(true);
+            txt_name.setDisable(true);
+        } else {
+            gameboardP2 = new Gameboard(new Player(txt_name.getAccessibleText()));
+            btn_save.setDisable(true);
+            txt_name.setDisable(true);
+        }
+    }
+
+    public void placeShipOne(MouseEvent e) {
         generateShip();
         XandY(e);
         if (!rbt_horizontal.isDisabled() && !rbt_vertical.isDisabled()) {
@@ -667,7 +689,54 @@ public class PlayerController {
             String id = strarr[0];
             int nbr = Integer.parseInt(strarr[1]);
 
-            if (gameboard.placeShipOnBoard(ship,x,y,rbt_vertical.isSelected())) {
+            if (gameboardP1.placeShipOnBoard(ship,x,y,rbt_vertical.isSelected())) {
+                markShips(nbr, tmpString, id);
+
+
+                deletePlacedShip();
+
+                rbt_vertical.setDisable(true);
+                rbt_horizontal.setDisable(true);
+
+                sixship.setDisable(false);
+                firstfourship.setDisable(false);
+                secondfourship.setDisable(false);
+                firstthreeship.setDisable(false);
+                secondthreeship.setDisable(false);
+                thirdthreeship.setDisable(false);
+                firsttwoship.setDisable(false);
+                secondtwoship.setDisable(false);
+                thirdtwoship.setDisable(false);
+                fourthtwoship.setDisable(false);
+            }
+            if (!sixship.isVisible() && !firstfourship.isVisible() && !secondfourship.isVisible() && !firstthreeship.isVisible() &&
+                    !secondthreeship.isVisible() && !thirdthreeship.isVisible() && !firsttwoship.isVisible() && !secondtwoship.isVisible() &&
+                    !thirdtwoship.isVisible() && !fourthtwoship.isVisible()) {
+                if (btn_finishp1 != null) {
+                    btn_finishp1.setDisable(false);
+                }
+                if (btn_finishp2 != null) {
+                    btn_finishp2.setDisable(false);
+                }
+            }
+        } else {
+            return;
+        }
+    }
+
+    public void placeShipTwo(MouseEvent e) {
+        generateShip();
+        XandY(e);
+        if (!rbt_horizontal.isDisabled() && !rbt_vertical.isDisabled()) {
+            Rectangle rt = (Rectangle) e.getSource();
+            String string = rt.getId();
+            String tmpString = null;
+
+            String[] strarr = string.split("X");
+            String id = strarr[0];
+            int nbr = Integer.parseInt(strarr[1]);
+
+            if (gameboardP2.placeShipOnBoard(ship,x,y,rbt_vertical.isSelected())) {
                 markShips(nbr, tmpString, id);
 
 
@@ -714,7 +783,7 @@ public class PlayerController {
         thisStage.close();
     }
 
-    public void click_finishp2(ActionEvent e) throws IOException{
+    public void click_finishp2(ActionEvent e) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("GameBoard.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
@@ -935,4 +1004,5 @@ public class PlayerController {
             }
         }
     }
+
 }
