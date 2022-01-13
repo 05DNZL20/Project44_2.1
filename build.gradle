@@ -4,7 +4,7 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.0.7'
 }
 
-group 'org.probe'
+group 'at.teamproject44'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -25,4 +25,4 @@ javafx {
     version = '17.0.1'
 }
 
-mainClassName = 'org.test.Main'
+mainClassName = 'at.teamproject44.Main'

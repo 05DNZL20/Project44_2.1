@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainMenu {
+public class MainMenuController {
 
     @FXML
     Button btn_startgame, btn_gamerules, btn_contacs;
