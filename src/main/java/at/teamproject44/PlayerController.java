@@ -44,7 +44,9 @@ public class PlayerController {
 
     int x, y;
 
-    String name1,name2;
+    static String name1,name2;
+
+    Parent root;
 
     public Gameboard getPlayer1(){
         return gameboardP1;
@@ -655,26 +657,26 @@ public class PlayerController {
 
     public void click_save1(ActionEvent e) {
         if (!txt_name.getText().isEmpty()) {
-            gameboardP1 = new Gameboard(new Player(txt_name.getText()));
-            btn_save.setDisable(true);
-            txt_name.setDisable(true);
+            name1 = txt_name.getText();
+            gameboardP1 = new Gameboard(new Player(name1));
         } else {
-            gameboardP1 = new Gameboard(new Player(txt_name.getAccessibleText()));
-            btn_save.setDisable(true);
-            txt_name.setDisable(true);
+            name1 = txt_name.getAccessibleText();
+            gameboardP1 = new Gameboard(new Player(name1));
         }
+        btn_save.setDisable(true);
+        txt_name.setDisable(true);
     }
 
     public void click_save2(ActionEvent e) {
         if (!txt_name.getText().isEmpty()) {
-            gameboardP2 = new Gameboard(new Player(txt_name.getText()));
-            btn_save.setDisable(true);
-            txt_name.setDisable(true);
+            name2 = txt_name.getText();
+            gameboardP2 = new Gameboard(new Player(name2));
         } else {
-            gameboardP2 = new Gameboard(new Player(txt_name.getAccessibleText()));
-            btn_save.setDisable(true);
-            txt_name.setDisable(true);
+            name2 = txt_name.getAccessibleText();
+            gameboardP2 = new Gameboard(new Player(name2));
         }
+        btn_save.setDisable(true);
+        txt_name.setDisable(true);
     }
 
     public void placeShipOne(MouseEvent e) {
@@ -772,7 +774,7 @@ public class PlayerController {
     }
 
     public void click_finishp1(ActionEvent e) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("PlayerTwo.fxml"));
+        root = FXMLLoader.load(getClass().getResource("PlayerTwo.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Battleship-Player2-Board");
@@ -784,7 +786,13 @@ public class PlayerController {
     }
 
     public void click_finishp2(ActionEvent e) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("GameBoard.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GameBoard.fxml"));
+        root = loader.load();
+
+        GameBoardController gbController = loader.getController();
+        gbController.setNameP1(name1);
+        gbController.setNameP2(name2);
+
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Battleship-GameBoard");
