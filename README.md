@@ -15,6 +15,7 @@ Manual:
 9. The player who shot all ships from the opponent wins!
 
 Have fun while trying out what we have so far.
+
 You can run the project with: View > Tool Windows > Gradle > Tasks > Application > Run
 
 Sincerely,
