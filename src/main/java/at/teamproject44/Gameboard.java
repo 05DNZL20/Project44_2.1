@@ -48,7 +48,30 @@ public class Gameboard {
     public boolean placeShipOnBoard(Ship ship, int x, int y, boolean alignment) {
         int length = ship.getType();
 
-       /* if (!alignment){
+        if (x + length - 1 > 9 && !alignment) {
+            System.out.println("Nicht mehr im Spielbereich");
+            return false;
+        } else if (y + length - 1 > 9 && alignment) {
+            System.out.println("Nicht mehr im Spielbereich");
+            return false;
+        }
+        if (!alignment) { //horizontal
+            for (int i = 0; i < length; i++) {
+                if (board[x + i][y] != null) {
+                    System.out.println("Platz schon belegt");
+                    return false;
+                }
+            }
+        } else { //vertikal
+            for (int i = 0; i < length; i++) {
+                if (board[x][y + i] != null) {
+                    System.out.println("Platz schon belegt");
+                    return false;
+                }
+            }
+        }
+
+        if (alignment){
             if (!checkVertical(length,x,y)){
                 System.out.println("Nachbar");
                 return false;
@@ -58,57 +81,18 @@ public class Gameboard {
                 System.out.println("Nachbar");
                 return false;
             }
-        }*/
+        }
 
-        if (x + length - 2 > 9 && !alignment) {
-            System.out.println("Nicht mehr im Spielbereich");
-            return false;
-        } else if (y + length - 2 > 9 && alignment) {
-            System.out.println("Nicht mehr im Spielbereich");
-            return false;
-        }
-        if (!alignment) {
+        if (!alignment) { //horizontal
             for (int i = 0; i < length; i++) {
-                if (x + i > 9) {
-                    System.out.println("Out of Array Range");
-                    return false;
-                } else if (board[x + i][y] != null) {
-                    System.out.println("Platz schon belegt");
-                    return false;
-                }
-            }
-        } else {
-            for (int i = 0; i < length; i++) {
-                if (y + i > 9) {
-                    System.out.println("Out of Array Range");
-                    return false;
-                }
-                if (board[x][y + i] != null) {
-                    System.out.println("Platz schon belegt");
-                    return false;
-                }
-            }
-        }
-        if (!alignment) {
-            for (int i = 0; i < length; i++) {
-                if (x + i > 9) {
-                    System.out.println("Out of Array Range");
-                    return false;
-                } else {
-                    board[x + i][y] = ship;
-                }
+                board[x + i][y] = ship;
             }
             return true;
-        } else {
-            for (int i = 0; i < length; i++) {
-                if (y + i > 9) {
-                    System.out.println("Out of Array Range");
-                    return false;
-                } else {
-                    board[x][y + i] = ship;
-                }
-            }
 
+        } else { //vertikal
+            for (int i = 0; i < length; i++) {
+                board[x][y + i] = ship;
+            }
             return true;
         }
     }
@@ -173,7 +157,7 @@ public class Gameboard {
             }
         }
 
-        if (y == 9) {
+        if (y + type - 1 == 9) {
             if (board[x][y - 1] != null) {
                 return false;
             }
@@ -185,6 +169,57 @@ public class Gameboard {
             if (board[x][y - 1] != null) {
                 return false;
             } else if (board[x][y + type] != null) {
+                return false;
+            }
+        }
+        if (y==0&&x==0){
+            if (board[x + 1][y+type] != null){
+                return false;
+            }
+        }else if (y==0&&x==9) {
+            if (board[x - 1][y + type] != null) {
+                return false;
+            }
+        }else if (x==0&&y+type-1==9){
+            if (board[x+1][y-1]!=null){
+                return false;
+            }
+        }else if(x==9&&y+type-1==9){
+            if(board[x-1][y-1]!=null){
+                return false;
+            }
+        }else if (y==0){
+            if (board[x-1][y+type]!=null){
+                return false;
+            }else if (board[x+1][y+type]!=null){
+                return false;
+            }
+        }else if (y+type-1==9){
+            if (board[x-1][y-1]!=null){
+                return false;
+            }else if (board[x+1][y-1]!=null){
+                return false;
+            }
+        }else if(x==0){
+            if (board[x+1][y-1]!=null){
+                return false;
+            }else if (board[x+1][y+type]!=null){
+                return false;
+            }
+        }else if(x==9){
+            if (board[x-1][y-1]!=null){
+                return false;
+            }else if (board[x-1][y+type]!=null){
+                return false;
+            }
+        }else {
+            if (board[x-1][y-1]!=null){
+                return false;
+            }else if (board[x+1][y-1]!=null){
+                return false;
+            }else if (board[x-1][y+type]!=null){
+                return false;
+            }else if (board[x+1][y+type]!=null){
                 return false;
             }
         }
@@ -225,7 +260,7 @@ public class Gameboard {
             }
         }
 
-        if (x == 9) {
+        if (x + type - 1 == 9) {
             if (board[x - 1][y] != null) {
                 return false;
             }
@@ -237,6 +272,59 @@ public class Gameboard {
             if (board[x - 1][y] != null) {
                 return false;
             } else if (board[x + type][y] != null) {
+                return false;
+            }
+        }
+
+        //Checkt die Ecken
+        if (y==0&&x==0){
+            if (board[x + type][y+1] != null){
+                return false;
+            }
+        }else if (y==0&&x+type-1==9) {
+            if (board[x -1][y + 1] != null) {
+                return false;
+            }
+        }else if (x==0&&y==9){
+            if (board[x+type][y-1]!=null){
+                return false;
+            }
+        }else if(x+type-1==9&&y==9){
+            if(board[x-1][y-1]!=null){
+                return false;
+            }
+        }else if (y==0){
+            if (board[x-1][y+1]!=null){
+                return false;
+            }else if (board[x+type][y+1]!=null){
+                return false;
+            }
+        }else if (y==9){
+            if (board[x-1][y-1]!=null){
+                return false;
+            }else if (board[x+type][y-1]!=null){
+                return false;
+            }
+        }else if (x==0) {
+            if (board[x+type][y+1] != null) {
+                return false;
+            } else if (board[x + type][y - 1] != null) {
+                return false;
+            }
+        }else if (x+type-1==9) {
+            if (board[x - 1][y - 1] != null) {
+                return false;
+            } else if (board[x -1][y + 1] != null) {
+                return false;
+            }
+        }else {
+            if (board[x-1][y-1]!=null){
+                return false;
+            }else if (board[x-1][y+1]!=null){
+                return false;
+            }else if (board[x+type][y-1]!=null){
+                return false;
+            }else if (board[x+type][y+1]!=null){
                 return false;
             }
         }
