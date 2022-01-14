@@ -12,7 +12,7 @@ Manual:
 6. Player 2 follows the same steps as Player 1 before
 7. You can shoot, if the field turns red, you hit a ship, if it turns blue, you hit water
 8. If you successfully hit a ship, you have another shot.
-9. The player who shot all ships from the oponent wins!
+9. The player who shot all ships from the opponent wins!
 
 Have fun while trying out what we have so far.
 You can run the project with: View > Tool Windows > Gradle > Tasks > Application > Run
