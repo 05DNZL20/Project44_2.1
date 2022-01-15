@@ -1,6 +1,6 @@
 package at.teamproject44;
 
-/* 1. Erstellung einer Schiffe Klasse mit folgenden Instanzvariablen:
+/** 1. Erstellung einer Schiffe Klasse mit folgenden Instanzvariablen:
 Typ des Schiffs, Ausrichtung (Vertikal o. horizontal), Gesundheitszustand */
 
 
