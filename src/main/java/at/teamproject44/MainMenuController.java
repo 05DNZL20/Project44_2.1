@@ -68,6 +68,9 @@ public class MainMenuController {
          * Development & Research:
          * Mohamad Tamim
          *
+         * Github Repository for further information:
+         * https://github.com/05DNZL20/Project44_2.1
+         *
          */
     }
 }
