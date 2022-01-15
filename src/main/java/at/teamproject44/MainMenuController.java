@@ -31,11 +31,43 @@ public class MainMenuController {
 
     public void click_gamerules(ActionEvent actionEvent) {
 
-        //Füge hier ein was bei den Spielregeln angezeigt werden soll
+        // TODO: 15.01.2022
+        /** Game Rules:
+         * Firstly you type in your name, then place the ships.
+         * You have 10 Ships to place, you can choose in which direction you want to put them.
+         * The Game starts if both players are ready to play.
+         * It is randomized which player starts.
+         * If one player lands a hit, he has another try!
+         * The game ends, if all ships of one player are destroyed.
+         * Enjoy!
+         */
     }
 
     public void click_contacts(ActionEvent actionEvent) {
 
-        //Füge hier ein was bei den Credits angezeigt werden soll
+        // TODO: 15.01.2022
+        /**
+         * Credits:
+         * Project 44
+         *
+         * Teamleading & Development:
+         * Julia Sosnowski
+         *
+         * Java Fx Design:
+         * Safa Sik
+         *
+         * Development & Gameboard Guru:
+         * Markus Wieger
+         *
+         * Development & Head of Organisation:
+         * Merve Tuz
+         *
+         * Development & Organisation:
+         * Abdulalim Yilmaz
+         *
+         * Development & Research:
+         * Mohamad Tamim
+         *
+         */
     }
 }
