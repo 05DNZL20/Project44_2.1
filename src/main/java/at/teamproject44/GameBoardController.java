@@ -188,7 +188,7 @@ public class GameBoardController implements Initializable {
                 re09.setDisable(true);
             }
         }
-        if (event.getSceneY() > 120 && event.getSceneY() <= 150) {
+        else if (event.getSceneY() > 120 && event.getSceneY() <= 150) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 1)) {
                     re10.setFill(Color.RED);
@@ -281,7 +281,7 @@ public class GameBoardController implements Initializable {
                 re19.setDisable(true);
             }
         }
-        if (event.getSceneY() > 150 && event.getSceneY() <= 180) {
+        else if (event.getSceneY() > 150 && event.getSceneY() <= 180) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 2)) {
                     re20.setFill(Color.RED);
@@ -374,7 +374,7 @@ public class GameBoardController implements Initializable {
                 re29.setDisable(true);
             }
         }
-        if (event.getSceneY() > 180 && event.getSceneY() <= 210) {
+        else if (event.getSceneY() > 180 && event.getSceneY() <= 210) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 3)) {
                     re30.setFill(Color.RED);
@@ -467,7 +467,7 @@ public class GameBoardController implements Initializable {
                 re39.setDisable(true);
             }
         }
-        if (event.getSceneY() > 210 && event.getSceneY() <= 240) {
+        else if (event.getSceneY() > 210 && event.getSceneY() <= 240) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 4)) {
                     re40.setFill(Color.RED);
@@ -560,7 +560,7 @@ public class GameBoardController implements Initializable {
                 re49.setDisable(true);
             }
         }
-        if (event.getSceneY() > 240 && event.getSceneY() <= 270) {
+        else if (event.getSceneY() > 240 && event.getSceneY() <= 270) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 5)) {
                     re50.setFill(Color.RED);
@@ -653,7 +653,7 @@ public class GameBoardController implements Initializable {
                 re59.setDisable(true);
             }
         }
-        if (event.getSceneY() > 270 && event.getSceneY() <= 300) {
+        else if (event.getSceneY() > 270 && event.getSceneY() <= 300) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 6)) {
                     re60.setFill(Color.RED);
@@ -746,7 +746,7 @@ public class GameBoardController implements Initializable {
                 re69.setDisable(true);
             }
         }
-        if (event.getSceneY() > 300 && event.getSceneY() <= 330) {
+        else if (event.getSceneY() > 300 && event.getSceneY() <= 330) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 7)) {
                     re70.setFill(Color.RED);
@@ -839,7 +839,7 @@ public class GameBoardController implements Initializable {
                 re79.setDisable(true);
             }
         }
-        if (event.getSceneY() > 330 && event.getSceneY() <= 360) {
+        else if (event.getSceneY() > 330 && event.getSceneY() <= 360) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 8)) {
                     re80.setFill(Color.RED);
@@ -932,7 +932,7 @@ public class GameBoardController implements Initializable {
                 re89.setDisable(true);
             }
         }
-        if (event.getSceneY() > 360 && event.getSceneY() <= 430) {
+        else if (event.getSceneY() > 360 && event.getSceneY() <= 430) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 9)) {
                     re90.setFill(Color.RED);
@@ -1026,7 +1026,6 @@ public class GameBoardController implements Initializable {
             }
         }
     }
-
     public void shotP2(MouseEvent event) {
         if (event.getSceneY() > 440 && event.getSceneY() <= 470) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
@@ -1121,7 +1120,7 @@ public class GameBoardController implements Initializable {
                 rp09.setDisable(true);
             }
         }
-        if (event.getSceneY() > 470 && event.getSceneY() <= 500) {
+        else if (event.getSceneY() > 470 && event.getSceneY() <= 500) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 1)) {
                     rp10.setFill(Color.RED);
@@ -1214,7 +1213,7 @@ public class GameBoardController implements Initializable {
                 rp19.setDisable(true);
             }
         }
-        if (event.getSceneY() > 500 && event.getSceneY() <= 530) {
+        else if (event.getSceneY() > 500 && event.getSceneY() <= 530) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 2)) {
                     rp20.setFill(Color.RED);
@@ -1307,7 +1306,7 @@ public class GameBoardController implements Initializable {
                 rp29.setDisable(true);
             }
         }
-        if (event.getSceneY() > 530 && event.getSceneY() <= 560) {
+        else if (event.getSceneY() > 530 && event.getSceneY() <= 560) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 3)) {
                     rp30.setFill(Color.RED);
@@ -1400,7 +1399,7 @@ public class GameBoardController implements Initializable {
                 rp39.setDisable(true);
             }
         }
-        if (event.getSceneY() > 560 && event.getSceneY() <= 590) {
+        else if (event.getSceneY() > 560 && event.getSceneY() <= 590) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 4)) {
                     rp40.setFill(Color.RED);
@@ -1493,7 +1492,7 @@ public class GameBoardController implements Initializable {
                 rp49.setDisable(true);
             }
         }
-        if (event.getSceneY() > 590 && event.getSceneY() <= 620) {
+        else if (event.getSceneY() > 590 && event.getSceneY() <= 620) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 5)) {
                     rp50.setFill(Color.RED);
@@ -1586,7 +1585,7 @@ public class GameBoardController implements Initializable {
                 rp59.setDisable(true);
             }
         }
-        if (event.getSceneY() > 620 && event.getSceneY() <= 650) {
+        else if (event.getSceneY() > 620 && event.getSceneY() <= 650) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 6)) {
                     rp60.setFill(Color.RED);
@@ -1679,7 +1678,7 @@ public class GameBoardController implements Initializable {
                 rp69.setDisable(true);
             }
         }
-        if (event.getSceneY() > 650 && event.getSceneY() <= 680) {
+        else if (event.getSceneY() > 650 && event.getSceneY() <= 680) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 7)) {
                     rp70.setFill(Color.RED);
@@ -1773,7 +1772,7 @@ public class GameBoardController implements Initializable {
                 turnP1 = true;
             }
         }
-        if (event.getSceneY() > 680 && event.getSceneY() <= 710) {
+        else if (event.getSceneY() > 680 && event.getSceneY() <= 710) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 8)) {
                     rp80.setFill(Color.RED);
@@ -1866,7 +1865,7 @@ public class GameBoardController implements Initializable {
                 rp89.setDisable(true);
             }
         }
-        if (event.getSceneY() > 710 && event.getSceneY() <= 740) {
+        else if (event.getSceneY() > 710 && event.getSceneY() <= 740) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 9)) {
                     rp90.setFill(Color.RED);
@@ -1960,7 +1959,6 @@ public class GameBoardController implements Initializable {
             }
         }
     }
-
     public void shot(MouseEvent event) {
         if (hbx_pone1.isDisable()){
             shotP2(event);
