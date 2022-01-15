@@ -723,8 +723,6 @@ public class PlayerController {
                     btn_finishp2.setDisable(false);
                 }
             }
-        } else {
-            return;
         }
     }
     public void placeShipTwo(MouseEvent e) {
@@ -769,8 +767,6 @@ public class PlayerController {
                     btn_finishp2.setDisable(false);
                 }
             }
-        } else {
-            return;
         }
     }
     public void click_finishp1(ActionEvent e) throws IOException {
@@ -789,8 +785,6 @@ public class PlayerController {
         root = loader.load();
 
         GameBoardController gbController = loader.getController();
-        /*gbController.setNameP1(name1);
-        gbController.setNameP2(name2);*/
 
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
