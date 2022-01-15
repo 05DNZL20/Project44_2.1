@@ -61,6 +61,7 @@ public class PlayerController {
         return gameboardP2;
     }
 
+// Methode zur Generierung der Schiffe
 
     private void generateShip() {
         if (sixship.getFill() == Color.BLUE) {
@@ -86,6 +87,7 @@ public class PlayerController {
         }
         return length;
     }
+
     private void markShips(int nbr, String tmpString, String id) {
         for (int i = 0; i < getShipLength(); i++) {
             if (i != 0) {
@@ -96,6 +98,9 @@ public class PlayerController {
                 }
             }
             tmpString = id + "X" + String.format("%02d", nbr);
+
+            //Wenn das Feld mit dem Schiff befüllt wurde ist es: Weiß
+            //Das Schiff selbst ist vor der Auswahl: grün
 
             if (tmpString.equals(reX00.getId())) {
                 reX00.setFill(Color.WHITE);
@@ -400,6 +405,7 @@ public class PlayerController {
             }
         }
     }
+    //Wenn das Schiff gewählt wurde zum platzieren, soll die Füllung der Grids blau werden
     private void deletePlacedShip() {
         if (sixship.getFill() == Color.BLUE) {
             sixship.setVisible(false);

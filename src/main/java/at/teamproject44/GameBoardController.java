@@ -11,6 +11,8 @@ import javafx.scene.shape.Rectangle;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/** JavaFx implemetierung des Gameboard grids */
+
 public class GameBoardController implements Initializable {
     PlayerController pc = null;
     static Gameboard gameboardP1 = null;
@@ -93,6 +95,9 @@ public class GameBoardController implements Initializable {
         hbx_ptwo9.setDisable(false);
         hbx_ptwo10.setDisable(false);
     }
+//Farbveränderungen der grids wenn getroffen/nicht getroffen
+    //Wenn getroffen Feld=rot
+    //Wenn nicht getroffen Feld=blau
 
     public void shotP1(MouseEvent event) {
         if (event.getSceneY() > 90 && event.getSceneY() <= 120) {

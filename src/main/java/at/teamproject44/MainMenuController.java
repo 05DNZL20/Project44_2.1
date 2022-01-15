@@ -10,10 +10,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/** JavaFx Implementierung des Startmenüs */
+
 public class MainMenuController {
 
     @FXML
-    Button btn_startgame, btn_gamerules, btn_contacs;
+    Button btn_startgame, btn_gamerules, btn_contacs; //3 Buttons eingefügt
 
     public void click_startgame(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("PlayerOne.fxml"));
@@ -29,9 +31,11 @@ public class MainMenuController {
 
     public void click_gamerules(ActionEvent actionEvent) {
 
+        //Füge hier ein was bei den Spielregeln angezeigt werden soll
     }
 
     public void click_contacts(ActionEvent actionEvent) {
 
+        //Füge hier ein was bei den Credits angezeigt werden soll
     }
 }
