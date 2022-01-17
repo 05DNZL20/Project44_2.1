@@ -3,6 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.GameBoardController">
    <center>
@@ -304,7 +305,13 @@
       <Pane prefHeight="676.0" prefWidth="70.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <Pane prefHeight="676.0" prefWidth="231.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="676.0" prefWidth="231.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbl_message" layoutX="20.0" layoutY="20.0">
+               <font>
+                  <Font name="Eras Bold ITC" size="18.0" />
+               </font></Label>
+         </children></Pane>
    </right>
    <bottom>
       <Pane prefHeight="62.0" prefWidth="600.0" BorderPane.alignment="CENTER" />

@@ -110,14 +110,12 @@ public class Gameboard {
      * @param y Y_Koordinate
      * @return Liefert bei Treffer true zurück sonst false
      */
-    public boolean hit(int x, int y) {
+    public int hit(int x, int y) {
 
         if (board[x][y] == null) {
-            System.out.println("Leider nichts getroffen!");
-            return false;
+            return 0;
         } else if (board[x][y].equals(alreadyHit)) {
-            System.out.println("Feld wurde schon beschossen!");
-            return false;
+            return 2;
         } else {
             board[x][y].hit();
             if (!board[x][y].isShipAlive()) {
@@ -125,7 +123,7 @@ public class Gameboard {
                 counter++;
             }
             board[x][y] = alreadyHit;
-            return true;
+            return 1;
         }
     }
 
@@ -134,9 +132,7 @@ public class Gameboard {
     public boolean hasWonGame() {
 
         if (counter == 10) {
-            System.out.println("You won the game!");
             return true;
-
         }
         return false;
     }
