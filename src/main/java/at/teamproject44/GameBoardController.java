@@ -110,7 +110,7 @@ public class GameBoardController implements Initializable {
     //Wenn nicht getroffen Feld=blau
 
     public void shotP1(MouseEvent event) {
-        if (event.getSceneY() > 90 && event.getSceneY() <= 120) {
+        if (event.getSceneY() > 90 && event.getSceneY() <= 119) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -263,7 +263,7 @@ public class GameBoardController implements Initializable {
                 re09.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 120 && event.getSceneY() <= 150) {
+        else if (event.getSceneY() > 120 && event.getSceneY() <= 149) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -416,7 +416,7 @@ public class GameBoardController implements Initializable {
                 re19.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 150 && event.getSceneY() <= 180) {
+        else if (event.getSceneY() > 150 && event.getSceneY() <= 179) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -569,7 +569,7 @@ public class GameBoardController implements Initializable {
                 re29.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 180 && event.getSceneY() <= 210) {
+        else if (event.getSceneY() > 180 && event.getSceneY() <= 209) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 3) == 1 && re30.getFill() != Color.RED) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -722,7 +722,7 @@ public class GameBoardController implements Initializable {
                 re39.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 210 && event.getSceneY() <= 240) {
+        else if (event.getSceneY() > 210 && event.getSceneY() <= 239) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 4) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -875,7 +875,7 @@ public class GameBoardController implements Initializable {
                 re49.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 240 && event.getSceneY() <= 270) {
+        else if (event.getSceneY() > 240 && event.getSceneY() <= 269) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 5) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1028,7 +1028,7 @@ public class GameBoardController implements Initializable {
                 re59.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 270 && event.getSceneY() <= 300) {
+        else if (event.getSceneY() > 270 && event.getSceneY() <= 299) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 6) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1181,7 +1181,7 @@ public class GameBoardController implements Initializable {
                 re69.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 300 && event.getSceneY() <= 330) {
+        else if (event.getSceneY() > 300 && event.getSceneY() <= 329) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 7) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1334,7 +1334,7 @@ public class GameBoardController implements Initializable {
                 re79.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 330 && event.getSceneY() <= 360) {
+        else if (event.getSceneY() > 330 && event.getSceneY() <= 359) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 8) == 1 ) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1487,7 +1487,7 @@ public class GameBoardController implements Initializable {
                 re89.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 360 && event.getSceneY() <= 430) {
+        else if (event.getSceneY() > 360 && event.getSceneY() <= 429) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP1.hit(0, 9) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1642,7 +1642,7 @@ public class GameBoardController implements Initializable {
         }
     }
     public void shotP2(MouseEvent event) {
-        if (event.getSceneY() > 440 && event.getSceneY() <= 470) {
+        if (event.getSceneY() > 438 && event.getSceneY() <= 467) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 0)==1) {
                     lbl_message.setText(lbl_p1.getText() + ": " + messageHit);
@@ -1795,7 +1795,7 @@ public class GameBoardController implements Initializable {
                 rp09.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 470 && event.getSceneY() <= 500) {
+        else if (event.getSceneY() > 468 && event.getSceneY() <= 497) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 1)==1) {
                     lbl_message.setText(lbl_p1.getText()+": "+messageHit);
@@ -1948,7 +1948,7 @@ public class GameBoardController implements Initializable {
                 rp19.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 500 && event.getSceneY() <= 530) {
+        else if (event.getSceneY() > 498 && event.getSceneY() <= 527) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 2)==1) {
                     lbl_message.setText(lbl_p1.getText()+": "+messageHit);
@@ -2101,7 +2101,7 @@ public class GameBoardController implements Initializable {
                 rp29.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 530 && event.getSceneY() <= 560) {
+        else if (event.getSceneY() > 528 && event.getSceneY() <= 557) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 3)==1) {
                     lbl_message.setText(lbl_p1.getText()+": "+messageHit);
@@ -2254,7 +2254,7 @@ public class GameBoardController implements Initializable {
                 rp39.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 560 && event.getSceneY() <= 590) {
+        else if (event.getSceneY() > 558 && event.getSceneY() <= 587) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 4)==1) {
                     lbl_message.setText(lbl_p1.getText()+": "+messageHit);
@@ -2407,7 +2407,7 @@ public class GameBoardController implements Initializable {
                 rp49.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 590 && event.getSceneY() <= 620) {
+        else if (event.getSceneY() > 588 && event.getSceneY() <= 617) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 5)==1) {
                     lbl_message.setText(lbl_p1.getText()+": "+messageHit);
@@ -2560,7 +2560,7 @@ public class GameBoardController implements Initializable {
                 rp59.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 620 && event.getSceneY() <= 650) {
+        else if (event.getSceneY() > 618 && event.getSceneY() <= 647) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 6)==1) {
                     lbl_message.setText(lbl_p1.getText()+": "+messageHit);
@@ -2713,7 +2713,7 @@ public class GameBoardController implements Initializable {
                 rp69.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 650 && event.getSceneY() <= 680) {
+        else if (event.getSceneY() > 648 && event.getSceneY() <= 677) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 7)==1) {
                     lbl_message.setText(messageHit);
@@ -2867,7 +2867,7 @@ public class GameBoardController implements Initializable {
                 turnP1 = true;
             }
         }
-        else if (event.getSceneY() > 680 && event.getSceneY() <= 710) {
+        else if (event.getSceneY() > 678 && event.getSceneY() <= 707) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 8)==1) {
                     lbl_message.setText(lbl_p1.getText()+": "+messageHit);
@@ -3020,7 +3020,7 @@ public class GameBoardController implements Initializable {
                 rp89.setDisable(true);
             }
         }
-        else if (event.getSceneY() > 710 && event.getSceneY() <= 740) {
+        else if (event.getSceneY() > 708 && event.getSceneY() <= 737) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
                 if (gameboardP2.hit(0, 9)==1) {
                     lbl_message.setText(lbl_p1.getText()+": "+messageHit);

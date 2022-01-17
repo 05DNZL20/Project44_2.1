@@ -9,9 +9,4 @@ public class Player {
     public Player(String name) {
         this.name = name;
     }
-
-    //Erstellung einer Methode um den Namen des Players zu holen
-    public String getName() {
-        return name;
-    }
 }

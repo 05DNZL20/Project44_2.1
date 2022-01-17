@@ -22,14 +22,6 @@ public class Ship {
         return type;
     }
 
-    // Methode um Typ des Schiffes festzulegen
-    public void setType(int type) {
-        this.type = type;
-    }
-    // Methode um Ausrichtung des Schiffes zurückgeben
-    public boolean isVertical() {
-        return vertical;
-    }
     // Methode die aufgerufen wird, wenn ein Schiff getroffen wird
     public void hit() {
         if (health != 0) {
