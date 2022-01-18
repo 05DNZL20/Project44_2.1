@@ -4,8 +4,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.PlayerController">
     <center>
         <VBox maxWidth="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER">
@@ -187,6 +185,7 @@
         <AnchorPane prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <children>
                 <Button fx:id="btn_finishp2" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="266.0" layoutY="35.0" mnemonicParsing="false" onAction="#click_finishp2" prefHeight="30.0" prefWidth="68.0" text="Finish" />
+            <Button fx:id="btn_reset2" layoutX="638.0" layoutY="38.0" mnemonicParsing="false" onAction="#reset2" text="Reset all ships" />
             </children></AnchorPane>
     </bottom>
 </BorderPane>

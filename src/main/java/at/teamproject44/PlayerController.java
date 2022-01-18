@@ -32,7 +32,7 @@ public class PlayerController {
     RadioButton rbt_vertical, rbt_horizontal;
 
     @FXML
-    Button btn_finishp1, btn_finishp2, btn_save;
+    Button btn_finishp1, btn_finishp2, btn_save, btn_reset1,btn_reset2;
 
     @FXML
     TextField txt_name;
@@ -800,8 +800,7 @@ public class PlayerController {
     }
     //Wirkliche Spielfeld mit den 2 Boards wird aufgerufen("GameBoard.fxml")
     public void click_finishp2() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("GameBoard.fxml"));
-        root = loader.load();
+        root = FXMLLoader.load(getClass().getResource("GameBoard.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Battleship-GameBoard");
@@ -1038,6 +1037,48 @@ public class PlayerController {
                 thirdtwoship.setDisable(true);
             }
         }
+    }
+    //Setzt GameBoard con Player 1 zurück.
+    public void reset1() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("PlayerOne.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage = new Stage();
+        primaryStage.setTitle("Battleship-Player1-Board");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+        ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
+        primaryStage.setOnCloseRequest(event -> {
+            try {
+                reopen(primaryStage);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        Stage thisStage = (Stage) btn_reset1.getScene().getWindow();
+        thisStage.close();
+    }
+    //Setzt GameBoard con Player 2 zurück.
+    public void reset2() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("PlayerTwo.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage = new Stage();
+        primaryStage.setTitle("Battleship-Player2-Board");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+        ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
+        primaryStage.setOnCloseRequest(event -> {
+            try {
+                reopen(primaryStage);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        Stage thisStage = (Stage) btn_reset2.getScene().getWindow();
+        thisStage.close();
     }
 
 

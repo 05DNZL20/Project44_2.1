@@ -1,13 +1,19 @@
 package at.teamproject44;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -20,6 +26,7 @@ public class GameBoardController implements Initializable {
     static Gameboard gameboardP1 = null;
     static Gameboard gameboardP2 = null;
     boolean turnP1 = true;
+    private Parent root;
 
     private final String messageHit = "Hit!";
     private final String messageAlreadyShot = "Already shot!";
@@ -52,6 +59,8 @@ public class GameBoardController implements Initializable {
     @FXML
     HBox hbx_ptwo1, hbx_ptwo2, hbx_ptwo3, hbx_ptwo4, hbx_ptwo5, hbx_ptwo6, hbx_ptwo7, hbx_ptwo8, hbx_ptwo9, hbx_ptwo10,
             hbx_pone1, hbx_pone2, hbx_pone3, hbx_pone4, hbx_pone5, hbx_pone6, hbx_pone7, hbx_pone8, hbx_pone9, hbx_pone10;
+    @FXML
+    Button btn_restart;
 
     //Wir Disablen/Enablen jeweils die Gameboard, damit man nicht auf das falsche Feld schießt.
     private void disableP1Board() {
@@ -3184,6 +3193,7 @@ public class GameBoardController implements Initializable {
                 lbl_message.setText(lbl_p1.getText()+": Won the game!");
                 disableP1Board();
                 disableP2Board();
+                btn_restart.setVisible(true);
             }
         } else if (hbx_ptwo1.isDisable()) {
             shotP1(event);
@@ -3199,9 +3209,41 @@ public class GameBoardController implements Initializable {
                 lbl_message.setText(lbl_p2.getText()+": Won the game!");
                 disableP1Board();
                 disableP2Board();
+                btn_restart.setVisible(true);
             }
         }
 
+    }
+
+    public void restart() throws IOException {
+        root = FXMLLoader.load(getClass().getResource("PlayerOne.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage = new Stage();
+        primaryStage.setTitle("Battleship-Player1-Board");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+        ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
+        primaryStage.setOnCloseRequest(event -> {
+            try {
+                reopen(primaryStage);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        Stage thisStage = (Stage) btn_restart.getScene().getWindow();
+        thisStage.close();
+    }
+
+    //Methode wird verwendet um MainMenu.fxml wieder zu öffnen.
+    private void reopen(Stage stage) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage = new Stage();
+        primaryStage.setTitle("Battleship");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     //"initialize" wird sofort ausgeführt, wenn sich "GameBoard.fxml" öffnet.

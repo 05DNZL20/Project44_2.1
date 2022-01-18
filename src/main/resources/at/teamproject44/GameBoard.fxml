@@ -311,6 +311,7 @@
                <font>
                   <Font name="Eras Bold ITC" size="18.0" />
                </font></Label>
+            <Button fx:id="btn_restart" layoutX="90.0" layoutY="337.0" mnemonicParsing="false" onAction="#restart" text="Restart" visible="false" />
          </children></Pane>
    </right>
    <bottom>
