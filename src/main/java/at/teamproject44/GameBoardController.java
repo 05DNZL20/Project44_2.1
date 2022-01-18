@@ -3173,11 +3173,11 @@ public class GameBoardController implements Initializable {
         }
     }
     public void shot(MouseEvent event) {
-        if (hbx_pone1.isDisable()) {
-            shotP2(event);
-            if (turnP1) {
-                disableP1Board();
-                enableP2Board();
+        if (hbx_pone1.isDisable()) { //Wenn die zeilen von Player 1 disabled
+            shotP2(event); // Wird Event eröffnet das Player 2 geschossen wird
+            if (turnP1) { //Wenn P1 dran ist
+                disableP1Board(); // Dann kann man nicht auf Player 1 board klicken
+                enableP2Board(); // Sondern nur auf Player 2 Board schießen
             } else {
                 enableP1Board();
                 disableP2Board();
