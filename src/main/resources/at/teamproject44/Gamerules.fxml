@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="160.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.MainMenuController">
+   <children>
+      <Label ellipsisString="" text="Game Rules:" textAlignment="CENTER" underline="true" AnchorPane.leftAnchor="182.5" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Label>
+      <Label fx:id="lbl_rules" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="105.0" prefWidth="449.0" text="Firstly you type in your name, then place the ships.&#10;You have 10 Ships to place, you can choose in which direction you want to put them.&#10;The Game starts if both players are ready to play.&#10;It is randomized which player starts.&#10;If one player lands a hit, he has another try!&#10;The game ends, if all ships of one player are destroyed." textAlignment="CENTER" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" />
+      <Label layoutX="211.0" layoutY="130.0" text="Enjoy!" AnchorPane.leftAnchor="208.5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

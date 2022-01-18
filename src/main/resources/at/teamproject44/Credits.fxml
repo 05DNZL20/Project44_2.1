@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.MainMenuController">
+   <children>
+      <Label text="Credits:&#10;Project44" textAlignment="CENTER" underline="true" AnchorPane.leftAnchor="259.5" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="286.0" layoutY="52.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="353.0" prefWidth="254.0" text="Teamleading &amp; Development:&#10;Julia Sosnowski&#10;         &#10;Java Fx Design &amp; Development:&#10;Safa Şık&#10;         &#10;Development &amp; Gameboard Guru:&#10;Markus Wieger&#10;         &#10;Development &amp; Head of Organisation:&#10;Merve Tuz&#10;         &#10;Development &amp; Organisation:&#10;Abdulalim Yilmaz&#10;         &#10;Development &amp; Research:&#10;Mohamad Tamim&#10;         &#10;Github Repository for further information:&#10;https://github.com/05DNZL20/Project44_2.1" textAlignment="CENTER" AnchorPane.leftAnchor="173.0" AnchorPane.topAnchor="52.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
