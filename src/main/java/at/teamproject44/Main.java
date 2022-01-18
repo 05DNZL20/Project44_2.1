@@ -13,6 +13,7 @@ import java.util.Objects;
 
 public class Main extends Application {
 
+    //"MainMenu.fxml" wird aufgerufen.
     @Override
     public void start(Stage primaryStage) throws Exception{
             Parent root = FXMLLoader.load(this.getClass().getResource("MainMenu.fxml"));
