@@ -21,10 +21,11 @@ public class GameBoardController implements Initializable {
     static Gameboard gameboardP2 = null;
     boolean turnP1 = true;
 
-    private String messageHit = "Hit!";
-    private String messageAlreadyShot = "Already shot!";
-    private String messageMiss = "Miss!";
-    private String messageNeighbor = "Can't place ship! Keep distance from other ships!";
+    private final String messageHit = "Hit!";
+    private final String messageAlreadyShot = "Already shot!";
+    private final String messageMiss = "Miss!";
+    private final String messageShipDestroyed = "Ship destroyed!";
+    private final String messageNeighbor = "Can't place ship! Keep distance from other ships!";
 
     @FXML
     Rectangle re00, re01, re02, re03, re04, re05, re06, re07, re08, re09,
@@ -54,6 +55,7 @@ public class GameBoardController implements Initializable {
     HBox hbx_ptwo1, hbx_ptwo2, hbx_ptwo3, hbx_ptwo4, hbx_ptwo5, hbx_ptwo6, hbx_ptwo7, hbx_ptwo8, hbx_ptwo9, hbx_ptwo10,
             hbx_pone1, hbx_pone2, hbx_pone3, hbx_pone4, hbx_pone5, hbx_pone6, hbx_pone7, hbx_pone8, hbx_pone9, hbx_pone10;
 
+    //Wir Disablen/Enablen jeweils die Gameboard, damit man nicht auf das falsche Feld schießt.
     private void disableP1Board() {
         hbx_pone1.setDisable(true);
         hbx_pone2.setDisable(true);
@@ -66,7 +68,6 @@ public class GameBoardController implements Initializable {
         hbx_pone9.setDisable(true);
         hbx_pone10.setDisable(true);
     }
-
     private void disableP2Board() {
         hbx_ptwo1.setDisable(true);
         hbx_ptwo2.setDisable(true);
@@ -79,7 +80,6 @@ public class GameBoardController implements Initializable {
         hbx_ptwo9.setDisable(true);
         hbx_ptwo10.setDisable(true);
     }
-
     private void enableP1Board() {
         hbx_pone1.setDisable(false);
         hbx_pone2.setDisable(false);
@@ -92,7 +92,6 @@ public class GameBoardController implements Initializable {
         hbx_pone9.setDisable(false);
         hbx_pone10.setDisable(false);
     }
-
     private void enableP2Board() {
         hbx_ptwo1.setDisable(false);
         hbx_ptwo2.setDisable(false);
@@ -112,35 +111,36 @@ public class GameBoardController implements Initializable {
     public void shotP1(MouseEvent event) {
         if (event.getSceneY() > 90 && event.getSceneY() <= 119) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
-                if (gameboardP1.hit(0, 0) == 1) {
+                if (gameboardP1.hit(0,0)==1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re00.setFill(Color.RED);
                     turnP1 = false;
-                } else {
+                }
+                else{
                     if (gameboardP1.hit(0, 0) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re00.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re00.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re00.setDisable(true);
             } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 0) == 1) {
-                    lbl_message.setText(messageHit);
+                    lbl_message.setText(lbl_p2.getText()+": "+messageHit);
                     re01.setFill(Color.RED);
                     turnP1 = false;
                 } else {
                     if (gameboardP1.hit(1, 0) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re01.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re01.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re01.setDisable(true);
             } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -149,13 +149,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(2, 0) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re02.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re02.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re02.setDisable(true);
             } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -164,13 +164,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(3, 0) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re03.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re03.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re03.setDisable(true);
             } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -179,13 +179,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(4, 0) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re04.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re04.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re04.setDisable(true);
             } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -194,13 +194,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(5, 0) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re05.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re05.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re05.setDisable(true);
             } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
                 if (gameboardP1.hit(6, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -209,13 +209,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(6, 0) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re06.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re06.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re06.setDisable(true);
             } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -224,13 +224,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(7, 0) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re07.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re07.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re07.setDisable(true);
             } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
                 if (gameboardP1.hit(8, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -239,13 +239,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(8, 0) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re08.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re08.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re08.setDisable(true);
             } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
                 if (gameboardP1.hit(9, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -254,13 +254,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(9, 0) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re09.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re09.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re09.setDisable(true);
             }
         }
         else if (event.getSceneY() > 120 && event.getSceneY() <= 149) {
@@ -272,13 +272,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(0, 1) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re10.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re10.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re10.setDisable(true);
             } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -287,13 +287,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(1, 1) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re11.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re11.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re11.setDisable(true);
             } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -302,13 +302,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(2, 1) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re12.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re12.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re12.setDisable(true);
             } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -317,13 +317,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(3, 1) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re13.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re13.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re13.setDisable(true);
             } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -332,13 +332,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(4, 1) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re14.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re14.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re14.setDisable(true);
             } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -347,28 +347,28 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(5, 1) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re15.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re15.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re15.setDisable(true);
             } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
-                if (gameboardP1.hit(6, 1) == 1) {
+               if (gameboardP1.hit(6, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re16.setFill(Color.RED);
                     turnP1 = false;
-                } else {
-                    if (gameboardP1.hit(6, 1) == 0) {
-                        lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
-                    } else {
-                        lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
-                    }
-                    re16.setFill(Color.BLUE);
-                    turnP1 = true;
-                }
-                re16.setDisable(true);
+               } else {
+                   if (gameboardP1.hit(6, 1) == 0) {
+                       lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                       re16.setFill(Color.BLUE);
+                       turnP1 = true;
+                   } else {
+                       lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                       turnP1 = false;
+                   }
+               }
             } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -377,43 +377,43 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(7, 1) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re17.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re17.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re17.setDisable(true);
             } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
-                if (gameboardP1.hit(8, 1) == 1) {
+               if (gameboardP1.hit(8, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re18.setFill(Color.RED);
                     turnP1 = false;
-                } else {
-                    if (gameboardP1.hit(8, 1) == 0) {
-                        lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
-                    } else {
-                        lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
-                    }
-                    re18.setFill(Color.BLUE);
-                    turnP1 = true;
-                }
-                re18.setDisable(true);
+               } else {
+                   if (gameboardP1.hit(8, 1) == 0) {
+                       lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                       re18.setFill(Color.BLUE);
+                       turnP1 = true;
+                   } else {
+                       lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                       turnP1 = false;
+                   }
+               }
             } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
-                if (gameboardP1.hit(9, 1) == 1) {
+               if (gameboardP1.hit(9, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re19.setFill(Color.RED);
                     turnP1 = false;
-                } else {
-                    if (gameboardP1.hit(9, 1) == 0) {
-                        lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
-                    } else {
-                        lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
-                    }
-                    re19.setFill(Color.BLUE);
-                    turnP1 = true;
-                }
-                re19.setDisable(true);
+               } else {
+                   if (gameboardP1.hit(9, 1) == 0) {
+                       lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                       re19.setFill(Color.BLUE);
+                       turnP1 = true;
+                   } else {
+                       lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                       turnP1 = false;
+                   }
+               }
             }
         }
         else if (event.getSceneY() > 150 && event.getSceneY() <= 179) {
@@ -425,13 +425,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(0, 2) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re20.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re20.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re20.setDisable(true);
             } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -440,13 +440,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(1, 2) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re21.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re21.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re21.setDisable(true);
             } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -455,13 +455,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(2, 2) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re22.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re22.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re22.setDisable(true);
             } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -470,13 +470,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(3, 2) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re23.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re23.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re23.setDisable(true);
             } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -485,13 +485,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(4, 2) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re24.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re24.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re24.setDisable(true);
             } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -500,13 +500,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(5, 2) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re25.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re25.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re25.setDisable(true);
             } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
                 if (gameboardP1.hit(6, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -515,13 +515,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(6, 2) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re26.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re26.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re26.setDisable(true);
             } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -530,13 +530,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(7, 2) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re27.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re27.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re27.setDisable(true);
             } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
                 if (gameboardP1.hit(8, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -545,13 +545,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(8, 2) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re28.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re28.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re28.setDisable(true);
             } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
                 if (gameboardP1.hit(9, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -560,31 +560,31 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(9, 2) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re29.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re29.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re29.setDisable(true);
             }
         }
         else if (event.getSceneY() > 180 && event.getSceneY() <= 209) {
             if (event.getSceneX() > 70 && event.getSceneX() <= 100) {
-                if (gameboardP1.hit(0, 3) == 1 && re30.getFill() != Color.RED) {
+               if (gameboardP1.hit(0, 3) == 1 && re30.getFill() != Color.RED) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re30.setFill(Color.RED);
                     turnP1 = false;
-                } else {
+               } else {
                     if (gameboardP1.hit(0, 3) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re30.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re30.setFill(Color.BLUE);
-                    turnP1 = true;
-                }
-                re30.setDisable(true);
+               }
             } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 3) == 1 && re31.getFill() != Color.RED) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -593,13 +593,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(1, 3) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re31.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re31.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re31.setDisable(true);
             } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 3) == 1 && re32.getFill() != Color.RED) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -608,13 +608,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(2, 3) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re32.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re32.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re32.setDisable(true);
             } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 3) == 1 && re33.getFill() != Color.RED) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -623,13 +623,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(3, 3) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re33.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re33.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re33.setDisable(true);
             } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 3) == 1 && re34.getFill() != Color.RED) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -638,13 +638,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(4, 3) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re34.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re34.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re34.setDisable(true);
             } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 3) == 1 && re35.getFill() != Color.RED) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -653,13 +653,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(5, 3) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re35.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re35.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re35.setDisable(true);
             } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
                 if (gameboardP1.hit(6, 3) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -668,13 +668,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(6, 3) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re36.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re36.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re36.setDisable(true);
             } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 3) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -683,13 +683,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(7, 3) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re37.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re37.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re37.setDisable(true);
             } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
                 if (gameboardP1.hit(8, 3) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -697,14 +697,14 @@ public class GameBoardController implements Initializable {
                     turnP1 = false;
                 } else {
                     if (gameboardP1.hit(8, 3) == 0) {
-                        lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        lbl_message.setText(lbl_p2.getText() + ": " + messageMiss);
+                        re38.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
-                        lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        lbl_message.setText(lbl_p2.getText() + ": " + messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re38.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re38.setDisable(true);
             } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
                 if (gameboardP1.hit(9, 3) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -713,13 +713,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(9, 3) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re39.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re39.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re39.setDisable(true);
             }
         }
         else if (event.getSceneY() > 210 && event.getSceneY() <= 239) {
@@ -731,13 +731,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(0, 4) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re40.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re40.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re40.setDisable(true);
             } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 4) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -746,13 +746,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(1, 4) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re41.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re41.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re41.setDisable(true);
             } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 4) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -761,13 +761,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(2, 4) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re42.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re42.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re42.setDisable(true);
             } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 4) == 1 ) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -776,13 +776,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(3, 4) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re43.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re43.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re43.setDisable(true);
             } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 4) == 1 ){
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -791,13 +791,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(4, 4) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re44.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re44.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re44.setDisable(true);
             } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 4) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -806,13 +806,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(5, 4) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re45.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re45.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re45.setDisable(true);
             } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
                 if (gameboardP1.hit(6, 4) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -821,13 +821,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(6, 4) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re46.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re46.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re46.setDisable(true);
             } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 4) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -836,13 +836,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(7, 4) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re47.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re47.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re47.setDisable(true);
             } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
                 if (gameboardP1.hit(8, 4) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -851,13 +851,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(8, 4) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re48.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re48.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re48.setDisable(true);
             } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
                 if (gameboardP1.hit(9, 4) == 1 ) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -866,13 +866,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(9, 4) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re49.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re49.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re49.setDisable(true);
             }
         }
         else if (event.getSceneY() > 240 && event.getSceneY() <= 269) {
@@ -884,13 +884,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(0, 5) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re50.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re50.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re50.setDisable(true);
             } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 5) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -899,13 +899,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(1, 5) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re51.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re51.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re51.setDisable(true);
             } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 5) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -914,13 +914,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(2, 5) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re52.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re52.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re52.setDisable(true);
             } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 5) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -929,13 +929,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(3, 5) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re53.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re53.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re53.setDisable(true);
             } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 5) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -944,13 +944,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(4, 5) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re54.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re54.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re54.setDisable(true);
             } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 5) == 1 ) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -959,13 +959,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(5, 5) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re55.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re55.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re55.setDisable(true);
             } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
                 if (gameboardP1.hit(6, 5) == 1 ) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -974,13 +974,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(6, 5) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re56.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re56.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re56.setDisable(true);
             } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 5) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -989,13 +989,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(7, 5) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re57.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re57.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re57.setDisable(true);
             } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
                 if (gameboardP1.hit(8, 5) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1004,13 +1004,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(8, 5) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re58.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re58.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re58.setDisable(true);
             } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
                 if (gameboardP1.hit(9, 5) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1019,13 +1019,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(9, 5) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re59.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re59.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re59.setDisable(true);
             }
         }
         else if (event.getSceneY() > 270 && event.getSceneY() <= 299) {
@@ -1037,13 +1037,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(0, 6) == 1) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re60.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re60.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re60.setDisable(true);
             } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 6) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1052,13 +1052,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(1, 6) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re61.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re61.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re61.setDisable(true);
             } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 6) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1067,13 +1067,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(2, 6) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re62.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re62.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re62.setDisable(true);
             } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 6) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1082,13 +1082,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(3, 6) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re63.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re63.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re63.setDisable(true);
             } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 6) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1097,13 +1097,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(4, 6) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re64.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re64.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re64.setDisable(true);
             } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 6) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1112,13 +1112,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(5, 6) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re65.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re65.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re65.setDisable(true);
             } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
                 if (gameboardP1.hit(6, 6) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1127,13 +1127,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(6, 6) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re66.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re66.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re66.setDisable(true);
             } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 6) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1142,13 +1142,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(7, 6) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re67.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re67.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re67.setDisable(true);
             } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
                 if (gameboardP1.hit(8, 6) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1157,13 +1157,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(8, 6) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re68.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re68.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re68.setDisable(true);
             } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
                 if (gameboardP1.hit(9, 6) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1172,13 +1172,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(9, 6) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re69.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re69.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re69.setDisable(true);
             }
         }
         else if (event.getSceneY() > 300 && event.getSceneY() <= 329) {
@@ -1190,13 +1190,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(0, 7) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re70.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re70.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re70.setDisable(true);
             } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 7) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1205,13 +1205,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(1, 7) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re71.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re71.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re71.setDisable(true);
             } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 7) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1220,13 +1220,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(2, 7) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re72.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re72.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re72.setDisable(true);
             } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 7) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1235,13 +1235,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(3, 7) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re73.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re73.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re73.setDisable(true);
             } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 7) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1250,13 +1250,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(4, 7) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re74.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re74.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re74.setDisable(true);
             } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 7) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1265,13 +1265,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(5, 7) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re75.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re75.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re75.setDisable(true);
             } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
                 if (gameboardP1.hit(6, 7) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1280,13 +1280,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(6, 7) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re76.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re76.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re76.setDisable(true);
             } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 7) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1295,13 +1295,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(7, 7) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re77.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re77.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re77.setDisable(true);
             } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
                 if (gameboardP1.hit(8, 7) == 1 ) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1310,13 +1310,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(8, 7) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re78.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re78.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re78.setDisable(true);
             } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
                 if (gameboardP1.hit(9, 7) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1325,13 +1325,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(9, 7) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re79.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re79.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re79.setDisable(true);
             }
         }
         else if (event.getSceneY() > 330 && event.getSceneY() <= 359) {
@@ -1343,13 +1343,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(0, 8) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re80.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re80.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re80.setDisable(true);
             } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 8) == 1 ) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1358,13 +1358,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(1, 8) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re81.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re81.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re81.setDisable(true);
             } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 8) == 1 ) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1373,13 +1373,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(2, 8) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re82.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re82.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re82.setDisable(true);
             } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 8) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1388,13 +1388,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(3, 8) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re83.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re83.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re83.setDisable(true);
             } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 8) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1403,13 +1403,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(4, 8) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re84.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re84.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re84.setDisable(true);
             } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 8) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1418,13 +1418,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(5, 8) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re85.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re85.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re85.setDisable(true);
             } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
                 if (gameboardP1.hit(6, 8) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1433,13 +1433,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(6, 8) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re86.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re86.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re86.setDisable(true);
             } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 8) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1448,13 +1448,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(7, 8) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re87.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re87.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re87.setDisable(true);
             } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
                 if (gameboardP1.hit(8, 8) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1463,13 +1463,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(8, 8) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re88.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re88.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re88.setDisable(true);
             } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
                 if (gameboardP1.hit(9, 8) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1478,13 +1478,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(9, 8) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re89.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re89.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re89.setDisable(true);
             }
         }
         else if (event.getSceneY() > 360 && event.getSceneY() <= 429) {
@@ -1496,13 +1496,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(0, 9) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re90.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re90.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re90.setDisable(true);
             } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 9) == 1 ) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1511,13 +1511,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(1, 9) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re91.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re91.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re91.setDisable(true);
             } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 9) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1526,13 +1526,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(2, 9) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re92.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re92.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re92.setDisable(true);
             } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 9) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1541,13 +1541,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(3, 9) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re93.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re93.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re93.setDisable(true);
             } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 9) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1556,13 +1556,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(4, 9) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re94.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re94.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re94.setDisable(true);
             } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 9) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1571,13 +1571,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(5, 9) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re95.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re95.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re95.setDisable(true);
             } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
                 if (gameboardP1.hit(6, 9) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1586,13 +1586,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(6, 9) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re96.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re96.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re96.setDisable(true);
             } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 9) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1600,14 +1600,14 @@ public class GameBoardController implements Initializable {
                     turnP1 = false;
                 } else {
                     if (gameboardP1.hit(7, 9) == 0) {
-                        lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        lbl_message.setText(lbl_p2.getText() + ": " + messageMiss);
+                        re97.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
-                        lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        lbl_message.setText(lbl_p2.getText() + ": " + messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re97.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re97.setDisable(true);
             } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
                 if (gameboardP1.hit(8, 9) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1616,13 +1616,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(8, 9) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re98.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re98.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re98.setDisable(true);
             } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
                 if (gameboardP1.hit(9, 9) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
@@ -1631,13 +1631,13 @@ public class GameBoardController implements Initializable {
                 } else {
                     if (gameboardP1.hit(9, 9) == 0) {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageMiss);
+                        re99.setFill(Color.BLUE);
+                        turnP1 = true;
                     } else {
                         lbl_message.setText(lbl_p2.getText() + ": "+messageAlreadyShot);
+                        turnP1 = false;
                     }
-                    re99.setFill(Color.BLUE);
-                    turnP1 = true;
                 }
-                re99.setDisable(true);
             }
         }
     }
@@ -3207,6 +3207,8 @@ public class GameBoardController implements Initializable {
 
     }
 
+    //"initialize" wird sofort ausgeführt, wenn sich "GameBoard.fxml" öffnet.
+    //Da weisen wir den Variablen Werte zu und setzen Texte für die Label.
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         pc = new PlayerController();
