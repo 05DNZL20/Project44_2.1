@@ -99,7 +99,7 @@ public class PlayerController {
                     nbr = nbr + 1;
                 }
             }
-            tmpString = id + "X" + String.format("%02d", nbr);
+            tmpString = id + "X" + String.format("%02d", nbr); //
 
             //Wenn das Feld mit dem Schiff befüllt wurde ist es: Weiß
             //Das Schiff selbst ist vor der Auswahl: grün
@@ -690,15 +690,15 @@ public class PlayerController {
         txt_name.setDisable(true); // Wenn es gespeichert ist, hat man keinen Zugang mehr auf das Textfeld
     }
     public void placeShipOne(MouseEvent e) {
-        generateShip();
-        XandY(e);
+        generateShip(); //Methode aufrufen
+        XandY(e); //
         if (!rbt_horizontal.isDisabled() && !rbt_vertical.isDisabled()) { // Wenn horizontal und vertical Button NICHT disabled sind
-            Rectangle rt = (Rectangle) e.getSource();
-            String string = rt.getId();
-            String tmpString = null;
+            Rectangle rt = (Rectangle) e.getSource(); // ID von Grids wird geholt
+            String string = rt.getId(); // ID wird als String gespeichert
+            String tmpString = null; // Initialisierung vom tmpString
 
-            String[] strarr = string.split("X");
-            String id = strarr[0];
+            String[] strarr = string.split("X"); // String Array erstellt mit 2 Stellen und gesplittet, ewX00 starr[0] = re starr[1] = 00
+            String id = strarr[0]; // String id an der stelle 0 gespeichert
             int nbr = Integer.parseInt(strarr[1]);
 
             if (gameboardP1.placeShipOnBoard(ship,x,y,rbt_vertical.isSelected())) {
