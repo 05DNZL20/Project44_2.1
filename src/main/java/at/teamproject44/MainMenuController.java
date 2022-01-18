@@ -18,15 +18,15 @@ public class MainMenuController {
     Button btn_startgame, btn_gamerules, btn_contacs; //3 Buttons eingefügt
 
     public void click_startgame(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("PlayerOne.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("PlayerOne.fxml")); // GUI wird reingeladen
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
-        primaryStage.setTitle("Battleship-Player1-Board");
+        primaryStage.setTitle("Battleship-Player1-Board"); //Player1 Fenster öffnet sich
         primaryStage.setScene(scene);
         primaryStage.show();
 
         Stage thisStage = (Stage) btn_startgame.getScene().getWindow();
-        thisStage.close();
+        thisStage.close(); //Startmenü wird geschlossen
     }
 
     public void click_gamerules(ActionEvent actionEvent) {

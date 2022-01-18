@@ -15,8 +15,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class PlayerController {
-    @FXML
-    Rectangle reX00, reX01, reX02, reX03, reX04, reX05, reX06, reX07, reX08, reX09,
+    @FXML // dieser Befehl verweist auf Scene Builder Elemente
+    Rectangle reX00, reX01, reX02, reX03, reX04, reX05, reX06, reX07, reX08, reX09, //deklaration der Felder die mit Scene Builder erstellt wurden
             reX10, reX11, reX12, reX13, reX14, reX15, reX16, reX17, reX18, reX19,
             reX20, reX21, reX22, reX23, reX24, reX25, reX26, reX27, reX28, reX29,
             reX30, reX31, reX32, reX33, reX34, reX35, reX36, reX37, reX38, reX39,
@@ -26,7 +26,8 @@ public class PlayerController {
             reX70, reX71, reX72, reX73, reX74, reX75, reX76, reX77, reX78, reX79,
             reX80, reX81, reX82, reX83, reX84, reX85, reX86, reX87, reX88, reX89,
             reX90, reX91, reX92, reX93, reX94, reX95, reX96, reX97, reX98, reX99,
-            sixship, firstfourship, secondfourship, firstthreeship, secondthreeship, thirdthreeship, firsttwoship, secondtwoship, thirdtwoship, fourthtwoship;
+            sixship, firstfourship, secondfourship, firstthreeship, secondthreeship, thirdthreeship, firsttwoship, secondtwoship, thirdtwoship, fourthtwoship; // deklaration der verschiedenen Schifftypen
+
 
     @FXML
     RadioButton rbt_vertical, rbt_horizontal;
@@ -48,7 +49,7 @@ public class PlayerController {
 
     public String getName1(){
         return name1;
-    }
+    } // getter Methode für name
     public String getName2(){
         return name2;
     }
@@ -56,16 +57,17 @@ public class PlayerController {
 
     public Gameboard getPlayer1(){
         return gameboardP1;
-    }
+    } // getter Methode für Gameboard
     public Gameboard getPlayer2(){
         return gameboardP2;
     }
 
 // Methode zur Generierung der Schiffe
 
+
     private void generateShip() {
-        if (sixship.getFill() == Color.BLUE) {
-            ship = new Ship(6, rbt_vertical.isSelected());
+        if (sixship.getFill() == Color.BLUE) { //Wenn Schiff gewählt wird, wird es Blau, also ist angewählt
+            ship = new Ship(6, rbt_vertical.isSelected()); // Wenn das Schiff gewählt ist, wird automatisch vertical gewählt
         } else if ((firstfourship.getFill() == Color.BLUE) || (secondfourship.getFill() == Color.BLUE)) {
             ship = new Ship(4, rbt_vertical.isSelected());
         } else if ((firstthreeship.getFill() == Color.BLUE) || (secondthreeship.getFill() == Color.BLUE) || (thirdthreeship.getFill() == Color.BLUE)) {
@@ -666,12 +668,12 @@ public class PlayerController {
 
 
     public void click_save1(ActionEvent e) {
-        if (!txt_name.getText().isEmpty()) {
-            name1 = txt_name.getText();
-            gameboardP1 = new Gameboard(new Player(name1));
+        if (!txt_name.getText().isEmpty()) { //Wenn das Textfeld nicht leer ist
+            name1 = txt_name.getText(); // dann nimmt man diesen text
+            gameboardP1 = new Gameboard(new Player(name1)); // und speichert diesen
         } else {
-            name1 = txt_name.getAccessibleText();
-            gameboardP1 = new Gameboard(new Player(name1));
+            name1 = txt_name.getAccessibleText(); //Wenn nichts drin steht
+            gameboardP1 = new Gameboard(new Player(name1)); // Wird der Platzname "Player1" genommen, und ein new Gameboard erstellt
         }
         btn_save.setDisable(true);
         txt_name.setDisable(true);
@@ -684,13 +686,13 @@ public class PlayerController {
             name2 = txt_name.getAccessibleText();
             gameboardP2 = new Gameboard(new Player(name2));
         }
-        btn_save.setDisable(true);
-        txt_name.setDisable(true);
+        btn_save.setDisable(true); // Wenn es gespeichert ist, hat man keinen Zugang mehr auf den Save Button, da man sonst noch einen Player erstellt
+        txt_name.setDisable(true); // Wenn es gespeichert ist, hat man keinen Zugang mehr auf das Textfeld
     }
     public void placeShipOne(MouseEvent e) {
         generateShip();
         XandY(e);
-        if (!rbt_horizontal.isDisabled() && !rbt_vertical.isDisabled()) {
+        if (!rbt_horizontal.isDisabled() && !rbt_vertical.isDisabled()) { // Wenn horizontal und vertical Button NICHT disabled sind
             Rectangle rt = (Rectangle) e.getSource();
             String string = rt.getId();
             String tmpString = null;
@@ -802,14 +804,14 @@ public class PlayerController {
         thisStage.close();
     }
     public void selectShip(MouseEvent e) {
-        if (btn_save.isDisabled()) {
-            rbt_horizontal.setDisable(false);
-            rbt_vertical.setDisable(false);
+        if (btn_save.isDisabled()) { // Wenn der Save Button disabled ist wird diese Funktion erst
+            rbt_horizontal.setDisable(false); // Dann wird der "horizontal button" enabled
+            rbt_vertical.setDisable(false); // Dann wird der "vertical button" enabled
 
-            Rectangle re = (Rectangle) e.getSource();
-            if (re.getId().equals("sixship")) {
-                sixship.setFill(Color.BLUE);
-                firstfourship.setFill(Color.rgb(0, 146, 0));
+            Rectangle re = (Rectangle) e.getSource(); // es wird ein neues Rechteck zugewiesen für das angewählte schiff
+            if (re.getId().equals("sixship")) { //wenn das 6erSchiff gewählt ist...
+                sixship.setFill(Color.BLUE); // dann mach es blau, liebes JavaFx
+                firstfourship.setFill(Color.rgb(0, 146, 0)); // die anderen Schiffe sind grün
                 secondfourship.setFill(Color.rgb(0, 146, 0));
                 firstthreeship.setFill(Color.rgb(0, 146, 0));
                 secondthreeship.setFill(Color.rgb(0, 146, 0));
@@ -818,7 +820,7 @@ public class PlayerController {
                 secondtwoship.setFill(Color.rgb(0, 146, 0));
                 thirdtwoship.setFill(Color.rgb(0, 146, 0));
                 fourthtwoship.setFill(Color.rgb(0, 146, 0));
-                firstfourship.setDisable(true);
+                firstfourship.setDisable(true); //setzt alles anderen schiffe auf disabled damit diese nicht anklickbar sind sobald eins gewählt wird, damit nicht zuviele Schiffe erstellt werden
                 secondfourship.setDisable(true);
                 firstthreeship.setDisable(true);
                 secondthreeship.setDisable(true);

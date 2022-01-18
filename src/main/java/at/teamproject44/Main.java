@@ -10,12 +10,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-
+// Main Methode startet Game und Ablauf
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-            Parent root = FXMLLoader.load(this.getClass().getResource("MainMenu.fxml"));
+            Parent root = FXMLLoader.load(this.getClass().getResource("MainMenu.fxml")); // Spiel startet beim Main Menue
             Scene scene = new Scene(root);
             primaryStage.setTitle("Battleship");
             primaryStage.setScene(scene);
