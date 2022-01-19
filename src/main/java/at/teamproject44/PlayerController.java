@@ -1,6 +1,5 @@
 package at.teamproject44;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,7 +15,7 @@ import java.io.IOException;
 
 public class PlayerController {
     @FXML
-    Rectangle reX00, reX01, reX02, reX03, reX04, reX05, reX06, reX07, reX08, reX09,
+    private Rectangle reX00, reX01, reX02, reX03, reX04, reX05, reX06, reX07, reX08, reX09,
             reX10, reX11, reX12, reX13, reX14, reX15, reX16, reX17, reX18, reX19,
             reX20, reX21, reX22, reX23, reX24, reX25, reX26, reX27, reX28, reX29,
             reX30, reX31, reX32, reX33, reX34, reX35, reX36, reX37, reX38, reX39,
@@ -29,13 +28,13 @@ public class PlayerController {
             sixship, firstfourship, secondfourship, firstthreeship, secondthreeship, thirdthreeship, firsttwoship, secondtwoship, thirdtwoship, fourthtwoship;
 
     @FXML
-    RadioButton rbt_vertical, rbt_horizontal;
+    private RadioButton rbt_vertical, rbt_horizontal;
 
     @FXML
-    Button btn_finishp1, btn_finishp2, btn_save, btn_reset1,btn_reset2;
+    private Button btn_finishp1, btn_finishp2, btn_save, btn_reset1,btn_reset2;
 
     @FXML
-    TextField txt_name;
+    private TextField txt_name;
 
     private static Gameboard gameboardP1 = null;
     private static Gameboard gameboardP2 = null;
@@ -52,7 +51,6 @@ public class PlayerController {
     public String getName2(){
         return name2;
     }
-
 
     public Gameboard getPlayer1(){
         return gameboardP1;
@@ -430,7 +428,7 @@ public class PlayerController {
         }
     }
     //"Übersetzer" damit man die X- und Y-Koordinaten für die Klasse "Gameboard" werden kann.
-    private void XandY(MouseEvent e) {
+    private void setXandY(MouseEvent e) {
         if (e.getSceneY() > 100 && e.getSceneY() <= 140) {
             y = 0;
             if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
@@ -669,11 +667,10 @@ public class PlayerController {
     public void click_save1() {
         if (!txt_name.getText().isEmpty()) {
             name1 = txt_name.getText();
-            gameboardP1 = new Gameboard(new Player(name1));
         } else {
             name1 = txt_name.getAccessibleText();
-            gameboardP1 = new Gameboard(new Player(name1));
         }
+        gameboardP1 = new Gameboard(new Player(name1));
         btn_save.setDisable(true);
         txt_name.setDisable(true);
     }
@@ -681,18 +678,17 @@ public class PlayerController {
     public void click_save2() {
         if (!txt_name.getText().isEmpty()) {
             name2 = txt_name.getText();
-            gameboardP2 = new Gameboard(new Player(name2));
         } else {
             name2 = txt_name.getAccessibleText();
-            gameboardP2 = new Gameboard(new Player(name2));
         }
+        gameboardP2 = new Gameboard(new Player(name2));
         btn_save.setDisable(true);
         txt_name.setDisable(true);
     }
     //Schiffe von Player 1 werden auf Spielfeld platziert und abgespeichert.
-    public void placeShipOne(MouseEvent e) {
+    public void click_placeShip1(MouseEvent e) {
         generateShip();
-        XandY(e);
+        setXandY(e);
         if (!rbt_horizontal.isDisabled() && !rbt_vertical.isDisabled()) {
             Rectangle rt = (Rectangle) e.getSource();
             String string = rt.getId();
@@ -734,9 +730,9 @@ public class PlayerController {
         }
     }
     //Schiffe von Player 2 werden auf Spielfeld platziert und abgespeichert.
-    public void placeShipTwo(MouseEvent e) {
+    public void click_placeShip2(MouseEvent e) {
         generateShip();
-        XandY(e);
+        setXandY(e);
         if (!rbt_horizontal.isDisabled() && !rbt_vertical.isDisabled()) {
             Rectangle rt = (Rectangle) e.getSource();
             String string = rt.getId();
@@ -789,7 +785,7 @@ public class PlayerController {
         ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
         primaryStage.setOnCloseRequest(event -> {
             try {
-                reopen(primaryStage);
+                reopen();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -810,7 +806,7 @@ public class PlayerController {
         ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
         primaryStage.setOnCloseRequest(event -> {
             try {
-                reopen(primaryStage);
+                reopen();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -820,7 +816,7 @@ public class PlayerController {
         thisStage.close();
     }
     //Die Schiffe zum platzieren werden verwendet.
-    public void selectShip(MouseEvent e) {
+    public void click_selectShip(MouseEvent e) {
         if (btn_save.isDisabled()) {
             rbt_horizontal.setDisable(false);
             rbt_vertical.setDisable(false);
@@ -1039,7 +1035,7 @@ public class PlayerController {
         }
     }
     //Setzt GameBoard con Player 1 zurück.
-    public void reset1() throws IOException {
+    public void click_reset1() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("PlayerOne.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
@@ -1050,7 +1046,7 @@ public class PlayerController {
         ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
         primaryStage.setOnCloseRequest(event -> {
             try {
-                reopen(primaryStage);
+                reopen();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -1060,7 +1056,7 @@ public class PlayerController {
         thisStage.close();
     }
     //Setzt GameBoard con Player 2 zurück.
-    public void reset2() throws IOException {
+    public void click_reset2() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("PlayerTwo.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
@@ -1071,7 +1067,7 @@ public class PlayerController {
         ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
         primaryStage.setOnCloseRequest(event -> {
             try {
-                reopen(primaryStage);
+                reopen();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -1083,8 +1079,8 @@ public class PlayerController {
 
 
     //Methode wird verwendet um MainMenu.fxml wieder zu öffnen.
-    private void reopen(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+    private void reopen() throws IOException {
+        root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Battleship");

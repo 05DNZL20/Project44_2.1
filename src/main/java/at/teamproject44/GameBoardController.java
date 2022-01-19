@@ -22,18 +22,8 @@ import java.util.ResourceBundle;
  */
 
 public class GameBoardController implements Initializable {
-    PlayerController pc = null;
-    static Gameboard gameboardP1 = null;
-    static Gameboard gameboardP2 = null;
-    boolean turnP1 = true;
-    private Parent root;
-
-    private final String messageHit = "Hit!";
-    private final String messageAlreadyShot = "Already shot!";
-    private final String messageMiss = "Miss!";
-
     @FXML
-    Rectangle re00, re01, re02, re03, re04, re05, re06, re07, re08, re09,
+    private Rectangle re00, re01, re02, re03, re04, re05, re06, re07, re08, re09,
             re10, re11, re12, re13, re14, re15, re16, re17, re18, re19,
             re20, re21, re22, re23, re24, re25, re26, re27, re28, re29,
             re30, re31, re32, re33, re34, re35, re36, re37, re38, re39,
@@ -44,7 +34,7 @@ public class GameBoardController implements Initializable {
             re80, re81, re82, re83, re84, re85, re86, re87, re88, re89,
             re90, re91, re92, re93, re94, re95, re96, re97, re98, re99;
     @FXML
-    Rectangle rp00, rp01, rp02, rp03, rp04, rp05, rp06, rp07, rp08, rp09,
+    private Rectangle rp00, rp01, rp02, rp03, rp04, rp05, rp06, rp07, rp08, rp09,
             rp10, rp11, rp12, rp13, rp14, rp15, rp16, rp17, rp18, rp19,
             rp20, rp21, rp22, rp23, rp24, rp25, rp26, rp27, rp28, rp29,
             rp30, rp31, rp32, rp33, rp34, rp35, rp36, rp37, rp38, rp39,
@@ -55,12 +45,22 @@ public class GameBoardController implements Initializable {
             rp80, rp81, rp82, rp83, rp84, rp85, rp86, rp87, rp88, rp89,
             rp90, rp91, rp92, rp93, rp94, rp95, rp96, rp97, rp98, rp99;
     @FXML
-    Label lbl_p1, lbl_p2, lbl_information, lbl_message;
+    private Label lbl_p1, lbl_p2, lbl_information, lbl_message;
     @FXML
-    HBox hbx_ptwo1, hbx_ptwo2, hbx_ptwo3, hbx_ptwo4, hbx_ptwo5, hbx_ptwo6, hbx_ptwo7, hbx_ptwo8, hbx_ptwo9, hbx_ptwo10,
+    private HBox hbx_ptwo1, hbx_ptwo2, hbx_ptwo3, hbx_ptwo4, hbx_ptwo5, hbx_ptwo6, hbx_ptwo7, hbx_ptwo8, hbx_ptwo9, hbx_ptwo10,
             hbx_pone1, hbx_pone2, hbx_pone3, hbx_pone4, hbx_pone5, hbx_pone6, hbx_pone7, hbx_pone8, hbx_pone9, hbx_pone10;
     @FXML
-    Button btn_restart;
+    private Button btn_restart;
+
+    private PlayerController pc = null;
+    private static Gameboard gameboardP1 = null;
+    private static Gameboard gameboardP2 = null;
+    private boolean turnP1 = true;
+    private Parent root;
+
+    private final String messageHit = "Hit!";
+    private final String messageAlreadyShot = "Already shot!";
+    private final String messageMiss = "Miss!";
 
     //Wir Disablen/Enablen jeweils die Gameboard, damit man nicht auf das falsche Feld schießt.
     private void disableP1Board() {
@@ -3215,7 +3215,7 @@ public class GameBoardController implements Initializable {
 
     }
 
-    public void restart() throws IOException {
+    public void click_restart() throws IOException {
         root = FXMLLoader.load(getClass().getResource("PlayerOne.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
@@ -3226,7 +3226,7 @@ public class GameBoardController implements Initializable {
         ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
         primaryStage.setOnCloseRequest(event -> {
             try {
-                reopen(primaryStage);
+                reopen();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -3237,8 +3237,8 @@ public class GameBoardController implements Initializable {
     }
 
     //Methode wird verwendet um MainMenu.fxml wieder zu öffnen.
-    private void reopen(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+    private void reopen() throws IOException {
+        root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Battleship");

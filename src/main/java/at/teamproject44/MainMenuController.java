@@ -1,6 +1,5 @@
 package at.teamproject44;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,14 +15,13 @@ import java.io.IOException;
 public class MainMenuController {
 
     @FXML
-    Button btn_startgame, btn_gamerules, btn_contacs; //3 Buttons eingefügt
+    private Button btn_startgame, btn_gamerules,btn_credits; //3 Buttons eingefügt
 
-    @FXML
-    Label lbl_rules;
+    private Parent root;
 
     //Mausklick auf "Start Game" führt dazu das "PlayerOne.fxml" aufgerufen wird und "MainMenu.fxml" geschlossen wird.
     public void click_startgame() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("PlayerOne.fxml"));
+        root = FXMLLoader.load(getClass().getResource("PlayerOne.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Battleship-Player1-Board");
@@ -33,7 +31,7 @@ public class MainMenuController {
         ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
         primaryStage.setOnCloseRequest(event -> {
             try {
-                reopen(primaryStage);
+                reopen();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -45,7 +43,7 @@ public class MainMenuController {
 
     //Mausklick auf "Game Rules" führt dazu das "Gamerules.fxml" aufgerufen wird und "MainMenu.fxml" geschlossen wird.
     public void click_gamerules() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Gamerules.fxml"));
+        root = FXMLLoader.load(getClass().getResource("Gamerules.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Battleship-Game Rules");
@@ -55,7 +53,7 @@ public class MainMenuController {
         ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
         primaryStage.setOnCloseRequest(event -> {
             try {
-                reopen(primaryStage);
+                reopen();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -68,7 +66,7 @@ public class MainMenuController {
 
     //Mausklick auf "Credits" führt dazu das "Credits.fxml" aufgerufen wird und "MainMenu.fxml" geschlossen wird.
     public void click_contacts() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Credits.fxml"));
+        root = FXMLLoader.load(getClass().getResource("Credits.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Battleship-Credits");
@@ -78,20 +76,20 @@ public class MainMenuController {
         ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
         primaryStage.setOnCloseRequest(event -> {
             try {
-                reopen(primaryStage);
+                reopen();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         });
 
 
-        Stage thisStage = (Stage) btn_gamerules.getScene().getWindow();
+        Stage thisStage = (Stage) btn_credits.getScene().getWindow();
         thisStage.close();
     }
 
     //Methode wird verwendet um MainMenu.fxml wieder zu öffnen.
-    private void reopen(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+    private void reopen() throws IOException {
+        root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Battleship");
