@@ -185,7 +185,7 @@
         <AnchorPane prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <children>
                 <Button fx:id="btn_finishp2" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="266.0" layoutY="35.0" mnemonicParsing="false" onAction="#click_finishp2" prefHeight="30.0" prefWidth="68.0" text="Finish" />
-            <Button fx:id="btn_reset2" layoutX="638.0" layoutY="38.0" mnemonicParsing="false" onAction="#click_reset2" text="Reset all ships" AnchorPane.leftAnchor="638.0" AnchorPane.topAnchor="38.0" />
+            <Button fx:id="btn_reset2" layoutX="638.0" layoutY="38.0" mnemonicParsing="false" onAction="#click_reset2" text="Reset all" AnchorPane.leftAnchor="638.0" AnchorPane.topAnchor="38.0" />
             </children></AnchorPane>
     </bottom>
 </BorderPane>
