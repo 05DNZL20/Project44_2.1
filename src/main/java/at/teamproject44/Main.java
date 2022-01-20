@@ -16,11 +16,11 @@ public class Main extends Application {
     //"MainMenu.fxml" wird aufgerufen.
     @Override
     public void start(Stage primaryStage) throws Exception{
-            Parent root = FXMLLoader.load(this.getClass().getResource("MainMenu.fxml")); // Spiel startet beim Main Menue
-            Scene scene = new Scene(root);
-            primaryStage.setTitle("Battleship");
-            primaryStage.setScene(scene);
-            primaryStage.show();
+        Parent root = FXMLLoader.load(this.getClass().getResource("MainMenu.fxml")); // Spiel startet beim Main Menue
+        Scene scene = new Scene(root);
+        primaryStage.setTitle("Battleship");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
