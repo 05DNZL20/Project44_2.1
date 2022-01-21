@@ -432,7 +432,7 @@ public class PlayerController {
             thirdtwoship_clicked.setVisible(false);
         } else if (secondtwoship_clicked.isVisible()) {
             secondtwoship_clicked.setVisible(false);
-        } else {
+        } else if (firsttwoship_clicked.isVisible()){
             firsttwoship_clicked.setVisible(false);
         }
 
@@ -724,7 +724,7 @@ public class PlayerController {
             String id = strarr[0];
             int nbr = Integer.parseInt(strarr[1]);
 
-            if (gameboardP1.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected()) == 0) {
+            if (gameboardP1.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected())) {
                 markShips(nbr, id);
 
 
@@ -745,16 +745,21 @@ public class PlayerController {
                 fourthtwoship.setDisable(false);
 
                 lbl_message.setText(messageShipPlaced);
-            } else if (gameboardP1.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected()) == 1) {
-                lbl_message.setText(messageNotInGameboard);
-            } else if (gameboardP1.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected()) == 2) {
-                lbl_message.setText(messagePlaceOccupied);
-            } else {
-                lbl_message.setText(messageNeighbor);
+            } else{
+                if (gameboardP1.getError() == 1) {
+                    lbl_message.setText(messageNotInGameboard);
+                } else if (gameboardP1.getError() == 2) {
+                    lbl_message.setText(messagePlaceOccupied);
+                } else if (gameboardP1.getError() == 3){
+                    lbl_message.setText(messageNeighbor);
+                }
             }
-            if (!sixship.isVisible() && !firstfourship.isVisible() && !secondfourship.isVisible() && !firstthreeship.isVisible() &&
+            if ((!sixship.isVisible() && !firstfourship.isVisible() && !secondfourship.isVisible() && !firstthreeship.isVisible() &&
                     !secondthreeship.isVisible() && !thirdthreeship.isVisible() && !firsttwoship.isVisible() && !secondtwoship.isVisible() &&
-                    !thirdtwoship.isVisible() && !fourthtwoship.isVisible()) {
+                    !thirdtwoship.isVisible() && !fourthtwoship.isVisible())&&(!sixship_clicked.isVisible() && !firstfourship_clicked.isVisible() &&
+                    !secondfourship_clicked.isVisible() && !firstthreeship_clicked.isVisible() && !secondthreeship_clicked.isVisible() &&
+                    !thirdthreeship_clicked.isVisible() && !firsttwoship_clicked.isVisible() && !secondtwoship_clicked.isVisible() &&
+                    !thirdtwoship_clicked.isVisible() && !fourthtwoship_clicked.isVisible())) {
                 if (btn_finishp1 != null) {
                     btn_finishp1.setDisable(false);
                 }
@@ -777,7 +782,7 @@ public class PlayerController {
             String id = strarr[0];
             int nbr = Integer.parseInt(strarr[1]);
 
-            if (gameboardP2.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected()) == 0) {
+            if (gameboardP2.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected())) {
                 markShips(nbr, id);
 
 
@@ -798,16 +803,21 @@ public class PlayerController {
                 fourthtwoship.setDisable(false);
 
                 lbl_message.setText(messageShipPlaced);
-            } else if (gameboardP2.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected()) == 1) {
-                lbl_message.setText(messageNotInGameboard);
-            } else if (gameboardP2.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected()) == 2) {
-                lbl_message.setText(messagePlaceOccupied);
-            } else {
-                lbl_message.setText(messageNeighbor);
+            } else{
+                if (gameboardP2.getError() == 1) {
+                    lbl_message.setText(messageNotInGameboard);
+                } else if (gameboardP2.getError() == 2) {
+                    lbl_message.setText(messagePlaceOccupied);
+                } else if (gameboardP2.getError() == 3){
+                    lbl_message.setText(messageNeighbor);
+                }
             }
-            if (!sixship.isVisible() && !firstfourship.isVisible() && !secondfourship.isVisible() && !firstthreeship.isVisible() &&
+            if ((!sixship.isVisible() && !firstfourship.isVisible() && !secondfourship.isVisible() && !firstthreeship.isVisible() &&
                     !secondthreeship.isVisible() && !thirdthreeship.isVisible() && !firsttwoship.isVisible() && !secondtwoship.isVisible() &&
-                    !thirdtwoship.isVisible() && !fourthtwoship.isVisible()) {
+                    !thirdtwoship.isVisible() && !fourthtwoship.isVisible())&&(!sixship_clicked.isVisible() && !firstfourship_clicked.isVisible() &&
+                    !secondfourship_clicked.isVisible() && !firstthreeship_clicked.isVisible() && !secondthreeship_clicked.isVisible() &&
+                    !thirdthreeship_clicked.isVisible() && !firsttwoship_clicked.isVisible() && !secondtwoship_clicked.isVisible() &&
+                    !thirdtwoship_clicked.isVisible() && !fourthtwoship_clicked.isVisible())) {
                 if (btn_finishp1 != null) {
                     btn_finishp1.setDisable(false);
                 }

@@ -20,6 +20,7 @@ public class Gameboard {
     private Player player;
     private Ship[][] board = new Ship[10][10];
     private Ship alreadyHit = new Ship(25, true);
+    private int Error;
     //Variable um zerstörte Schiffe zu zählen
     private int counter = 0;
 
@@ -32,6 +33,10 @@ public class Gameboard {
      */
     public Gameboard(Player p) {
         player = p;
+    }
+
+    public int getError() {
+        return Error;
     }
 
     /**
@@ -47,42 +52,42 @@ public class Gameboard {
      * @return Wenn das Schiff platziert werden kann true sonst false.
      */
 
-    public int placeShipOnBoard(Ship ship, int x, int y, boolean alignment) {
+    public boolean placeShipOnBoard(Ship ship, int x, int y, boolean alignment) {
             int length = ship.getType();
-            int result = 10;
 
             if (x + length - 1 > 9 && !alignment) {
-                result = 1;
-                return result;
+                Error = 1;
+                return false; // Nicht im Spielfeld
             } else if (y + length - 1 > 9 && alignment) {
-                result = 1;
-                return result;
+                Error = 1;
+                return false; // Nicht im Spielfeld
             }
             if (!alignment) { //horizontal
                 for (int i = 0; i < length; i++) {
                     if (board[x + i][y] != null) {
-                        result = 2;
-                        return result;
+                        Error = 2;
+                        return false; // Platz schon belegt
                     }
                 }
             } else { //vertikal
                 for (int i = 0; i < length; i++) {
                     if (board[x][y + i] != null) {
-                        result = 2;
-                        return result;
+                        Error = 2;
+                        return false; // Platz schon belegt
+
                     }
                 }
             }
 
             if (alignment) {
                 if (!checkVertical(length, x, y)) {
-                    result = 3;
-                    return result;
+                    Error = 3;
+                    return false; //Fehler: Nachbar
                 }
             } else {
                 if (!checkHorizontal(length, x, y)) {
-                    result = 3;
-                    return result;
+                    Error = 3;
+                    return false; //Fehler: Nachbar
                 }
             }
 
@@ -90,15 +95,13 @@ public class Gameboard {
                 for (int i = 0; i < length; i++) {
                     board[x + i][y] = ship;
                 }
-                result = 0;
-                return result;
+                return true; //erfolgreich
 
             } else { //vertikal
                 for (int i = 0; i < length; i++) {
                     board[x][y + i] = ship;
                 }
-                result = 0;
-                return result;
+                return true; //erfolgreich
             }
     }
 
