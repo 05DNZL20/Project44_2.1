@@ -54,8 +54,8 @@ public class PlayerController {
     private static String name1, name2;
 
     private final String messageNeighbor = "Can't place Ship: Neighbor!";
-    private final String messageNotInGameboard = "Can't place Ship: Not in the gameboard anymore!";
-    private final String messagePlaceOccupied = "Can't place Ship: place already occupied!";
+    private final String messageNotInGameboard = "Can't place Ship: Not in\nthe gameboard anymore!";
+    private final String messagePlaceOccupied = "Can't place Ship: place\nalready occupied!";
     private final String messageShipPlaced = "Ship placed!";
 
     private int x, y;
@@ -744,13 +744,17 @@ public class PlayerController {
                 thirdtwoship.setDisable(false);
                 fourthtwoship.setDisable(false);
 
+                lbl_message.setTextFill(Color.GREEN);
                 lbl_message.setText(messageShipPlaced);
             } else{
                 if (gameboardP1.getError() == 1) {
+                    lbl_message.setTextFill(Color.RED);
                     lbl_message.setText(messageNotInGameboard);
                 } else if (gameboardP1.getError() == 2) {
+                    lbl_message.setTextFill(Color.RED);
                     lbl_message.setText(messagePlaceOccupied);
                 } else if (gameboardP1.getError() == 3){
+                    lbl_message.setTextFill(Color.RED);
                     lbl_message.setText(messageNeighbor);
                 }
             }
@@ -802,13 +806,17 @@ public class PlayerController {
                 thirdtwoship.setDisable(false);
                 fourthtwoship.setDisable(false);
 
+                lbl_message.setTextFill(Color.GREEN);
                 lbl_message.setText(messageShipPlaced);
             } else{
                 if (gameboardP2.getError() == 1) {
+                    lbl_message.setTextFill(Color.RED);
                     lbl_message.setText(messageNotInGameboard);
                 } else if (gameboardP2.getError() == 2) {
+                    lbl_message.setTextFill(Color.RED);
                     lbl_message.setText(messagePlaceOccupied);
                 } else if (gameboardP2.getError() == 3){
+                    lbl_message.setTextFill(Color.RED);
                     lbl_message.setText(messageNeighbor);
                 }
             }
