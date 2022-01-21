@@ -19,7 +19,6 @@ Index of Gameboard:
 public class Gameboard {
     private Player player;
     private Ship[][] board = new Ship[10][10];
-    private Ship alreadyHit = new Ship(25, true);
     private int Error;
     //Variable um zerstörte Schiffe zu zählen
     private int counter = 0;
@@ -120,15 +119,12 @@ public class Gameboard {
 
         if (board[x][y] == null) {
             return 0;
-        } else if (board[x][y].equals(alreadyHit)) {
-            return 2;
-        } else {
+        }else {
             board[x][y].hit();
             if (!board[x][y].isShipAlive()) {
                 System.out.println("Ship destroyed!");
                 counter++;
             }
-            board[x][y] = alreadyHit;
             return 1;
         }
     }
