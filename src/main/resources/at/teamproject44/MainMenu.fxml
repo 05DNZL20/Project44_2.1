@@ -5,21 +5,21 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.MainMenuController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="712.0" stylesheets="@CSS/font_saira.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.MainMenuController">
    <children>
-      <ImageView fitHeight="475.0" fitWidth="717.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="475.0" fitWidth="723.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Battleship_Background.jpeg" />
+            <Image url="@Images/Battleship_Background.jpeg" />
          </image></ImageView>
-      <Button fx:id="btn_startgame" alignment="CENTER" layoutX="226.0" layoutY="198.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#click_startgame" prefHeight="60.0" prefWidth="260.0" text="Start Game" AnchorPane.leftAnchor="226.0" AnchorPane.topAnchor="198.0">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font></Button>
-      <Button fx:id="btn_gamerules" alignment="CENTER" layoutX="225.0" layoutY="272.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#click_gamerules" prefHeight="60.0" prefWidth="260.0" text="Game Rules">
+      <Button fx:id="btn_startgame" alignment="CENTER" focusTraversable="false" layoutX="226.0" layoutY="198.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#click_startgame" onMouseEntered="#hover_enter" onMouseExited="#hover_exit" prefHeight="60.0" prefWidth="260.0" text="Start Game" AnchorPane.leftAnchor="226.0" AnchorPane.topAnchor="198.0">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button fx:id="btn_credits" alignment="CENTER" layoutX="225.0" layoutY="348.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#click_contacts" prefHeight="60.0" prefWidth="260.0" text="Credits">
+      <Button fx:id="btn_gamerules" alignment="CENTER" focusTraversable="false" layoutX="225.0" layoutY="272.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#click_gamerules" onMouseEntered="#hover_enter" onMouseExited="#hover_exit" prefHeight="60.0" prefWidth="260.0" text="Game Rules">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="btn_credits" alignment="CENTER" focusTraversable="false" layoutX="225.0" layoutY="348.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#click_contacts" onMouseEntered="#hover_enter" onMouseExited="#hover_exit" prefHeight="60.0" prefWidth="260.0" text="Credits">
          <font>
             <Font size="24.0" />
          </font></Button>

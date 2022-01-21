@@ -47,41 +47,42 @@ public class Gameboard {
      * @return Wenn das Schiff platziert werden kann true sonst false.
      */
 
-    public boolean placeShipOnBoard(Ship ship, int x, int y, boolean alignment) {
+    public int placeShipOnBoard(Ship ship, int x, int y, boolean alignment) {
             int length = ship.getType();
+            int result = 10;
 
             if (x + length - 1 > 9 && !alignment) {
-                System.out.println("Nicht mehr im Spielbereich");
-                return false;
+                result = 1;
+                return result;
             } else if (y + length - 1 > 9 && alignment) {
-                System.out.println("Nicht mehr im Spielbereich");
-                return false;
+                result = 1;
+                return result;
             }
             if (!alignment) { //horizontal
                 for (int i = 0; i < length; i++) {
                     if (board[x + i][y] != null) {
-                        System.out.println("Platz schon belegt");
-                        return false;
+                        result = 2;
+                        return result;
                     }
                 }
             } else { //vertikal
                 for (int i = 0; i < length; i++) {
                     if (board[x][y + i] != null) {
-                        System.out.println("Platz schon belegt");
-                        return false;
+                        result = 2;
+                        return result;
                     }
                 }
             }
 
             if (alignment) {
                 if (!checkVertical(length, x, y)) {
-                    System.out.println("Nachbar");
-                    return false;
+                    result = 3;
+                    return result;
                 }
             } else {
                 if (!checkHorizontal(length, x, y)) {
-                    System.out.println("Nachbar");
-                    return false;
+                    result = 3;
+                    return result;
                 }
             }
 
@@ -89,13 +90,15 @@ public class Gameboard {
                 for (int i = 0; i < length; i++) {
                     board[x + i][y] = ship;
                 }
-                return true;
+                result = 0;
+                return result;
 
             } else { //vertikal
                 for (int i = 0; i < length; i++) {
                     board[x][y + i] = ship;
                 }
-                return true;
+                result = 0;
+                return result;
             }
     }
 

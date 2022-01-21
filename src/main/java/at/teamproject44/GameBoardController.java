@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
@@ -132,7 +133,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re00.setDisable(true);
-            } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
+            }
+            else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 0) == 1) {
                     lbl_message.setText(messageHit);
                     re01.setFill(Color.RED);
@@ -147,7 +149,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re01.setDisable(true);
-            } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
+            }
+            else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re02.setFill(Color.RED);
@@ -162,7 +165,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re02.setDisable(true);
-            } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
+            }
+            else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re03.setFill(Color.RED);
@@ -177,7 +181,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re03.setDisable(true);
-            } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
+            }
+            else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re04.setFill(Color.RED);
@@ -192,7 +197,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re04.setDisable(true);
-            } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
+            }
+            else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re05.setFill(Color.RED);
@@ -207,7 +213,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re05.setDisable(true);
-            } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
+            }
+            else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
                 if (gameboardP1.hit(6, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re06.setFill(Color.RED);
@@ -222,7 +229,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re06.setDisable(true);
-            } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
+            }
+            else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re07.setFill(Color.RED);
@@ -237,7 +245,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re07.setDisable(true);
-            } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
+            }
+            else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
                 if (gameboardP1.hit(8, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re08.setFill(Color.RED);
@@ -252,7 +261,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re08.setDisable(true);
-            } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
+            }
+            else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
                 if (gameboardP1.hit(9, 0) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re09.setFill(Color.RED);
@@ -285,7 +295,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re10.setDisable(true);
-            } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
+            }
+            else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re11.setFill(Color.RED);
@@ -300,7 +311,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re11.setDisable(true);
-            } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
+            }
+            else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re12.setFill(Color.RED);
@@ -315,7 +327,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re12.setDisable(true);
-            } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
+            }
+            else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re13.setFill(Color.RED);
@@ -330,7 +343,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re13.setDisable(true);
-            } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
+            }
+            else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re14.setFill(Color.RED);
@@ -345,7 +359,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re14.setDisable(true);
-            } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
+            }
+            else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re15.setFill(Color.RED);
@@ -360,7 +375,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re15.setDisable(true);
-            } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
+            }
+            else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
                 if (gameboardP1.hit(6, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re16.setFill(Color.RED);
@@ -375,7 +391,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re16.setDisable(true);
-            } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
+            }
+            else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re17.setFill(Color.RED);
@@ -390,7 +407,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re17.setDisable(true);
-            } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
+            }
+            else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
                 if (gameboardP1.hit(8, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re18.setFill(Color.RED);
@@ -405,7 +423,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re18.setDisable(true);
-            } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
+            }
+            else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
                 if (gameboardP1.hit(9, 1) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re19.setFill(Color.RED);
@@ -438,7 +457,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re20.setDisable(true);
-            } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
+            }
+            else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re21.setFill(Color.RED);
@@ -453,7 +473,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re21.setDisable(true);
-            } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
+            }
+            else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re22.setFill(Color.RED);
@@ -468,7 +489,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re22.setDisable(true);
-            } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
+            }
+            else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re23.setFill(Color.RED);
@@ -483,7 +505,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re23.setDisable(true);
-            } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
+            }
+            else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re24.setFill(Color.RED);
@@ -498,7 +521,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re24.setDisable(true);
-            } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
+            }
+            else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re25.setFill(Color.RED);
@@ -513,7 +537,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re25.setDisable(true);
-            } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
+            }
+            else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
                 if (gameboardP1.hit(6, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re26.setFill(Color.RED);
@@ -528,7 +553,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re26.setDisable(true);
-            } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
+            }
+            else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re27.setFill(Color.RED);
@@ -543,7 +569,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re27.setDisable(true);
-            } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
+            }
+            else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
                 if (gameboardP1.hit(8, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re28.setFill(Color.RED);
@@ -558,7 +585,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re28.setDisable(true);
-            } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
+            }
+            else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
                 if (gameboardP1.hit(9, 2) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re29.setFill(Color.RED);
@@ -591,7 +619,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re30.setDisable(true);
-            } else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
+            }
+            else if (event.getSceneX() > 100 && event.getSceneX() <= 130) {
                 if (gameboardP1.hit(1, 3) == 1 && re31.getFill() != Color.RED) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re31.setFill(Color.RED);
@@ -606,7 +635,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re31.setDisable(true);
-            } else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
+            }
+            else if (event.getSceneX() > 130 && event.getSceneX() <= 160) {
                 if (gameboardP1.hit(2, 3) == 1 && re32.getFill() != Color.RED) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re32.setFill(Color.RED);
@@ -621,7 +651,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re32.setDisable(true);
-            } else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
+            }
+            else if (event.getSceneX() > 160 && event.getSceneX() <= 190) {
                 if (gameboardP1.hit(3, 3) == 1 && re33.getFill() != Color.RED) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re33.setFill(Color.RED);
@@ -636,7 +667,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re33.setDisable(true);
-            } else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
+            }
+            else if (event.getSceneX() > 190 && event.getSceneX() <= 220) {
                 if (gameboardP1.hit(4, 3) == 1 && re34.getFill() != Color.RED) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re34.setFill(Color.RED);
@@ -651,7 +683,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re34.setDisable(true);
-            } else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
+            }
+            else if (event.getSceneX() > 220 && event.getSceneX() <= 250) {
                 if (gameboardP1.hit(5, 3) == 1 && re35.getFill() != Color.RED) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re35.setFill(Color.RED);
@@ -666,7 +699,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re35.setDisable(true);
-            } else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
+            }
+            else if (event.getSceneX() > 250 && event.getSceneX() <= 280) {
                 if (gameboardP1.hit(6, 3) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re36.setFill(Color.RED);
@@ -681,7 +715,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re36.setDisable(true);
-            } else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
+            }
+            else if (event.getSceneX() > 280 && event.getSceneX() <= 310) {
                 if (gameboardP1.hit(7, 3) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re37.setFill(Color.RED);
@@ -696,7 +731,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re37.setDisable(true);
-            } else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
+            }
+            else if (event.getSceneX() > 310 && event.getSceneX() <= 340) {
                 if (gameboardP1.hit(8, 3) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re38.setFill(Color.RED);
@@ -711,7 +747,8 @@ public class GameBoardController implements Initializable {
                     turnP1 = true;
                 }
                 re38.setDisable(true);
-            } else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
+            }
+            else if (event.getSceneX() > 340 && event.getSceneX() <= 410) {
                 if (gameboardP1.hit(9, 3) == 1) {
                     lbl_message.setText(lbl_p2.getText() + ": "+messageHit);
                     re39.setFill(Color.RED);
@@ -3219,6 +3256,7 @@ public class GameBoardController implements Initializable {
         root = FXMLLoader.load(getClass().getResource("PlayerOne.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
+        primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
         primaryStage.setTitle("Battleship-Player1-Board");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -3241,6 +3279,7 @@ public class GameBoardController implements Initializable {
         root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
+        primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
         primaryStage.setTitle("Battleship");
         primaryStage.setScene(scene);
         primaryStage.show();

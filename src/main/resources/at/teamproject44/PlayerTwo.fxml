@@ -1,191 +1,270 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.PlayerController">
-    <center>
-        <VBox maxWidth="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER">
-            <children>
-                <HBox prefHeight="40.0">
-                    <children>
-                        <Rectangle fx:id="reX00" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX01" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX02" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX03" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX04" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX05" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX06" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX07" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX08" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="170.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX09" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="210.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                    </children>
-                </HBox>
-                <HBox layoutX="10.0" layoutY="10.0" prefHeight="40.0">
-                    <children>
-                        <Rectangle fx:id="reX10" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX11" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX12" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX13" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX14" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX15" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX16" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX17" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX18" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX19" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                    </children>
-                </HBox>
-                <HBox layoutX="10.0" layoutY="70.0" prefHeight="40.0">
-                    <children>
-                        <Rectangle fx:id="reX20" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX21" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX22" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX23" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX24" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX25" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX26" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX27" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX28" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX29" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                    </children></HBox>
-                <HBox layoutX="10.0" layoutY="130.0" prefHeight="40.0">
-                    <children>
-                        <Rectangle fx:id="reX30" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX31" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX32" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX33" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX34" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX35" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX36" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX37" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX38" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX39" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                    </children></HBox>
-                <HBox layoutX="10.0" layoutY="190.0" prefHeight="40.0">
-                    <children>
-                        <Rectangle fx:id="reX40" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX41" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX42" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX43" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX44" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX45" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX46" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX47" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX48" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX49" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                    </children></HBox>
-                <HBox layoutX="10.0" layoutY="10.0" prefHeight="40.0">
-                    <children>
-                        <Rectangle fx:id="reX50" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX51" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX52" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX53" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX54" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX55" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX56" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX57" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX58" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX59" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                    </children></HBox>
-                <HBox layoutX="10.0" layoutY="50.0" prefHeight="40.0">
-                    <children>
-                        <Rectangle fx:id="reX60" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX61" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX62" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX63" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX64" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX65" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX66" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX67" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX68" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="210.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX69" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                    </children></HBox>
-                <HBox layoutX="10.0" layoutY="90.0" prefHeight="40.0">
-                    <children>
-                        <Rectangle fx:id="reX70" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX71" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX72" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX73" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX74" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX75" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX76" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX77" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX78" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX79" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                    </children></HBox>
-                <HBox layoutX="10.0" layoutY="130.0" prefHeight="40.0">
-                    <children>
-                        <Rectangle fx:id="reX80" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX81" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX82" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX83" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX84" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX85" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX86" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX87" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX88" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX89" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                    </children></HBox>
-                <HBox layoutX="10.0" layoutY="170.0" prefHeight="40.0">
-                    <children>
-                        <Rectangle fx:id="reX90" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX91" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX92" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX93" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX94" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX95" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX96" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX97" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX98" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                        <Rectangle fx:id="reX99" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-                    </children></HBox>
-            </children>
-        </VBox>
-    </center>
-    <top>
-        <AnchorPane prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-            <children>
-                <Label layoutX="228.0" layoutY="42.0" text="Name: " AnchorPane.leftAnchor="228.0" AnchorPane.topAnchor="42.0" />
-                <TextField fx:id="txt_name" accessibleText="Player 2" layoutX="266.0" layoutY="38.0" promptText="Player 2" />
-                <Label layoutX="303.0" layoutY="64.0" text="(Please enter your name first!)" AnchorPane.leftAnchor="245.0" AnchorPane.topAnchor="70.0" />
-                <Button fx:id="btn_save" layoutX="442.0" layoutY="38.0" mnemonicParsing="false" onAction="#click_save2" text="Save Player" />
-            </children>
-        </AnchorPane>
-    </top>
-    <left>
-        <AnchorPane prefHeight="400.0" prefWidth="140.0" BorderPane.alignment="CENTER" />
-    </left>
-    <right>
-        <AnchorPane minHeight="600.0" prefHeight="600.0" prefWidth="265.0" BorderPane.alignment="CENTER">
-            <children>
-                <Rectangle fx:id="sixship" accessibleText="6" arcHeight="5.0" arcWidth="5.0" fill="#009200" height="240.0" onMouseClicked="#click_selectShip" stroke="BLACK" strokeType="INSIDE" width="40.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="25.0" />
-                <Rectangle fx:id="firstfourship" accessibleText="4" arcHeight="5.0" arcWidth="5.0" fill="#009200" height="160.0" layoutX="30.0" layoutY="10.0" onMouseClicked="#click_selectShip" stroke="BLACK" strokeType="INSIDE" width="40.0" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="25.0" />
-                <Rectangle fx:id="secondfourship" accessibleText="4" arcHeight="5.0" arcWidth="5.0" fill="#009200" height="160.0" layoutX="85.0" layoutY="20.0" onMouseClicked="#click_selectShip" stroke="BLACK" strokeType="INSIDE" width="40.0" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="195.0" />
-                <Rectangle fx:id="firstthreeship" accessibleText="3" arcHeight="5.0" arcWidth="5.0" fill="#009200" height="120.0" layoutX="85.0" layoutY="20.0" onMouseClicked="#click_selectShip" stroke="BLACK" strokeType="INSIDE" width="40.0" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="25.0" />
-                <Rectangle fx:id="secondthreeship" accessibleText="3" arcHeight="5.0" arcWidth="5.0" fill="#009200" height="120.0" layoutX="140.0" layoutY="20.0" onMouseClicked="#click_selectShip" stroke="BLACK" strokeType="INSIDE" width="40.0" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="155.0" />
-                <Rectangle fx:id="thirdthreeship" accessibleText="3" arcHeight="5.0" arcWidth="5.0" fill="#009200" height="120.0" layoutX="140.0" layoutY="150.0" onMouseClicked="#click_selectShip" stroke="BLACK" strokeType="INSIDE" width="40.0" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="285.0" />
-                <Rectangle fx:id="firsttwoship" accessibleText="2" arcHeight="5.0" arcWidth="5.0" fill="#009200" height="80.0" layoutX="140.0" layoutY="20.0" onMouseClicked="#click_selectShip" stroke="BLACK" strokeType="INSIDE" width="40.0" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="25.0" />
-                <Rectangle fx:id="secondtwoship" accessibleText="2" arcHeight="5.0" arcWidth="5.0" fill="#009200" height="80.0" layoutX="195.0" layoutY="20.0" onMouseClicked="#click_selectShip" stroke="BLACK" strokeType="INSIDE" width="40.0" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="115.0" />
-                <Rectangle fx:id="thirdtwoship" accessibleText="2" arcHeight="5.0" arcWidth="5.0" fill="#009200" height="80.0" layoutX="195.0" layoutY="110.0" onMouseClicked="#click_selectShip" stroke="BLACK" strokeType="INSIDE" width="40.0" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="205.0" />
-                <Rectangle fx:id="fourthtwoship" accessibleText="2" arcHeight="5.0" arcWidth="5.0" fill="#009200" height="80.0" layoutX="195.0" layoutY="200.0" onMouseClicked="#click_selectShip" stroke="BLACK" strokeType="INSIDE" width="40.0" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="295.0" />
-                <RadioButton fx:id="rbt_vertical" disable="true" layoutX="17.0" layoutY="390.0" mnemonicParsing="false" selected="true" text="Vertical">
-                    <toggleGroup>
-                        <ToggleGroup fx:id="alignment_group" />
-                    </toggleGroup>
-                </RadioButton>
-                <RadioButton fx:id="rbt_horizontal" disable="true" layoutX="17.0" layoutY="415.0" mnemonicParsing="false" text="Horizontal" toggleGroup="$alignment_group" />
-                <Label layoutX="32.0" layoutY="6.0" text="6er" />
-                <Label layoutX="87.0" layoutY="6.0" text="4er" />
-                <Label layoutX="142.0" layoutY="6.0" text="3er" />
-                <Label layoutX="197.0" layoutY="6.0" text="2er" />
-            </children></AnchorPane>
-    </right>
-    <bottom>
-        <AnchorPane prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-            <children>
-                <Button fx:id="btn_finishp2" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="266.0" layoutY="35.0" mnemonicParsing="false" onAction="#click_finishp2" prefHeight="30.0" prefWidth="68.0" text="Finish" />
-            <Button fx:id="btn_reset2" layoutX="638.0" layoutY="38.0" mnemonicParsing="false" onAction="#click_reset2" text="Reset all" AnchorPane.leftAnchor="638.0" AnchorPane.topAnchor="38.0" />
-            </children></AnchorPane>
-    </bottom>
-</BorderPane>
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.PlayerController">
+    <ImageView fitHeight="684.0" fitWidth="1023.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <image>
+            <Image url="@Images/Player_Background.png" />
+        </image></ImageView>
+    <VBox maxWidth="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="400.0" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="100.0" BorderPane.alignment="CENTER">
+        <children>
+            <HBox prefHeight="40.0">
+                <children>
+                    <Rectangle fx:id="reX00" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX01" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX02" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX03" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX04" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX05" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX06" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX07" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX08" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="170.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX09" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="210.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="40.0">
+                <children>
+                    <Rectangle fx:id="reX10" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX11" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX12" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX13" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX14" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX15" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX16" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX17" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX18" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX19" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="70.0" prefHeight="40.0">
+                <children>
+                    <Rectangle fx:id="reX20" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX21" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX22" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX23" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX24" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX25" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX26" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX27" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX28" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX29" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                </children></HBox>
+            <HBox layoutX="10.0" layoutY="130.0" prefHeight="40.0">
+                <children>
+                    <Rectangle fx:id="reX30" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX31" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX32" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX33" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX34" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX35" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX36" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX37" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX38" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX39" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                </children></HBox>
+            <HBox layoutX="10.0" layoutY="190.0" prefHeight="40.0">
+                <children>
+                    <Rectangle fx:id="reX40" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX41" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX42" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX43" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX44" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX45" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX46" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX47" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX48" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX49" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                </children></HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="40.0">
+                <children>
+                    <Rectangle fx:id="reX50" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX51" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX52" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX53" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX54" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX55" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX56" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX57" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX58" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX59" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                </children></HBox>
+            <HBox layoutX="10.0" layoutY="50.0" prefHeight="40.0">
+                <children>
+                    <Rectangle fx:id="reX60" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX61" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX62" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX63" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX64" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX65" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX66" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX67" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX68" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="210.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX69" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                </children></HBox>
+            <HBox layoutX="10.0" layoutY="90.0" prefHeight="40.0">
+                <children>
+                    <Rectangle fx:id="reX70" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX71" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX72" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX73" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX74" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX75" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX76" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX77" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX78" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX79" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                </children></HBox>
+            <HBox layoutX="10.0" layoutY="130.0" prefHeight="40.0">
+                <children>
+                    <Rectangle fx:id="reX80" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX81" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX82" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX83" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX84" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX85" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX86" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX87" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX88" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX89" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                </children></HBox>
+            <HBox layoutX="10.0" layoutY="170.0" prefHeight="40.0">
+                <children>
+                    <Rectangle fx:id="reX90" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX91" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX92" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX93" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX94" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX95" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX96" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="90.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX97" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX98" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                    <Rectangle fx:id="reX99" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="40.0" layoutX="290.0" layoutY="10.0" onMouseClicked="#click_placeShip2" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+                </children></HBox>
+        </children>
+    </VBox>
+    <Label layoutX="140.0" layoutY="36.0" stylesheets="@CSS/font_saira.css" text="N A M E :" textFill="WHITE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="36.0" />
+    <TextField fx:id="txt_name" accessibleText="Player 2" focusTraversable="false" layoutX="223.0" layoutY="38.0" promptText="Player 2" />
+    <Label layoutX="122.0" layoutY="71.0" stylesheets="@CSS/font_saira.css" text="(P L E A S E   E N T E R   Y O U R   N A M E   F I R S T!)" textFill="WHITE" AnchorPane.leftAnchor="122.0" AnchorPane.topAnchor="71.0" />
+    <Button fx:id="btn_save" focusTraversable="false" layoutX="391.0" layoutY="30.0" mnemonicParsing="false" onAction="#click_save2" onMouseEntered="#hover_enter" onMouseExited="#hover_exit" prefHeight="40.0" prefWidth="149.0" stylesheets="@CSS/font_saira.css" text="SAVE PLAYER">
+        <font>
+            <Font size="5.0" />
+        </font></Button>
+    <RadioButton fx:id="rbt_vertical" disable="true" layoutX="562.0" layoutY="366.0" mnemonicParsing="false" selected="true" stylesheets="@CSS/font_saira.css" text="VERTICAL" AnchorPane.leftAnchor="562.0">
+        <toggleGroup>
+            <ToggleGroup fx:id="alignment_group" />
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="rbt_horizontal" disable="true" layoutX="561.0" layoutY="401.0" mnemonicParsing="false" stylesheets="@CSS/font_saira.css" text="HORIZONTAL" toggleGroup="$alignment_group" AnchorPane.leftAnchor="561.0" />
+    <Label layoutX="611.0" layoutY="24.0" stylesheets="@CSS/font_saira.css" text="6er" textFill="WHITE" AnchorPane.leftAnchor="611.0" />
+    <Label layoutX="691.0" layoutY="24.0" stylesheets="@CSS/font_saira.css" text="4er" textFill="WHITE" AnchorPane.leftAnchor="691.0" />
+    <Label layoutX="773.0" layoutY="24.0" stylesheets="@CSS/font_saira.css" text="3er" textFill="WHITE" AnchorPane.leftAnchor="773.0" />
+    <Label layoutX="859.0" layoutY="24.0" stylesheets="@CSS/font_saira.css" text="2er" textFill="WHITE" AnchorPane.leftAnchor="859.0" />
+    <Label fx:id="lbl_message" alignment="CENTER" contentDisplay="CENTER" layoutX="542.0" layoutY="433.0" prefHeight="104.0" prefWidth="310.0" stylesheets="@CSS/font_saira.css" textAlignment="CENTER" AnchorPane.leftAnchor="542.0" />
+    <Button fx:id="btn_finishp2" alignment="CENTER" contentDisplay="CENTER" disable="true" focusTraversable="false" layoutX="694.0" layoutY="549.0" mnemonicParsing="false" onAction="#click_finishp2" onMouseEntered="#hover_enter" onMouseExited="#hover_exit" prefHeight="98.0" prefWidth="186.0" stylesheets="@CSS/font_saira.css" text="FINISH" AnchorPane.topAnchor="549.0" />
+    <Button fx:id="btn_resetp2" focusTraversable="false" layoutX="140.0" layoutY="543.0" mnemonicParsing="false" onAction="#click_reset2" onMouseEntered="#hover_enter" onMouseExited="#hover_exit" prefHeight="104.0" prefWidth="400.0" stylesheets="@CSS/font_saira.css" text="R E S E T   A L L" textFill="WHITE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="543.0" />
+    <ImageView fx:id="firsttwoship" fitHeight="80.0" fitWidth="90.0" layoutX="829.0" layoutY="96.0" onMouseClicked="#click_selectShip" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+        <image>
+            <Image url="@Images/twoship.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="fourthtwoship" fitHeight="80.0" fitWidth="90.0" layoutX="829.0" layoutY="395.0" onMouseClicked="#click_selectShip" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+        <image>
+            <Image url="@Images/twoship.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="secondtwoship" fitHeight="80.0" fitWidth="90.0" layoutX="829.0" layoutY="199.0" onMouseClicked="#click_selectShip" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+        <image>
+            <Image url="@Images/twoship.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="thirdtwoship" fitHeight="80.0" fitWidth="90.0" layoutX="829.0" layoutY="296.0" onMouseClicked="#click_selectShip" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+        <image>
+            <Image url="@Images/twoship.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="firstfourship" fitHeight="81.0" fitWidth="140.0" layoutX="636.0" layoutY="116.0" onMouseClicked="#click_selectShip" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+        <image>
+            <Image url="@Images/fourship.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="sixship" fitHeight="67.0" fitWidth="319.0" layoutX="488.0" layoutY="174.0" onMouseClicked="#click_selectShip" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+        <image>
+            <Image url="@Images/sixship.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="secondfourship" fitHeight="81.0" fitWidth="140.0" layoutX="636.0" layoutY="262.0" onMouseClicked="#click_selectShip" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+        <image>
+            <Image url="@Images/fourship.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="firstthreeship" fitHeight="50.0" fitWidth="115.0" layoutX="730.0" layoutY="100.0" onMouseClicked="#click_selectShip" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+        <image>
+            <Image url="@Images/threeship.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="thirdthreeship" fitHeight="50.0" fitWidth="115.0" layoutX="730.0" layoutY="345.0" onMouseClicked="#click_selectShip" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+        <image>
+            <Image url="@Images/threeship.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="secondthreeship" fitHeight="50.0" fitWidth="115.0" layoutX="730.0" layoutY="222.0" onMouseClicked="#click_selectShip" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+        <image>
+            <Image url="@Images/threeship.png" />
+        </image>
+    </ImageView>
+   <ImageView fx:id="sixship_clicked" fitHeight="67.0" fitWidth="319.0" layoutX="488.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" visible="false">
+      <image>
+         <Image url="@Images/sixship_clicked.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="firstfourship_clicked" fitHeight="81.0" fitWidth="140.0" layoutX="636.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" visible="false">
+      <image>
+         <Image url="@Images/fourship_clicked.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="secondfourship_clicked" fitHeight="81.0" fitWidth="140.0" layoutX="636.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" visible="false">
+      <image>
+         <Image url="@Images/fourship_clicked.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="firstthreeship_clicked" fitHeight="50.0" fitWidth="115.0" layoutX="730.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" visible="false">
+      <image>
+         <Image url="@Images/threeship_clicked.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="secondthreeship_clicked" fitHeight="50.0" fitWidth="115.0" layoutX="730.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" visible="false">
+      <image>
+         <Image url="@Images/threeship_clicked.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thirdthreeship_clicked" fitHeight="50.0" fitWidth="115.0" layoutX="730.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" visible="false">
+      <image>
+         <Image url="@Images/threeship_clicked.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="firsttwoship_clicked" fitHeight="80.0" fitWidth="90.0" layoutX="829.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" visible="false">
+      <image>
+         <Image url="@Images/twoship_clicked.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="secondtwoship_clicked" fitHeight="80.0" fitWidth="90.0" layoutX="829.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" visible="false">
+      <image>
+         <Image url="@Images/twoship_clicked.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="thirdtwoship_clicked" fitHeight="80.0" fitWidth="90.0" layoutX="829.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" visible="false">
+      <image>
+         <Image url="@Images/twoship_clicked.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="fourthtwoship_clicked" fitHeight="80.0" fitWidth="90.0" layoutX="829.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" visible="false">
+      <image>
+         <Image url="@Images/twoship_clicked.png" />
+      </image>
+   </ImageView>
+</AnchorPane>
