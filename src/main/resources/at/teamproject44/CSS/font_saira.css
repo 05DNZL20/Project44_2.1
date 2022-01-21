@@ -10,7 +10,8 @@ Button{
 
 Label{
      -fx-font-family: "Saira";
-     -fx-font-size: 12;
+     -fx-font-size: 18;
+     -fx-background-color: rgba(0,0,0,0.5);
 }
 
 RadioButton{
@@ -41,6 +42,3 @@ RadioButton{
       -fx-background-color: #ff0000;
  }
 
-#lbl_message{
-     -fx-font-size: 24;
-}

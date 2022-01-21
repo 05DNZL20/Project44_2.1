@@ -20,6 +20,7 @@ public class Gameboard {
     private Player player;
     private Ship[][] board = new Ship[10][10];
     private int Error;
+    private int DestroyedShips;
     //Variable um zerstörte Schiffe zu zählen
     private int counter = 0;
 
@@ -37,6 +38,12 @@ public class Gameboard {
     public int getError() {
         return Error;
     }
+
+    public int getDestroyedShips() {
+        return DestroyedShips;
+    }
+
+    public int getCounter(){return counter;}
 
     /**
      * place_ship_on_board(Schiffart, x_koordinate, y_koordinate, Ausrichtung_auf_Spielbrett):
@@ -115,22 +122,22 @@ public class Gameboard {
      * @param y Y_Koordinate
      * @return Liefert bei Treffer true zurück sonst false
      */
-    public int hit(int x, int y) {
+    public boolean hit(int x, int y) {
+        DestroyedShips = 0;
         if (board[x][y] == null) {
-            return 0;
+            return false;
         }else {
             board[x][y].hit();
             if (!board[x][y].isShipAlive()) {
-                System.out.println("Ship destroyed!");
+                DestroyedShips = 1; //Ship destroyed
                 counter++;
             }
-            return 1;
+            return true;
         }
     }
 
     // Methode um zurückzugeben, ob ein Player gewonnen hat
     public boolean hasWonGame() {
-
         if (counter == 10) {
             return true;
         }

@@ -148,9 +148,9 @@
         </children>
     </VBox>
     <Label layoutX="140.0" layoutY="36.0" stylesheets="@CSS/font_saira.css" text="N A M E :" textFill="WHITE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="36.0" />
-    <TextField fx:id="txt_name" accessibleText="Player 1" focusTraversable="false" layoutX="223.0" layoutY="38.0" promptText="Player 1" />
+    <TextField fx:id="txt_name" accessibleText="Player 1" focusTraversable="false" layoutX="228.0" layoutY="38.0" promptText="Player 1" />
     <Label layoutX="122.0" layoutY="71.0" stylesheets="@CSS/font_saira.css" text="(P L E A S E   E N T E R   Y O U R   N A M E   F I R S T!)" textFill="WHITE" AnchorPane.leftAnchor="122.0" AnchorPane.topAnchor="71.0" />
-    <Button fx:id="btn_save" focusTraversable="false" layoutX="391.0" layoutY="30.0" mnemonicParsing="false" onAction="#click_save1" onMouseEntered="#hover_enter" onMouseExited="#hover_exit" prefHeight="40.0" prefWidth="149.0" stylesheets="@CSS/font_saira.css" text="SAVE PLAYER">
+    <Button fx:id="btn_save" focusTraversable="false" layoutX="396.0" layoutY="24.0" mnemonicParsing="false" onAction="#click_save1" onMouseEntered="#hover_enter" onMouseExited="#hover_exit" prefHeight="29.0" prefWidth="149.0" stylesheets="@CSS/font_saira.css" text="SAVE PLAYER" AnchorPane.leftAnchor="395.0" AnchorPane.topAnchor="25.0">
       <font>
          <Font size="5.0" />
       </font></Button>

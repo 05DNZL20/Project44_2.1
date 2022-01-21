@@ -1,320 +1,313 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.GameBoardController">
-   <center>
-      <VBox maxWidth="300.0" minWidth="300.0" prefWidth="300.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label fx:id="lbl_p1" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="300.0" minHeight="20.0" minWidth="300.0" prefHeight="20.0" prefWidth="300.0" text="Player 1" />
+<AnchorPane minWidth="-Infinity" prefHeight="800.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.GameBoardController">
+   <ImageView fitHeight="800.0" fitWidth="670.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@Images/Gameboard_Background.png" />
+      </image>
+   </ImageView>
+      <Label fx:id="lbl_p1" alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="60.0" maxHeight="30.0" maxWidth="300.0" minHeight="20.0" minWidth="300.0" prefHeight="30.0" prefWidth="300.0" stylesheets="@CSS/font_saira.css" text="Player 1" textFill="WHITE" />
+    <VBox maxWidth="300.0" minWidth="300.0" prefWidth="300.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="90.0" BorderPane.alignment="CENTER">
+        <children>
             <HBox fx:id="hbx_pone1" disable="true" layoutX="10.0" layoutY="574.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="re00" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="12.0" y="14.0" />
-                  <Rectangle fx:id="re01" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" />
-                  <Rectangle fx:id="re02" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" />
-                  <Rectangle fx:id="re03" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" />
-                  <Rectangle fx:id="re04" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" />
-                  <Rectangle fx:id="re05" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" />
-                  <Rectangle fx:id="re06" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" />
-                  <Rectangle fx:id="re07" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" />
-                  <Rectangle fx:id="re08" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" />
-                  <Rectangle fx:id="re09" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="re00" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="12.0" y="14.0" />
+                    <Rectangle fx:id="re01" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" />
+                    <Rectangle fx:id="re02" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" />
+                    <Rectangle fx:id="re03" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" />
+                    <Rectangle fx:id="re04" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" />
+                    <Rectangle fx:id="re05" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" />
+                    <Rectangle fx:id="re06" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" />
+                    <Rectangle fx:id="re07" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" />
+                    <Rectangle fx:id="re08" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" />
+                    <Rectangle fx:id="re09" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_pone2" disable="true" layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="re10" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="1.0" />
-                  <Rectangle fx:id="re11" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="1.0" />
-                  <Rectangle fx:id="re12" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="1.0" />
-                  <Rectangle fx:id="re13" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="1.0" />
-                  <Rectangle fx:id="re14" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="1.0" />
-                  <Rectangle fx:id="re15" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="1.0" />
-                  <Rectangle fx:id="re16" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="1.0" />
-                  <Rectangle fx:id="re17" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="1.0" />
-                  <Rectangle fx:id="re18" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="1.0" />
-                  <Rectangle fx:id="re19" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="1.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="re10" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="1.0" />
+                    <Rectangle fx:id="re11" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="1.0" />
+                    <Rectangle fx:id="re12" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="1.0" />
+                    <Rectangle fx:id="re13" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="1.0" />
+                    <Rectangle fx:id="re14" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="1.0" />
+                    <Rectangle fx:id="re15" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="1.0" />
+                    <Rectangle fx:id="re16" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="1.0" />
+                    <Rectangle fx:id="re17" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="1.0" />
+                    <Rectangle fx:id="re18" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="1.0" />
+                    <Rectangle fx:id="re19" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="1.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_pone3" disable="true" layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="re20" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="2.0" />
-                  <Rectangle fx:id="re21" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="2.0" />
-                  <Rectangle fx:id="re22" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="2.0" />
-                  <Rectangle fx:id="re23" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="2.0" />
-                  <Rectangle fx:id="re24" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="2.0" />
-                  <Rectangle fx:id="re25" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="2.0" />
-                  <Rectangle fx:id="re26" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="2.0" />
-                  <Rectangle fx:id="re27" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="2.0" />
-                  <Rectangle fx:id="re28" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="2.0" />
-                  <Rectangle fx:id="re29" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="2.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="re20" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="2.0" />
+                    <Rectangle fx:id="re21" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="2.0" />
+                    <Rectangle fx:id="re22" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="2.0" />
+                    <Rectangle fx:id="re23" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="2.0" />
+                    <Rectangle fx:id="re24" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="2.0" />
+                    <Rectangle fx:id="re25" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="2.0" />
+                    <Rectangle fx:id="re26" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="2.0" />
+                    <Rectangle fx:id="re27" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="2.0" />
+                    <Rectangle fx:id="re28" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="2.0" />
+                    <Rectangle fx:id="re29" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="2.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_pone4" disable="true" layoutX="10.0" layoutY="90.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="re30" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="3.0" />
-                  <Rectangle fx:id="re31" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="3.0" />
-                  <Rectangle fx:id="re32" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="3.0" />
-                  <Rectangle fx:id="re33" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="3.0" />
-                  <Rectangle fx:id="re34" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="3.0" />
-                  <Rectangle fx:id="re35" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="3.0" />
-                  <Rectangle fx:id="re36" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="3.0" />
-                  <Rectangle fx:id="re37" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="3.0" />
-                  <Rectangle fx:id="re38" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="3.0" />
-                  <Rectangle fx:id="re39" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="3.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="re30" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="3.0" />
+                    <Rectangle fx:id="re31" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="3.0" />
+                    <Rectangle fx:id="re32" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="3.0" />
+                    <Rectangle fx:id="re33" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="3.0" />
+                    <Rectangle fx:id="re34" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="3.0" />
+                    <Rectangle fx:id="re35" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="3.0" />
+                    <Rectangle fx:id="re36" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="3.0" />
+                    <Rectangle fx:id="re37" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="3.0" />
+                    <Rectangle fx:id="re38" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="3.0" />
+                    <Rectangle fx:id="re39" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="3.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_pone5" disable="true" layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="re40" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="4.0" />
-                  <Rectangle fx:id="re41" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="4.0" />
-                  <Rectangle fx:id="re42" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="4.0" />
-                  <Rectangle fx:id="re43" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="4.0" />
-                  <Rectangle fx:id="re44" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="4.0" />
-                  <Rectangle fx:id="re45" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="4.0" />
-                  <Rectangle fx:id="re46" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="4.0" />
-                  <Rectangle fx:id="re47" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="4.0" />
-                  <Rectangle fx:id="re48" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="4.0" />
-                  <Rectangle fx:id="re49" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="4.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="re40" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="4.0" />
+                    <Rectangle fx:id="re41" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="4.0" />
+                    <Rectangle fx:id="re42" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="4.0" />
+                    <Rectangle fx:id="re43" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="4.0" />
+                    <Rectangle fx:id="re44" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="4.0" />
+                    <Rectangle fx:id="re45" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="4.0" />
+                    <Rectangle fx:id="re46" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="4.0" />
+                    <Rectangle fx:id="re47" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="4.0" />
+                    <Rectangle fx:id="re48" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="4.0" />
+                    <Rectangle fx:id="re49" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="4.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_pone6" disable="true" layoutX="10.0" layoutY="90.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="re50" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="5" />
-                  <Rectangle fx:id="re51" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="5.0" />
-                  <Rectangle fx:id="re52" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="5.0" />
-                  <Rectangle fx:id="re53" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="5.0" />
-                  <Rectangle fx:id="re54" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="5.0" />
-                  <Rectangle fx:id="re55" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="5.0" />
-                  <Rectangle fx:id="re56" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="5.0" />
-                  <Rectangle fx:id="re57" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="5.0" />
-                  <Rectangle fx:id="re58" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="5.0" />
-                  <Rectangle fx:id="re59" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="5.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="re50" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="5" />
+                    <Rectangle fx:id="re51" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="5.0" />
+                    <Rectangle fx:id="re52" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="5.0" />
+                    <Rectangle fx:id="re53" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="5.0" />
+                    <Rectangle fx:id="re54" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="5.0" />
+                    <Rectangle fx:id="re55" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="5.0" />
+                    <Rectangle fx:id="re56" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="5.0" />
+                    <Rectangle fx:id="re57" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="5.0" />
+                    <Rectangle fx:id="re58" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="5.0" />
+                    <Rectangle fx:id="re59" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="5.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_pone7" disable="true" layoutX="10.0" layoutY="120.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="re60" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="6.0" />
-                  <Rectangle fx:id="re61" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="6.0" />
-                  <Rectangle fx:id="re62" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="6.0" />
-                  <Rectangle fx:id="re63" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="6.0" />
-                  <Rectangle fx:id="re64" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="6.0" />
-                  <Rectangle fx:id="re65" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="6.0" />
-                  <Rectangle fx:id="re66" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="6.0" />
-                  <Rectangle fx:id="re67" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="6.0" />
-                  <Rectangle fx:id="re68" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="6.0" />
-                  <Rectangle fx:id="re69" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="6.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="re60" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="6.0" />
+                    <Rectangle fx:id="re61" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="6.0" />
+                    <Rectangle fx:id="re62" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="6.0" />
+                    <Rectangle fx:id="re63" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="6.0" />
+                    <Rectangle fx:id="re64" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="6.0" />
+                    <Rectangle fx:id="re65" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="6.0" />
+                    <Rectangle fx:id="re66" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="6.0" />
+                    <Rectangle fx:id="re67" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="6.0" />
+                    <Rectangle fx:id="re68" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="6.0" />
+                    <Rectangle fx:id="re69" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="6.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_pone8" disable="true" layoutX="10.0" layoutY="150.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="re70" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="7.0" />
-                  <Rectangle fx:id="re71" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="7.0" />
-                  <Rectangle fx:id="re72" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="7.0" />
-                  <Rectangle fx:id="re73" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="7.0" />
-                  <Rectangle fx:id="re74" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="7.0" />
-                  <Rectangle fx:id="re75" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="7.0" />
-                  <Rectangle fx:id="re76" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="7.0" />
-                  <Rectangle fx:id="re77" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="7.0" />
-                  <Rectangle fx:id="re78" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="7.0" />
-                  <Rectangle fx:id="re79" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="7.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="re70" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="7.0" />
+                    <Rectangle fx:id="re71" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="7.0" />
+                    <Rectangle fx:id="re72" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="7.0" />
+                    <Rectangle fx:id="re73" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="7.0" />
+                    <Rectangle fx:id="re74" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="7.0" />
+                    <Rectangle fx:id="re75" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="7.0" />
+                    <Rectangle fx:id="re76" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="7.0" />
+                    <Rectangle fx:id="re77" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="7.0" />
+                    <Rectangle fx:id="re78" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="7.0" />
+                    <Rectangle fx:id="re79" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="7.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_pone9" disable="true" layoutX="10.0" layoutY="240.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="re80" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="8.0" />
-                  <Rectangle fx:id="re81" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="8.0" />
-                  <Rectangle fx:id="re82" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="8.0" />
-                  <Rectangle fx:id="re83" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="8.0" />
-                  <Rectangle fx:id="re84" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="8.0" />
-                  <Rectangle fx:id="re85" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="8.0" />
-                  <Rectangle fx:id="re86" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="8.0" />
-                  <Rectangle fx:id="re87" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="8.0" />
-                  <Rectangle fx:id="re88" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="8.0" />
-                  <Rectangle fx:id="re89" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="8.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="re80" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="8.0" />
+                    <Rectangle fx:id="re81" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="8.0" />
+                    <Rectangle fx:id="re82" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="8.0" />
+                    <Rectangle fx:id="re83" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="8.0" />
+                    <Rectangle fx:id="re84" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="8.0" />
+                    <Rectangle fx:id="re85" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="8.0" />
+                    <Rectangle fx:id="re86" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="8.0" />
+                    <Rectangle fx:id="re87" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="8.0" />
+                    <Rectangle fx:id="re88" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="8.0" />
+                    <Rectangle fx:id="re89" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="8.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_pone10" disable="true" layoutX="10.0" layoutY="270.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="re90" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="9.0" />
-                  <Rectangle fx:id="re91" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="9.0" />
-                  <Rectangle fx:id="re92" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="9.0" />
-                  <Rectangle fx:id="re93" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="9.0" />
-                  <Rectangle fx:id="re94" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="9.0" />
-                  <Rectangle fx:id="re95" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="9.0" />
-                  <Rectangle fx:id="re96" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="9.0" />
-                  <Rectangle fx:id="re97" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="9.0" />
-                  <Rectangle fx:id="re98" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="9.0" />
-                  <Rectangle fx:id="re99" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="9.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="re90" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" y="9.0" />
+                    <Rectangle fx:id="re91" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" y="9.0" />
+                    <Rectangle fx:id="re92" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" y="9.0" />
+                    <Rectangle fx:id="re93" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" y="9.0" />
+                    <Rectangle fx:id="re94" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" y="9.0" />
+                    <Rectangle fx:id="re95" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" y="9.0" />
+                    <Rectangle fx:id="re96" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" y="9.0" />
+                    <Rectangle fx:id="re97" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" y="9.0" />
+                    <Rectangle fx:id="re98" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" y="9.0" />
+                    <Rectangle fx:id="re99" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" y="9.0" />
+                </children>
             </HBox>
-            <VBox alignment="CENTER" prefHeight="50.0" prefWidth="50.0" />
-            <Label fx:id="lbl_p2" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="300.0" minHeight="20.0" minWidth="300.0" prefHeight="20.0" prefWidth="300.0" text="Player 2" />
+            <VBox alignment="CENTER" prefHeight="18.0" prefWidth="50.0" />
+            <Label fx:id="lbl_p2" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" stylesheets="@CSS/font_saira.css" text="Player 2" textFill="WHITE" />
             <HBox fx:id="hbx_ptwo1" layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="rp00" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp01" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" />
-                  <Rectangle fx:id="rp02" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" />
-                  <Rectangle fx:id="rp03" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" />
-                  <Rectangle fx:id="rp04" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" />
-                  <Rectangle fx:id="rp05" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" />
-                  <Rectangle fx:id="rp06" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" />
-                  <Rectangle fx:id="rp07" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" />
-                  <Rectangle fx:id="rp08" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" />
-                  <Rectangle fx:id="rp09" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="rp00" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp01" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="1.0" />
+                    <Rectangle fx:id="rp02" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="2.0" />
+                    <Rectangle fx:id="rp03" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="3.0" />
+                    <Rectangle fx:id="rp04" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="4.0" />
+                    <Rectangle fx:id="rp05" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="5.0" />
+                    <Rectangle fx:id="rp06" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="6.0" />
+                    <Rectangle fx:id="rp07" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="7.0" />
+                    <Rectangle fx:id="rp08" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="8.0" />
+                    <Rectangle fx:id="rp09" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" x="9.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_ptwo2" layoutX="10.0" layoutY="40.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="rp10" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp11" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp12" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp13" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp14" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp15" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp16" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp17" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp18" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp19" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="rp10" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp11" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp12" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp13" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp14" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp15" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp16" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp17" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp18" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp19" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_ptwo3" layoutX="10.0" layoutY="70.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="rp20" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp21" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp22" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp23" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp24" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp25" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp26" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp27" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp28" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp29" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="rp20" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp21" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp22" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp23" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp24" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp25" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp26" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp27" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp28" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp29" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_ptwo4" layoutX="10.0" layoutY="100.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="rp30" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp31" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp32" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp33" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp34" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp35" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp36" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp37" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp38" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp39" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="rp30" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp31" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp32" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp33" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp34" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp35" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp36" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp37" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp38" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp39" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_ptwo5" layoutX="10.0" layoutY="130.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="rp40" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp41" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp42" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp43" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp44" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp45" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp46" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp47" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp48" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp49" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="rp40" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp41" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp42" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp43" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp44" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp45" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp46" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp47" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp48" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp49" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_ptwo6" layoutX="10.0" layoutY="160.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="rp50" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp51" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp52" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp53" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp54" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp55" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp56" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp57" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp58" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp59" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="rp50" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp51" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp52" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp53" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp54" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp55" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp56" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp57" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp58" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp59" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_ptwo7" layoutX="10.0" layoutY="190.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="rp60" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp61" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp62" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp63" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp64" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp65" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp66" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp67" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp68" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp69" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="rp60" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp61" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp62" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp63" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp64" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp65" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp66" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp67" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp68" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp69" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_ptwo8" layoutX="10.0" layoutY="220.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="rp70" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp71" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp72" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp73" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp74" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp75" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp76" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp77" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp78" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp79" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="rp70" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp71" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp72" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp73" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp74" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp75" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp76" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp77" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp78" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp79" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_ptwo9" layoutX="10.0" layoutY="250.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="rp80" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp81" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp82" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp83" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp84" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp85" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp86" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp87" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp88" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp89" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="rp80" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp81" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp82" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp83" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp84" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp85" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp86" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp87" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp88" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp89" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                </children>
             </HBox>
             <HBox fx:id="hbx_ptwo10" layoutX="10.0" layoutY="280.0" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="30.0">
-               <children>
-                  <Rectangle fx:id="rp90" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp91" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp92" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp93" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp94" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp95" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp96" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp97" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp98" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-                  <Rectangle fx:id="rp99" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-               </children>
+                <children>
+                    <Rectangle fx:id="rp90" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp91" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp92" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp93" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="40.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp94" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="70.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp95" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp96" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp97" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp98" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="160.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                    <Rectangle fx:id="rp99" arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="30.0" layoutX="250.0" layoutY="10.0" onMouseClicked="#shot" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                </children>
             </HBox>
-         </children>
-      </VBox>
-   </center>
-   <top>
-      <Pane prefHeight="70.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label fx:id="lbl_information" layoutX="286.0" layoutY="27.0" />
-         </children></Pane>
-   </top>
-   <left>
-      <Pane prefHeight="676.0" prefWidth="70.0" BorderPane.alignment="CENTER" />
-   </left>
-   <right>
-      <Pane prefHeight="676.0" prefWidth="231.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label fx:id="lbl_message" layoutX="20.0" layoutY="20.0">
-               <font>
-                  <Font name="Eras Bold ITC" size="18.0" />
-               </font></Label>
-            <Button fx:id="btn_restart" layoutX="90.0" layoutY="337.0" mnemonicParsing="false" onAction="#click_restart" text="Restart" visible="false" />
-         </children></Pane>
-   </right>
-   <bottom>
-      <Pane prefHeight="62.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
-   </bottom>
-</BorderPane>
+        </children>
+    </VBox>
+    <Label fx:id="lbl_information" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" prefHeight="55.0" prefWidth="655.0" stylesheets="@CSS/font_saira.css" text="lbl_information" textFill="WHITE" AnchorPane.leftAnchor="-1.0">
+      <font>
+         <Font size="36.0" />
+      </font></Label>
+    <Label fx:id="lbl_message" alignment="CENTER" contentDisplay="CENTER" layoutX="380.0" layoutY="359.0" prefHeight="108.0" prefWidth="269.0" stylesheets="@CSS/font_saira.css" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="380.0" AnchorPane.topAnchor="359.0">
+      <font>
+         <Font size="10.0" />
+      </font></Label>
+    <Button fx:id="btn_restart" focusTraversable="false" layoutX="497.0" layoutY="724.0" mnemonicParsing="false" onAction="#click_restart" prefHeight="55.0" prefWidth="137.0" stylesheets="@CSS/font_saira.css" text="Restart" visible="false" AnchorPane.leftAnchor="497.0" AnchorPane.topAnchor="724.0" />
+   <Label fx:id="lbl_ShipsPlayer1" layoutX="380.0" layoutY="215.0" stylesheets="@CSS/font_saira.css" text="lbl_ShipsPlayer1" textFill="WHITE" AnchorPane.leftAnchor="380.0" AnchorPane.topAnchor="211.0" />
+   <Label fx:id="lbl_ShipsPlayer2" layoutX="387.0" layoutY="557.0" stylesheets="@CSS/font_saira.css" text="lbl_ShipsPlayer2" textFill="WHITE" AnchorPane.leftAnchor="380.0" AnchorPane.topAnchor="559.0" />
+</AnchorPane>

@@ -438,239 +438,401 @@ public class PlayerController {
     }
 
     //"Übersetzer" damit man die X- und Y-Koordinaten für die Klasse "Gameboard" werden kann.
-    private void setXandY(MouseEvent e) {
+    private void setXandYnew(MouseEvent e) {
         if (e.getSceneY() > 100 && e.getSceneY() <= 140) {
             y = 0;
             if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
                 x = 0;
-            } else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
-                x = 1;
-            } else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
-                x = 2;
-            } else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
-                x = 3;
-            } else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
-                x = 4;
-            } else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
-                x = 5;
-            } else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
-                x = 6;
-            } else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
-                x = 7;
-            } else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
-                x = 8;
-            } else if (e.getSceneX() > 500 && e.getSceneX() <= 5400) {
-                x = 9;
             }
-        } else if (e.getSceneY() > 140 && e.getSceneY() <= 180) {
-            y = 1;
-            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
-                x = 0;
-            } else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
+            else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
                 x = 1;
-            } else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
-                x = 2;
-            } else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
-                x = 3;
-            } else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
-                x = 4;
-            } else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
-                x = 5;
-            } else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
-                x = 6;
-            } else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
-                x = 7;
-            } else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
-                x = 8;
-            } else if (e.getSceneX() > 500 && e.getSceneX() <= 5400) {
-                x = 9;
             }
-        } else if (e.getSceneY() > 180 && e.getSceneY() <= 220) {
-            y = 2;
-            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
-                x = 0;
-            } else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
-                x = 1;
-            } else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
+            else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
                 x = 2;
-            } else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
-                x = 3;
-            } else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
-                x = 4;
-            } else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
-                x = 5;
-            } else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
-                x = 6;
-            } else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
-                x = 7;
-            } else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
-                x = 8;
-            } else if (e.getSceneX() > 500 && e.getSceneX() <= 5400) {
-                x = 9;
             }
-        } else if (e.getSceneY() > 220 && e.getSceneY() <= 260) {
-            y = 3;
-            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
-                x = 0;
-            } else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
-                x = 1;
-            } else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
-                x = 2;
-            } else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
+            else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
                 x = 3;
-            } else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
-                x = 4;
-            } else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
-                x = 5;
-            } else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
-                x = 6;
-            } else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
-                x = 7;
-            } else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
-                x = 8;
-            } else if (e.getSceneX() > 500 && e.getSceneX() <= 5400) {
-                x = 9;
             }
-        } else if (e.getSceneY() > 260 && e.getSceneY() <= 300) {
-            y = 4;
-            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
-                x = 0;
-            } else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
-                x = 1;
-            } else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
-                x = 2;
-            } else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
-                x = 3;
-            } else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
+            else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
                 x = 4;
-            } else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
-                x = 5;
-            } else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
-                x = 6;
-            } else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
-                x = 7;
-            } else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
-                x = 8;
-            } else if (e.getSceneX() > 500 && e.getSceneX() <= 5400) {
-                x = 9;
             }
-        } else if (e.getSceneY() > 300 && e.getSceneY() <= 340) {
-            y = 5;
-            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
-                x = 0;
-            } else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
-                x = 1;
-            } else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
-                x = 2;
-            } else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
-                x = 3;
-            } else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
-                x = 4;
-            } else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
+            else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
                 x = 5;
-            } else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
-                x = 6;
-            } else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
-                x = 7;
-            } else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
-                x = 8;
-            } else if (e.getSceneX() > 500 && e.getSceneX() <= 5400) {
-                x = 9;
             }
-        } else if (e.getSceneY() > 340 && e.getSceneY() <= 380) {
-            y = 6;
-            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
-                x = 0;
-            } else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
-                x = 1;
-            } else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
-                x = 2;
-            } else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
-                x = 3;
-            } else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
-                x = 4;
-            } else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
-                x = 5;
-            } else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
+            else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
                 x = 6;
-            } else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
-                x = 7;
-            } else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
-                x = 8;
-            } else if (e.getSceneX() > 500 && e.getSceneX() <= 5400) {
-                x = 9;
             }
-        } else if (e.getSceneY() > 380 && e.getSceneY() <= 420) {
-            y = 7;
-            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
-                x = 0;
-            } else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
-                x = 1;
-            } else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
-                x = 2;
-            } else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
-                x = 3;
-            } else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
-                x = 4;
-            } else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
-                x = 5;
-            } else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
-                x = 6;
-            } else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
+            else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
                 x = 7;
-            } else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
-                x = 8;
-            } else if (e.getSceneX() > 500 && e.getSceneX() <= 5400) {
-                x = 9;
             }
-        } else if (e.getSceneY() > 420 && e.getSceneY() <= 460) {
-            y = 8;
-            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
-                x = 0;
-            } else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
-                x = 1;
-            } else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
-                x = 2;
-            } else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
-                x = 3;
-            } else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
-                x = 4;
-            } else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
-                x = 5;
-            } else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
-                x = 6;
-            } else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
-                x = 7;
-            } else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
+            else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
                 x = 8;
-            } else if (e.getSceneX() > 500 && e.getSceneX() <= 5400) {
-                x = 9;
             }
-        } else if (e.getSceneY() > 460 && e.getSceneY() <= 500) {
-            y = 9;
-            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
-                x = 0;
-            } else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
-                x = 1;
-            } else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
-                x = 2;
-            } else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
-                x = 3;
-            } else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
-                x = 4;
-            } else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
-                x = 5;
-            } else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
-                x = 6;
-            } else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
-                x = 7;
-            } else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
-                x = 8;
-            } else if (e.getSceneX() > 500 && e.getSceneX() <= 5400) {
+            else if (e.getSceneX() > 500 && e.getSceneX() <= 540) {
                 x = 9;
             }
         }
+        else if (e.getSceneY() > 140 && e.getSceneY() <= 180) {
+            y = 1;
+            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
+                x = 0;
+            }
+            else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
+                x = 1;
+            }
+            else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
+                x = 2;
+            }
+            else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
+                x = 3;
+            }
+            else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
+                x = 4;
+            }
+            else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
+                x = 5;
+            }
+            else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
+                x = 6;
+            }
+            else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
+                x = 7;
+            }
+            else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
+                x = 8;
+            }
+            else if (e.getSceneX() > 500 && e.getSceneX() <= 540) {
+                x = 9;
+            }
+        }
+        else if (e.getSceneY() > 180 && e.getSceneY() <= 220) {
+            y = 2;
+            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
+                x = 0;
+            }
+            else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
+                x = 1;
+            }
+            else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
+                x = 2;
+            }
+            else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
+                x = 3;
+            }
+            else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
+                x = 4;
+            }
+            else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
+                x = 5;
+            }
+            else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
+                x = 6;
+            }
+            else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
+                x = 7;
+            }
+            else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
+                x = 8;
+            }
+            else if (e.getSceneX() > 500 && e.getSceneX() <= 540) {
+                x = 9;
+            }
+        }
+        else if (e.getSceneY() > 220 && e.getSceneY() <= 260) {
+            y = 3;
+            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
+                x = 0;
+            }
+            else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
+                x = 1;
+            }
+            else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
+                x = 2;
+            }
+            else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
+                x = 3;
+            }
+            else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
+                x = 4;
+            }
+            else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
+                x = 5;
+            }
+            else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
+                x = 6;
+            }
+            else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
+                x = 7;
+            }
+            else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
+                x = 8;
+            }
+            else if (e.getSceneX() > 500 && e.getSceneX() <= 540) {
+                x = 9;
+            }
+        }
+        else if (e.getSceneY() > 260 && e.getSceneY() <= 300) {
+            y = 4;
+            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
+                x = 0;
+            }
+            else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
+                x = 1;
+            }
+            else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
+                x = 2;
+            }
+            else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
+                x = 3;
+            }
+            else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
+                x = 4;
+            }
+            else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
+                x = 5;
+            }
+            else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
+                x = 6;
+            }
+            else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
+                x = 7;
+            }
+            else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
+                x = 8;
+            }
+            else if (e.getSceneX() > 500 && e.getSceneX() <= 540) {
+                x = 9;
+            }
+        }
+        else if (e.getSceneY() > 300 && e.getSceneY() <= 340) {
+            y = 5;
+            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
+                x = 0;
+            }
+            else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
+                x = 1;
+            }
+            else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
+                x = 2;
+            }
+            else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
+                x = 3;
+            }
+            else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
+                x = 4;
+            }
+            else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
+                x = 5;
+            }
+            else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
+                x = 6;
+            }
+            else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
+                x = 7;
+            }
+            else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
+                x = 8;
+            }
+            else if (e.getSceneX() > 500 && e.getSceneX() <= 540) {
+                x = 9;
+            }
+        }
+        else if (e.getSceneY() > 340 && e.getSceneY() <= 380) {
+            y = 6;
+            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
+                x = 0;
+            }
+            else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
+                x = 1;
+            }
+            else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
+                x = 2;
+            }
+            else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
+                x = 3;
+            }
+            else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
+                x = 4;
+            }
+            else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
+                x = 5;
+            }
+            else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
+                x = 6;
+            }
+            else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
+                x = 7;
+            }
+            else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
+                x = 8;
+            }
+            else if (e.getSceneX() > 500 && e.getSceneX() <= 540) {
+                x = 9;
+            }
+        }
+        else if (e.getSceneY() > 380 && e.getSceneY() <= 420) {
+            y = 7;
+            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
+                x = 0;
+            }
+            else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
+                x = 1;
+            }
+            else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
+                x = 2;
+            }
+            else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
+                x = 3;
+            }
+            else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
+                x = 4;
+            }
+            else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
+                x = 5;
+            }
+            else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
+                x = 6;
+            }
+            else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
+                x = 7;
+            }
+            else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
+                x = 8;
+            }
+            else if (e.getSceneX() > 500 && e.getSceneX() <= 540) {
+                x = 9;
+            }
+        }
+        else if (e.getSceneY() > 420 && e.getSceneY() <= 460) {
+            y = 8;
+            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
+                x = 0;
+            }
+            else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
+                x = 1;
+            }
+            else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
+                x = 2;
+            }
+            else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
+                x = 3;
+            }
+            else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
+                x = 4;
+            }
+            else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
+                x = 5;
+            }
+            else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
+                x = 6;
+            }
+            else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
+                x = 7;
+            }
+            else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
+                x = 8;
+            }
+            else if (e.getSceneX() > 500 && e.getSceneX() <= 540) {
+                x = 9;
+            }
+        }
+        else if (e.getSceneY() > 460 && e.getSceneY() <= 500) {
+            y = 9;
+            if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
+                x = 0;
+            }
+            else if (e.getSceneX() > 180 && e.getSceneX() <= 220) {
+                x = 1;
+            }
+            else if (e.getSceneX() > 220 && e.getSceneX() <= 260) {
+                x = 2;
+            }
+            else if (e.getSceneX() > 260 && e.getSceneX() <= 300) {
+                x = 3;
+            }
+            else if (e.getSceneX() > 300 && e.getSceneX() <= 340) {
+                x = 4;
+            }
+            else if (e.getSceneX() > 340 && e.getSceneX() <= 380) {
+                x = 5;
+            }
+            else if (e.getSceneX() > 380 && e.getSceneX() <= 420) {
+                x = 6;
+            }
+            else if (e.getSceneX() > 420 && e.getSceneX() <= 460) {
+                x = 7;
+            }
+            else if (e.getSceneX() > 460 && e.getSceneX() <= 500) {
+                x = 8;
+            }
+            else if (e.getSceneX() > 500 && e.getSceneX() <= 540) {
+                x = 9;
+            }
+        }
+    }
 
+    private void setXandY(MouseEvent e) {
+        if (e.getSceneX() > 140 && e.getSceneX() <= 179) {
+            x = 0;
+        }
+        else if (e.getSceneX() > 180 && e.getSceneX() <= 219) {
+            x = 1;
+        }
+        else if (e.getSceneX() > 220 && e.getSceneX() <= 259) {
+            x = 2;
+        }
+        else if (e.getSceneX() > 260 && e.getSceneX() <= 299) {
+            x = 3;
+        }
+        else if (e.getSceneX() > 300 && e.getSceneX() <= 339) {
+            x = 4;
+        }
+        else if (e.getSceneX() > 340 && e.getSceneX() <= 379) {
+            x = 5;
+        }
+        else if (e.getSceneX() > 380 && e.getSceneX() <= 419) {
+            x = 6;
+        }
+        else if (e.getSceneX() > 420 && e.getSceneX() <= 459) {
+            x = 7;
+        }
+        else if (e.getSceneX() > 460 && e.getSceneX() <= 499) {
+            x = 8;
+        }
+        else if (e.getSceneX() > 500 && e.getSceneX() <= 539) {
+            x = 9;
+        }
+
+        if (e.getSceneY() > 100 && e.getSceneY() <= 139) {
+            y = 0;
+        }
+        else if (e.getSceneY() > 140 && e.getSceneY() <= 179) {
+            y = 1;
+        }
+        else if (e.getSceneY() > 180 && e.getSceneY() <= 219) {
+            y = 2;
+        }
+        else if (e.getSceneY() > 220 && e.getSceneY() <= 259) {
+            y = 3;
+        }
+        else if (e.getSceneY() > 260 && e.getSceneY() <= 299) {
+            y = 4;
+        }
+        else if (e.getSceneY() > 300 && e.getSceneY() <= 339) {
+            y = 5;
+        }
+        else if (e.getSceneY() > 340 && e.getSceneY() <= 379) {
+            y = 6;
+        }
+        else if (e.getSceneY() > 380 && e.getSceneY() <= 419) {
+            y = 7;
+        }
+        else if (e.getSceneY() > 420 && e.getSceneY() <= 459) {
+            y = 8;
+        }
+        else if (e.getSceneY() > 460 && e.getSceneY() <= 499) {
+            y = 9;
+        }
     }
 
 
@@ -841,7 +1003,8 @@ public class PlayerController {
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
         primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
-        primaryStage.setTitle("Battleship-Player2-Board");
+        primaryStage.setTitle("Battleship-Player2 Board");
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
 
@@ -865,6 +1028,7 @@ public class PlayerController {
         Stage primaryStage = new Stage();
         primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
         primaryStage.setTitle("Battleship-GameBoard");
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
 
@@ -1076,6 +1240,7 @@ public class PlayerController {
         Stage primaryStage = new Stage();
         primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
         primaryStage.setTitle("Battleship");
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
     }

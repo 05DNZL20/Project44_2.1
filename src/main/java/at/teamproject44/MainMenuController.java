@@ -33,7 +33,8 @@ public class MainMenuController {
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
         primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
-        primaryStage.setTitle("Battleship-Player1-Board");
+        primaryStage.setTitle("Battleship-Player1 Board");
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
 
@@ -57,6 +58,7 @@ public class MainMenuController {
         Stage primaryStage = new Stage();
         primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
         primaryStage.setTitle("Battleship-Game Rules");
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
 
@@ -81,6 +83,7 @@ public class MainMenuController {
         Stage primaryStage = new Stage();
         primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
         primaryStage.setTitle("Battleship-Credits");
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
 
@@ -117,6 +120,7 @@ public class MainMenuController {
         Stage primaryStage = new Stage();
         primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
         primaryStage.setTitle("Battleship");
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
