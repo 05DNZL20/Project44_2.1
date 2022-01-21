@@ -1,22 +1,25 @@
 package at.teamproject44;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 
 public class PlayerController {
     @FXML
-    Rectangle reX00, reX01, reX02, reX03, reX04, reX05, reX06, reX07, reX08, reX09,
+    private Rectangle reX00, reX01, reX02, reX03, reX04, reX05, reX06, reX07, reX08, reX09,
             reX10, reX11, reX12, reX13, reX14, reX15, reX16, reX17, reX18, reX19,
             reX20, reX21, reX22, reX23, reX24, reX25, reX26, reX27, reX28, reX29,
             reX30, reX31, reX32, reX33, reX34, reX35, reX36, reX37, reX38, reX39,
@@ -25,69 +28,74 @@ public class PlayerController {
             reX60, reX61, reX62, reX63, reX64, reX65, reX66, reX67, reX68, reX69,
             reX70, reX71, reX72, reX73, reX74, reX75, reX76, reX77, reX78, reX79,
             reX80, reX81, reX82, reX83, reX84, reX85, reX86, reX87, reX88, reX89,
-            reX90, reX91, reX92, reX93, reX94, reX95, reX96, reX97, reX98, reX99,
-            sixship, firstfourship, secondfourship, firstthreeship, secondthreeship, thirdthreeship, firsttwoship, secondtwoship, thirdtwoship, fourthtwoship;
+            reX90, reX91, reX92, reX93, reX94, reX95, reX96, reX97, reX98, reX99;
 
     @FXML
-    RadioButton rbt_vertical, rbt_horizontal;
+    private RadioButton rbt_vertical, rbt_horizontal;
 
     @FXML
-    Button btn_finishp1, btn_finishp2, btn_save;
+    private Button btn_finishp1, btn_finishp2, btn_save, btn_resetp1, btn_resetp2;
 
     @FXML
-    TextField txt_name;
+    private TextField txt_name;
 
-    static Gameboard gameboardP1 = null;
-    static Gameboard gameboardP2 = null;
-    static Ship ship = null;
-    static String name1,name2;
+    @FXML
+    private Label lbl_message;
 
-    int x, y;
+    @FXML
+    ImageView sixship, firstfourship, secondfourship, firstthreeship, secondthreeship, thirdthreeship, firsttwoship, secondtwoship, thirdtwoship, fourthtwoship,
+            sixship_clicked, firstfourship_clicked, secondfourship_clicked, firstthreeship_clicked, secondthreeship_clicked, thirdthreeship_clicked, firsttwoship_clicked, secondtwoship_clicked, thirdtwoship_clicked, fourthtwoship_clicked;
 
-    Parent root;
+    private Button btn;
 
-    public String getName1(){
+    private static Gameboard gameboardP1 = null;
+    private static Gameboard gameboardP2 = null;
+    private Ship ship = null;
+    private static String name1, name2;
+
+    private final String messageNeighbor = "Can't place Ship: Neighbor!";
+    private final String messageNotInGameboard = "Can't place Ship: Not in the gameboard anymore!";
+    private final String messagePlaceOccupied = "Can't place Ship: place already occupied!";
+    private final String messageShipPlaced = "Ship placed!";
+
+    private int x, y;
+    private int length;
+
+    private Parent root;
+
+    public String getName1() {
         return name1;
     }
-    public String getName2(){
+
+    public String getName2() {
         return name2;
     }
 
-
-    public Gameboard getPlayer1(){
+    public Gameboard getPlayer1() {
         return gameboardP1;
     }
-    public Gameboard getPlayer2(){
+
+    public Gameboard getPlayer2() {
         return gameboardP2;
     }
 
 
+    // Methode zur Generierung der Schiffe
     private void generateShip() {
-        if (sixship.getFill() == Color.BLUE) {
+        if (length == 6) {
             ship = new Ship(6, rbt_vertical.isSelected());
-        } else if ((firstfourship.getFill() == Color.BLUE) || (secondfourship.getFill() == Color.BLUE)) {
+        } else if (length == 4) {
             ship = new Ship(4, rbt_vertical.isSelected());
-        } else if ((firstthreeship.getFill() == Color.BLUE) || (secondthreeship.getFill() == Color.BLUE) || (thirdthreeship.getFill() == Color.BLUE)) {
+        } else if (length == 3) {
             ship = new Ship(3, rbt_vertical.isSelected());
-        } else if ((firsttwoship.getFill() == Color.BLUE) || (secondtwoship.getFill() == Color.BLUE) || (thirdtwoship.getFill() == Color.BLUE) || (fourthtwoship.getFill() == Color.BLUE)) {
+        } else if (length == 2) {
             ship = new Ship(2, rbt_vertical.isSelected());
         }
     }
-    private int getShipLength() {
-        int length = 0;
-        if (sixship.getFill() == Color.BLUE) {
-            length = 6;
-        } else if ((firstfourship.getFill() == Color.BLUE) || (secondfourship.getFill() == Color.BLUE)) {
-            length = 4;
-        } else if ((firstthreeship.getFill() == Color.BLUE) || (secondthreeship.getFill() == Color.BLUE) || (thirdthreeship.getFill() == Color.BLUE)) {
-            length = 3;
-        } else if ((firsttwoship.getFill() == Color.BLUE) || (secondtwoship.getFill() == Color.BLUE) || (thirdtwoship.getFill() == Color.BLUE) || (fourthtwoship.getFill() == Color.BLUE)) {
-            length = 2;
-        }
-        return length;
-    }
-    private void markShips(int nbr, String tmpString, String id) {
-        for (int i = 0; i < getShipLength(); i++) {
+
+    //Platzierte Schiffe werden weiß mit grünen Rändern auf Spielfeld markiert.
+    private void markShips(int nbr, String id) {
+        for (int i = 0; i < length; i++) {
             if (i != 0) {
                 if (rbt_vertical.isSelected()) {
                     nbr = nbr + 10;
@@ -95,7 +103,10 @@ public class PlayerController {
                     nbr = nbr + 1;
                 }
             }
-            tmpString = id + "X" + String.format("%02d", nbr);
+            String tmpString = id + "X" + String.format("%02d", nbr);
+
+            //Wenn das Feld mit dem Schiff befüllt wurde ist es: Weiß
+            //Das Schiff selbst ist vor der Auswahl: grün
 
             if (tmpString.equals(reX00.getId())) {
                 reX00.setFill(Color.WHITE);
@@ -400,30 +411,35 @@ public class PlayerController {
             }
         }
     }
+
+    //Wenn das Schiff gewählt wurde zum platzieren, soll die Füllung der Grids blau werden
     private void deletePlacedShip() {
-        if (sixship.getFill() == Color.BLUE) {
-            sixship.setVisible(false);
-        } else if (firstfourship.getFill() == Color.BLUE) {
-            firstfourship.setVisible(false);
-        } else if (secondfourship.getFill() == Color.BLUE) {
-            secondfourship.setVisible(false);
-        } else if (firstthreeship.getFill() == Color.BLUE) {
-            firstthreeship.setVisible(false);
-        } else if (secondthreeship.getFill() == Color.BLUE) {
-            secondthreeship.setVisible(false);
-        } else if (thirdthreeship.getFill() == Color.BLUE) {
-            thirdthreeship.setVisible(false);
-        } else if (firsttwoship.getFill() == Color.BLUE) {
-            firsttwoship.setVisible(false);
-        } else if (secondtwoship.getFill() == Color.BLUE) {
-            secondtwoship.setVisible(false);
-        } else if (thirdtwoship.getFill() == Color.BLUE) {
-            thirdtwoship.setVisible(false);
-        } else if (fourthtwoship.getFill() == Color.BLUE) {
-            fourthtwoship.setVisible(false);
+        if (sixship_clicked.isVisible()) {
+            sixship_clicked.setVisible(false);
+        } else if (secondfourship_clicked.isVisible()) {
+            secondfourship_clicked.setVisible(false);
+        } else if (firstfourship_clicked.isVisible()) {
+            firstfourship_clicked.setVisible(false);
+        } else if (thirdthreeship_clicked.isVisible()) {
+            thirdthreeship_clicked.setVisible(false);
+        } else if (secondthreeship_clicked.isVisible()) {
+            secondthreeship_clicked.setVisible(false);
+        } else if (firstthreeship_clicked.isVisible()){
+            firstthreeship_clicked.setVisible(false);
+        } else if (fourthtwoship_clicked.isVisible()) {
+            fourthtwoship_clicked.setVisible(false);
+        } else if (thirdtwoship_clicked.isVisible()) {
+            thirdtwoship_clicked.setVisible(false);
+        } else if (secondtwoship_clicked.isVisible()) {
+            secondtwoship_clicked.setVisible(false);
+        } else {
+            firsttwoship_clicked.setVisible(false);
         }
+
     }
-    private void XandY(MouseEvent e) {
+
+    //"Übersetzer" damit man die X- und Y-Koordinaten für die Klasse "Gameboard" werden kann.
+    private void setXandY(MouseEvent e) {
         if (e.getSceneY() > 100 && e.getSceneY() <= 140) {
             y = 0;
             if (e.getSceneX() > 140 && e.getSceneX() <= 180) {
@@ -659,42 +675,57 @@ public class PlayerController {
     }
 
 
-    public void click_save1(ActionEvent e) {
+    //Text unterstreichen wenn man mit Maus drüberwischt.
+    public void hover_enter(MouseEvent e) {
+        btn = (Button) e.getSource();
+
+        btn.setUnderline(true);
+    }
+
+    public void hover_exit(MouseEvent e) {
+        btn = (Button) e.getSource();
+
+        btn.setUnderline(false);
+    }
+
+    //Button dient dazu um Spieler 1 zu erstellen
+    public void click_save1() {
         if (!txt_name.getText().isEmpty()) {
             name1 = txt_name.getText();
-            gameboardP1 = new Gameboard(new Player(name1));
         } else {
             name1 = txt_name.getAccessibleText();
-            gameboardP1 = new Gameboard(new Player(name1));
         }
+        gameboardP1 = new Gameboard(new Player(name1));
         btn_save.setDisable(true);
         txt_name.setDisable(true);
     }
-    public void click_save2(ActionEvent e) {
+
+    //Button dient dazu um Spieler 2 zu erstellen
+    public void click_save2() {
         if (!txt_name.getText().isEmpty()) {
             name2 = txt_name.getText();
-            gameboardP2 = new Gameboard(new Player(name2));
         } else {
             name2 = txt_name.getAccessibleText();
-            gameboardP2 = new Gameboard(new Player(name2));
         }
+        gameboardP2 = new Gameboard(new Player(name2));
         btn_save.setDisable(true);
         txt_name.setDisable(true);
     }
-    public void placeShipOne(MouseEvent e) {
+
+    //Schiffe von Player 1 werden auf Spielfeld platziert und abgespeichert.
+    public void click_placeShip1(MouseEvent e) {
         generateShip();
-        XandY(e);
+        setXandY(e);
         if (!rbt_horizontal.isDisabled() && !rbt_vertical.isDisabled()) {
             Rectangle rt = (Rectangle) e.getSource();
             String string = rt.getId();
-            String tmpString = null;
 
-            String[] strarr = string.split("X");
+            String[] strarr = string.split("X"); //reX00 starr[0] = re starr[1] = 00
             String id = strarr[0];
             int nbr = Integer.parseInt(strarr[1]);
 
-            if (gameboardP1.placeShipOnBoard(ship,x,y,rbt_vertical.isSelected())) {
-                markShips(nbr, tmpString, id);
+            if (gameboardP1.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected()) == 0) {
+                markShips(nbr, id);
 
 
                 deletePlacedShip();
@@ -712,6 +743,14 @@ public class PlayerController {
                 secondtwoship.setDisable(false);
                 thirdtwoship.setDisable(false);
                 fourthtwoship.setDisable(false);
+
+                lbl_message.setText(messageShipPlaced);
+            } else if (gameboardP1.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected()) == 1) {
+                lbl_message.setText(messageNotInGameboard);
+            } else if (gameboardP1.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected()) == 2) {
+                lbl_message.setText(messagePlaceOccupied);
+            } else {
+                lbl_message.setText(messageNeighbor);
             }
             if (!sixship.isVisible() && !firstfourship.isVisible() && !secondfourship.isVisible() && !firstthreeship.isVisible() &&
                     !secondthreeship.isVisible() && !thirdthreeship.isVisible() && !firsttwoship.isVisible() && !secondtwoship.isVisible() &&
@@ -723,24 +762,23 @@ public class PlayerController {
                     btn_finishp2.setDisable(false);
                 }
             }
-        } else {
-            return;
         }
     }
-    public void placeShipTwo(MouseEvent e) {
+
+    //Schiffe von Player 2 werden auf Spielfeld platziert und abgespeichert.
+    public void click_placeShip2(MouseEvent e) {
         generateShip();
-        XandY(e);
+        setXandY(e);
         if (!rbt_horizontal.isDisabled() && !rbt_vertical.isDisabled()) {
             Rectangle rt = (Rectangle) e.getSource();
             String string = rt.getId();
-            String tmpString = null;
 
             String[] strarr = string.split("X");
             String id = strarr[0];
             int nbr = Integer.parseInt(strarr[1]);
 
-            if (gameboardP2.placeShipOnBoard(ship,x,y,rbt_vertical.isSelected())) {
-                markShips(nbr, tmpString, id);
+            if (gameboardP2.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected()) == 0) {
+                markShips(nbr, id);
 
 
                 deletePlacedShip();
@@ -758,6 +796,14 @@ public class PlayerController {
                 secondtwoship.setDisable(false);
                 thirdtwoship.setDisable(false);
                 fourthtwoship.setDisable(false);
+
+                lbl_message.setText(messageShipPlaced);
+            } else if (gameboardP2.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected()) == 1) {
+                lbl_message.setText(messageNotInGameboard);
+            } else if (gameboardP2.placeShipOnBoard(ship, x, y, rbt_vertical.isSelected()) == 2) {
+                lbl_message.setText(messagePlaceOccupied);
+            } else {
+                lbl_message.setText(messageNeighbor);
             }
             if (!sixship.isVisible() && !firstfourship.isVisible() && !secondfourship.isVisible() && !firstthreeship.isVisible() &&
                     !secondthreeship.isVisible() && !thirdthreeship.isVisible() && !firsttwoship.isVisible() && !secondtwoship.isVisible() &&
@@ -769,55 +815,66 @@ public class PlayerController {
                     btn_finishp2.setDisable(false);
                 }
             }
-        } else {
-            return;
         }
     }
-    public void click_finishp1(ActionEvent e) throws IOException {
+
+    //Fenster für Schiffe platzieren für Player 2 wird aufgerufen.("PlayerTwo.fxml")
+    public void click_finishp1() throws IOException {
         root = FXMLLoader.load(getClass().getResource("PlayerTwo.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
+        primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
         primaryStage.setTitle("Battleship-Player2-Board");
         primaryStage.setScene(scene);
         primaryStage.show();
 
+        ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
+        primaryStage.setOnCloseRequest(event -> {
+            try {
+                reopen();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
         Stage thisStage = (Stage) btn_finishp1.getScene().getWindow();
         thisStage.close();
     }
-    public void click_finishp2(ActionEvent e) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("GameBoard.fxml"));
-        root = loader.load();
 
-        GameBoardController gbController = loader.getController();
-        /*gbController.setNameP1(name1);
-        gbController.setNameP2(name2);*/
-
+    //Wirkliche Spielfeld mit den 2 Boards wird aufgerufen("GameBoard.fxml")
+    public void click_finishp2() throws IOException {
+        root = FXMLLoader.load(getClass().getResource("GameBoard.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = new Stage();
+        primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
         primaryStage.setTitle("Battleship-GameBoard");
         primaryStage.setScene(scene);
         primaryStage.show();
 
+        ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
+        primaryStage.setOnCloseRequest(event -> {
+            try {
+                reopen();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
         Stage thisStage = (Stage) btn_finishp2.getScene().getWindow();
         thisStage.close();
     }
-    public void selectShip(MouseEvent e) {
+
+    //Die Schiffe zum platzieren werden verwendet.
+    public void click_selectShip(MouseEvent e) {
         if (btn_save.isDisabled()) {
             rbt_horizontal.setDisable(false);
             rbt_vertical.setDisable(false);
 
-            Rectangle re = (Rectangle) e.getSource();
+            ImageView re = (ImageView) e.getSource();
             if (re.getId().equals("sixship")) {
-                sixship.setFill(Color.BLUE);
-                firstfourship.setFill(Color.rgb(0, 146, 0));
-                secondfourship.setFill(Color.rgb(0, 146, 0));
-                firstthreeship.setFill(Color.rgb(0, 146, 0));
-                secondthreeship.setFill(Color.rgb(0, 146, 0));
-                thirdthreeship.setFill(Color.rgb(0, 146, 0));
-                firsttwoship.setFill(Color.rgb(0, 146, 0));
-                secondtwoship.setFill(Color.rgb(0, 146, 0));
-                thirdtwoship.setFill(Color.rgb(0, 146, 0));
-                fourthtwoship.setFill(Color.rgb(0, 146, 0));
+                length = 6;
+                sixship_clicked.setVisible(true);
+                sixship.setVisible(false);
                 firstfourship.setDisable(true);
                 secondfourship.setDisable(true);
                 firstthreeship.setDisable(true);
@@ -828,16 +885,9 @@ public class PlayerController {
                 thirdtwoship.setDisable(true);
                 fourthtwoship.setDisable(true);
             } else if (re.getId().equals("firstfourship")) {
-                sixship.setFill(Color.rgb(0, 146, 0));
-                firstfourship.setFill(Color.BLUE);
-                secondfourship.setFill(Color.rgb(0, 146, 0));
-                firstthreeship.setFill(Color.rgb(0, 146, 0));
-                secondthreeship.setFill(Color.rgb(0, 146, 0));
-                thirdthreeship.setFill(Color.rgb(0, 146, 0));
-                firsttwoship.setFill(Color.rgb(0, 146, 0));
-                secondtwoship.setFill(Color.rgb(0, 146, 0));
-                thirdtwoship.setFill(Color.rgb(0, 146, 0));
-                fourthtwoship.setFill(Color.rgb(0, 146, 0));
+                length = 4;
+                firstfourship_clicked.setVisible(true);
+                firstfourship.setVisible(false);
                 sixship.setDisable(true);
                 secondfourship.setDisable(true);
                 firstthreeship.setDisable(true);
@@ -848,16 +898,9 @@ public class PlayerController {
                 thirdtwoship.setDisable(true);
                 fourthtwoship.setDisable(true);
             } else if (re.getId().equals("secondfourship")) {
-                sixship.setFill(Color.rgb(0, 146, 0));
-                firstfourship.setFill(Color.rgb(0, 146, 0));
-                secondfourship.setFill(Color.BLUE);
-                firstthreeship.setFill(Color.rgb(0, 146, 0));
-                secondthreeship.setFill(Color.rgb(0, 146, 0));
-                thirdthreeship.setFill(Color.rgb(0, 146, 0));
-                firsttwoship.setFill(Color.rgb(0, 146, 0));
-                secondtwoship.setFill(Color.rgb(0, 146, 0));
-                thirdtwoship.setFill(Color.rgb(0, 146, 0));
-                fourthtwoship.setFill(Color.rgb(0, 146, 0));
+                length = 4;
+                secondfourship_clicked.setVisible(true);
+                secondfourship.setVisible(false);
                 sixship.setDisable(true);
                 firstfourship.setDisable(true);
                 firstthreeship.setDisable(true);
@@ -868,16 +911,9 @@ public class PlayerController {
                 thirdtwoship.setDisable(true);
                 fourthtwoship.setDisable(true);
             } else if (re.getId().equals("firstthreeship")) {
-                sixship.setFill(Color.rgb(0, 146, 0));
-                firstfourship.setFill(Color.rgb(0, 146, 0));
-                secondfourship.setFill(Color.rgb(0, 146, 0));
-                firstthreeship.setFill(Color.BLUE);
-                secondthreeship.setFill(Color.rgb(0, 146, 0));
-                thirdthreeship.setFill(Color.rgb(0, 146, 0));
-                firsttwoship.setFill(Color.rgb(0, 146, 0));
-                secondtwoship.setFill(Color.rgb(0, 146, 0));
-                thirdtwoship.setFill(Color.rgb(0, 146, 0));
-                fourthtwoship.setFill(Color.rgb(0, 146, 0));
+                length = 3;
+                firstthreeship_clicked.setVisible(true);
+                firstthreeship.setVisible(false);
                 sixship.setDisable(true);
                 firstfourship.setDisable(true);
                 secondfourship.setDisable(true);
@@ -888,16 +924,9 @@ public class PlayerController {
                 thirdtwoship.setDisable(true);
                 fourthtwoship.setDisable(true);
             } else if (re.getId().equals("secondthreeship")) {
-                sixship.setFill(Color.rgb(0, 146, 0));
-                firstfourship.setFill(Color.rgb(0, 146, 0));
-                secondfourship.setFill(Color.rgb(0, 146, 0));
-                firstthreeship.setFill(Color.rgb(0,146,0));
-                secondthreeship.setFill(Color.BLUE);
-                thirdthreeship.setFill(Color.rgb(0, 146, 0));
-                firsttwoship.setFill(Color.rgb(0, 146, 0));
-                secondtwoship.setFill(Color.rgb(0, 146, 0));
-                thirdtwoship.setFill(Color.rgb(0, 146, 0));
-                fourthtwoship.setFill(Color.rgb(0, 146, 0));
+                length = 3;
+                secondthreeship_clicked.setVisible(true);
+                secondthreeship.setVisible(false);
                 sixship.setDisable(true);
                 firstfourship.setDisable(true);
                 secondfourship.setDisable(true);
@@ -908,16 +937,9 @@ public class PlayerController {
                 thirdtwoship.setDisable(true);
                 fourthtwoship.setDisable(true);
             } else if (re.getId().equals("thirdthreeship")) {
-                sixship.setFill(Color.rgb(0, 146, 0));
-                firstfourship.setFill(Color.rgb(0, 146, 0));
-                secondfourship.setFill(Color.rgb(0, 146, 0));
-                firstthreeship.setFill(Color.rgb(0,146,0));
-                secondthreeship.setFill(Color.rgb(0,146,0));
-                thirdthreeship.setFill(Color.BLUE);
-                firsttwoship.setFill(Color.rgb(0, 146, 0));
-                secondtwoship.setFill(Color.rgb(0, 146, 0));
-                thirdtwoship.setFill(Color.rgb(0, 146, 0));
-                fourthtwoship.setFill(Color.rgb(0, 146, 0));
+                length = 3;
+                thirdthreeship_clicked.setVisible(true);
+                thirdthreeship.setVisible(false);
                 sixship.setDisable(true);
                 firstfourship.setDisable(true);
                 secondfourship.setDisable(true);
@@ -928,16 +950,9 @@ public class PlayerController {
                 thirdtwoship.setDisable(true);
                 fourthtwoship.setDisable(true);
             } else if (re.getId().equals("firsttwoship")) {
-                sixship.setFill(Color.rgb(0, 146, 0));
-                firstfourship.setFill(Color.rgb(0, 146, 0));
-                secondfourship.setFill(Color.rgb(0, 146, 0));
-                firstthreeship.setFill(Color.rgb(0,146,0));
-                secondthreeship.setFill(Color.rgb(0,146,0));
-                thirdthreeship.setFill(Color.rgb(0, 146, 0));
-                firsttwoship.setFill(Color.BLUE);
-                secondtwoship.setFill(Color.rgb(0, 146, 0));
-                thirdtwoship.setFill(Color.rgb(0, 146, 0));
-                fourthtwoship.setFill(Color.rgb(0, 146, 0));
+                length = 2;
+                firsttwoship_clicked.setVisible(true);
+                firsttwoship.setVisible(false);
                 sixship.setDisable(true);
                 firstfourship.setDisable(true);
                 secondfourship.setDisable(true);
@@ -948,16 +963,9 @@ public class PlayerController {
                 thirdtwoship.setDisable(true);
                 fourthtwoship.setDisable(true);
             } else if (re.getId().equals("secondtwoship")) {
-                sixship.setFill(Color.rgb(0, 146, 0));
-                firstfourship.setFill(Color.rgb(0, 146, 0));
-                secondfourship.setFill(Color.rgb(0, 146, 0));
-                firstthreeship.setFill(Color.rgb(0,146,0));
-                secondthreeship.setFill(Color.rgb(0,146,0));
-                thirdthreeship.setFill(Color.rgb(0, 146, 0));
-                firsttwoship.setFill(Color.rgb(0, 146, 0));
-                secondtwoship.setFill(Color.BLUE);
-                thirdtwoship.setFill(Color.rgb(0, 146, 0));
-                fourthtwoship.setFill(Color.rgb(0, 146, 0));
+                length = 2;
+                secondtwoship_clicked.setVisible(true);
+                secondtwoship.setVisible(false);
                 sixship.setDisable(true);
                 firstfourship.setDisable(true);
                 secondfourship.setDisable(true);
@@ -968,16 +976,9 @@ public class PlayerController {
                 thirdtwoship.setDisable(true);
                 fourthtwoship.setDisable(true);
             } else if (re.getId().equals("thirdtwoship")) {
-                sixship.setFill(Color.rgb(0, 146, 0));
-                firstfourship.setFill(Color.rgb(0, 146, 0));
-                secondfourship.setFill(Color.rgb(0, 146, 0));
-                firstthreeship.setFill(Color.rgb(0,146,0));
-                secondthreeship.setFill(Color.rgb(0,146,0));
-                thirdthreeship.setFill(Color.rgb(0, 146, 0));
-                firsttwoship.setFill(Color.rgb(0, 146, 0));
-                secondtwoship.setFill(Color.rgb(0, 146, 0));
-                thirdtwoship.setFill(Color.BLUE);
-                fourthtwoship.setFill(Color.rgb(0, 146, 0));
+                length = 2;
+                thirdtwoship_clicked.setVisible(true);
+                thirdtwoship.setVisible(false);
                 sixship.setDisable(true);
                 firstfourship.setDisable(true);
                 secondfourship.setDisable(true);
@@ -988,16 +989,9 @@ public class PlayerController {
                 secondtwoship.setDisable(true);
                 fourthtwoship.setDisable(true);
             } else if (re.getId().equals("fourthtwoship")) {
-                sixship.setFill(Color.rgb(0, 146, 0));
-                firstfourship.setFill(Color.rgb(0, 146, 0));
-                secondfourship.setFill(Color.rgb(0, 146, 0));
-                firstthreeship.setFill(Color.rgb(0,146,0));
-                secondthreeship.setFill(Color.rgb(0,146,0));
-                thirdthreeship.setFill(Color.rgb(0, 146, 0));
-                firsttwoship.setFill(Color.rgb(0, 146, 0));
-                secondtwoship.setFill(Color.rgb(0, 146, 0));
-                thirdtwoship.setFill(Color.rgb(0, 146, 0));
-                fourthtwoship.setFill(Color.BLUE);
+                length = 2;
+                fourthtwoship_clicked.setVisible(true);
+                fourthtwoship.setVisible(false);
                 sixship.setDisable(true);
                 firstfourship.setDisable(true);
                 secondfourship.setDisable(true);
@@ -1011,4 +1005,61 @@ public class PlayerController {
         }
     }
 
+    //Setzt GameBoard con Player 1 zurück.
+    public void click_reset1() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("PlayerOne.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage = new Stage();
+        primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
+        primaryStage.setTitle("Battleship-Player1-Board");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+        ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
+        primaryStage.setOnCloseRequest(event -> {
+            try {
+                reopen();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        Stage thisStage = (Stage) btn_resetp1.getScene().getWindow();
+        thisStage.close();
+    }
+
+    //Setzt GameBoard con Player 2 zurück.
+    public void click_reset2() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("PlayerTwo.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage = new Stage();
+        primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
+        primaryStage.setTitle("Battleship-Player2-Board");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+        ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
+        primaryStage.setOnCloseRequest(event -> {
+            try {
+                reopen();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        Stage thisStage = (Stage) btn_resetp2.getScene().getWindow();
+        thisStage.close();
+    }
+
+
+    //Methode wird verwendet um MainMenu.fxml wieder zu öffnen.
+    private void reopen() throws IOException {
+        root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage = new Stage();
+        primaryStage.getIcons().add(new Image("at/teamproject44/Images/Battleship_icon.jpeg"));
+        primaryStage.setTitle("Battleship");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
 }

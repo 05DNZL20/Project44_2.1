@@ -1,0 +1,46 @@
+@font-face {
+     font-family: 'Saira';
+     src: url('Saira-Bold.ttf');
+}
+
+Button{
+     -fx-font-family: "Saira";
+     -fx-font-size: 24;
+}
+
+Label{
+     -fx-font-family: "Saira";
+     -fx-font-size: 18;
+}
+
+RadioButton{
+     -fx-font-family: "Saira";
+     -fx-font-size: 18;
+}
+
+#lbl_enjoy{
+     -fx-font-size: 24;
+}
+
+#btn_save{
+     -fx-font-size: 18;
+}
+
+#btn_finishp1{
+     -fx-background-color: #00ff00;
+}
+
+#btn_resetp1{
+     -fx-background-color: #ff0000;
+}
+#btn_finishp2{
+      -fx-background-color: #00ff00;
+ }
+
+ #btn_resetp2{
+      -fx-background-color: #ff0000;
+ }
+
+#lbl_message{
+     -fx-font-size: 24;
+}
