@@ -53,56 +53,56 @@ public class Gameboard {
      */
 
     public boolean placeShipOnBoard(Ship ship, int x, int y, boolean alignment) {
-            int length = ship.getType();
-
-            if (x + length - 1 > 9 && !alignment) {
-                Error = 1;
-                return false; // Nicht im Spielfeld
-            } else if (y + length - 1 > 9 && alignment) {
-                Error = 1;
-                return false; // Nicht im Spielfeld
-            }
-            if (!alignment) { //horizontal
-                for (int i = 0; i < length; i++) {
-                    if (board[x + i][y] != null) {
-                        Error = 2;
-                        return false; // Platz schon belegt
-                    }
-                }
-            } else { //vertikal
-                for (int i = 0; i < length; i++) {
-                    if (board[x][y + i] != null) {
-                        Error = 2;
-                        return false; // Platz schon belegt
-
-                    }
+        Error = 0;
+        int length = ship.getType();
+        if (x + length - 1 > 9 && !alignment) {
+            Error = 1;
+            return false; // Nicht im Spielfeld
+        } else if (y + length - 1 > 9 && alignment) {
+            Error = 1;
+            return false; // Nicht im Spielfeld
+        }
+        if (!alignment) { //horizontal
+            for (int i = 0; i < length; i++) {
+                if (board[x + i][y] != null) {
+                    Error = 2;
+                    return false; // Platz schon belegt
                 }
             }
+        } else { //vertikal
+            for (int i = 0; i < length; i++) {
+                if (board[x][y + i] != null) {
+                    Error = 2;
+                    return false; // Platz schon belegt
 
-            if (alignment) {
-                if (!checkVertical(length, x, y)) {
-                    Error = 3;
-                    return false; //Fehler: Nachbar
-                }
-            } else {
-                if (!checkHorizontal(length, x, y)) {
-                    Error = 3;
-                    return false; //Fehler: Nachbar
                 }
             }
+        }
 
-            if (!alignment) { //horizontal
-                for (int i = 0; i < length; i++) {
-                    board[x + i][y] = ship;
-                }
-                return true; //erfolgreich
-
-            } else { //vertikal
-                for (int i = 0; i < length; i++) {
-                    board[x][y + i] = ship;
-                }
-                return true; //erfolgreich
+        if (alignment) {
+            if (!checkVertical(length, x, y)) {
+                Error = 3;
+                return false; //Fehler: Nachbar
             }
+        } else {
+            if (!checkHorizontal(length, x, y)) {
+                Error = 3;
+                return false; //Fehler: Nachbar
+            }
+        }
+
+        if (!alignment) { //horizontal
+            for (int i = 0; i < length; i++) {
+                board[x + i][y] = ship;
+            }
+            return true; //erfolgreich
+
+        } else { //vertikal
+            for (int i = 0; i < length; i++) {
+                board[x][y + i] = ship;
+            }
+            return true; //erfolgreich
+        }
     }
 
     /**
@@ -117,7 +117,6 @@ public class Gameboard {
      * @return Liefert bei Treffer true zurück sonst false
      */
     public int hit(int x, int y) {
-
         if (board[x][y] == null) {
             return 0;
         } else if (board[x][y].equals(alreadyHit)) {
@@ -134,7 +133,6 @@ public class Gameboard {
     }
 
     // Methode um zurückzugeben, ob ein Player gewonnen hat
-
     public boolean hasWonGame() {
 
         if (counter == 10) {

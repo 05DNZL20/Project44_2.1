@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="817.0" prefWidth="1123.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.MainMenuController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.MainMenuController">
    <children>
-      <ImageView fitHeight="823.0" fitWidth="1123.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="719.0" fitWidth="960.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/GameRules_Background.png" />
          </image></ImageView>
-      <Label fx:id="lbl_rules" alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="308.0" prefHeight="335.0" prefWidth="974.0" stylesheets="@CSS/font_saira.css" text="F I R S T L Y   Y O U   T Y P E   I N   Y O U R   N A M E ,   T H E N   P L A C E   T H E   S H I P S .&#10;&#10;Y O U   H A V E   1 0   S H I P S   T O   P L A C E ,   Y O U   C A N   C H O O S E   I N   W H I C H   D I R E C T I O N&#10;Y O U   W A N T   T O   P U T   T H E M .&#10;&#10;T H E   G A M E   S T A R T S   I F   B O T H   P L A Y E R S   A R E   R E A D Y   T O   P L A Y .&#10;&#10;I F   O N E   P L A Y E R   L A N D S   A   H I T ,   H E   H A S   A N O T H E R   T R Y !&#10;&#10;T H E   G A M E   E N D S ,   I F   A L L   S H I P S   O F   O N E   P L A Y E R   A R E   D E S T R O Y E D ." textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="308.0" />
-      <Label fx:id="lbl_enjoy" alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="643.0" prefHeight="53.0" prefWidth="974.0" stylesheets="@CSS/font_saira.css" text="E n j o y !" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="75.0">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="lbl_guthub" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="708.0" prefHeight="68.0" prefWidth="974.0" stylesheets="@CSS/font_saira.css" text="G I T H U B   R E P O S I T O R Y   F O R   F U R T H E R   I N F O R M A T I O N :&#10;H T T P S : / / G I T H U B . C O M / 0 5 D N Z L 2 0 / P R O J E C T 4 4 _ 2 . 1" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

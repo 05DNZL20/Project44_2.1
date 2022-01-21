@@ -3261,7 +3261,7 @@ public class GameBoardController implements Initializable {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
+        ///Bei klick auf X (Rechts oben) wird die Methode reopen() aufgerufen um MainMenu.fxml zu öffnen.
         primaryStage.setOnCloseRequest(event -> {
             try {
                 reopen();

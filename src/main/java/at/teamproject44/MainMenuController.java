@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 public class MainMenuController {
 
     @FXML
-    private Button btn_startgame, btn_gamerules,btn_credits; //3 Buttons eingefügt
+    private Button btn_startgame, btn_gamerules, btn_credits; //3 Buttons eingefügt
 
     private Parent root;
     private Button btn;

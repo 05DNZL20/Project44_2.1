@@ -43,7 +43,7 @@ public class PlayerController {
     private Label lbl_message;
 
     @FXML
-    ImageView sixship, firstfourship, secondfourship, firstthreeship, secondthreeship, thirdthreeship, firsttwoship, secondtwoship, thirdtwoship, fourthtwoship,
+    private ImageView sixship, firstfourship, secondfourship, firstthreeship, secondthreeship, thirdthreeship, firsttwoship, secondtwoship, thirdtwoship, fourthtwoship,
             sixship_clicked, firstfourship_clicked, secondfourship_clicked, firstthreeship_clicked, secondthreeship_clicked, thirdthreeship_clicked, firsttwoship_clicked, secondtwoship_clicked, thirdtwoship_clicked, fourthtwoship_clicked;
 
     private Button btn;
@@ -63,18 +63,17 @@ public class PlayerController {
 
     private Parent root;
 
+
+    //Getter Methoden
     public String getName1() {
         return name1;
     }
-
     public String getName2() {
         return name2;
     }
-
     public Gameboard getPlayer1() {
         return gameboardP1;
     }
-
     public Gameboard getPlayer2() {
         return gameboardP2;
     }
@@ -744,7 +743,7 @@ public class PlayerController {
                 thirdtwoship.setDisable(false);
                 fourthtwoship.setDisable(false);
 
-                lbl_message.setTextFill(Color.GREEN);
+                lbl_message.setTextFill(Color.rgb(26,255,0));
                 lbl_message.setText(messageShipPlaced);
             } else{
                 if (gameboardP1.getError() == 1) {
@@ -806,7 +805,7 @@ public class PlayerController {
                 thirdtwoship.setDisable(false);
                 fourthtwoship.setDisable(false);
 
-                lbl_message.setTextFill(Color.GREEN);
+                lbl_message.setTextFill(Color.rgb(26,255,0));
                 lbl_message.setText(messageShipPlaced);
             } else{
                 if (gameboardP2.getError() == 1) {
@@ -846,7 +845,7 @@ public class PlayerController {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
+        ///Bei klick auf X (Rechts oben) wird die Methode reopen() aufgerufen um MainMenu.fxml zu öffnen.
         primaryStage.setOnCloseRequest(event -> {
             try {
                 reopen();
@@ -869,7 +868,7 @@ public class PlayerController {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
+        ///Bei klick auf X (Rechts oben) wird die Methode reopen() aufgerufen um MainMenu.fxml zu öffnen.
         primaryStage.setOnCloseRequest(event -> {
             try {
                 reopen();
@@ -1033,7 +1032,7 @@ public class PlayerController {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
+        ///Bei klick auf X (Rechts oben) wird die Methode reopen() aufgerufen um MainMenu.fxml zu öffnen.
         primaryStage.setOnCloseRequest(event -> {
             try {
                 reopen();
@@ -1056,7 +1055,7 @@ public class PlayerController {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        ///Bei klick auf X (Rechts oben) wird die Methode reopen(Stage) aufgerufen um MainMenu.fxml zu öffnen.
+        ///Bei klick auf X (Rechts oben) wird die Methode reopen() aufgerufen um MainMenu.fxml zu öffnen.
         primaryStage.setOnCloseRequest(event -> {
             try {
                 reopen();

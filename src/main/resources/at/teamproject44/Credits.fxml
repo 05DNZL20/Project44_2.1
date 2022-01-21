@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="817.0" prefWidth="1123.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.MainMenuController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.teamproject44.MainMenuController">
    <children>
-      <ImageView fitHeight="823.0" fitWidth="1123.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="698.0" fitWidth="968.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@Images/Credits_Background.png" />
          </image>
       </ImageView>
-      <Label fx:id="lbl_credits" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="304.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="972.0" stylesheets="@CSS/font_saira.css" text="T E A M L E A D I N G   &amp;   D E V E L O P M E N T l :                                               J U L I A   S O S N O W S K I &#10;         &#10;J A V A   F X   D E S I G N   &amp;   D E V E L O P M E N T :                                           S A F A   Ş I K &#10;         &#10;D E V E L O P M E N T   &amp;   G A M E B O A R D   G U R U :                                     M A R K U S   W I E G E R&#10;         &#10;D E V E L O P M E N T   &amp;   H E A D   O F   O R G A N I S A T I O N :                     M E R V E   T U Z &#10;         &#10;D E V E L O P M E N T   &amp;   O R G A N I S A T I O N :                                               A B D U L A L I M   Y I L M A Z&#10;         &#10;D E V E L O P M E N T   &amp;   R E S E A R C H :                                                            M O H A M A D   T A M I M" textFill="WHITE" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="304.0">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="lbl_github" alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="710.0" prefHeight="64.0" prefWidth="972.0" stylesheets="@CSS/font_saira.css" text="G I T H U B   R E P O S I T O R Y   F O R   F U R T H E R   I N F O R M A T I O N :&#10;H T T P S : / / G I T H U B . C O M / 0 5 D N Z L 2 0 / P R O J E C T 4 4 _ 2 . 1" textAlignment="CENTER" textFill="WHITE" />
    </children>
 </AnchorPane>
