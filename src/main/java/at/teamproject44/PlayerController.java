@@ -439,65 +439,65 @@ public class PlayerController {
 
     //"Übersetzer" damit man die X- und Y-Koordinaten für die Klasse "Gameboard" werden kann.
     private void setXandY(MouseEvent e) {
-        if (e.getSceneX() > 140 && e.getSceneX() <= 179) {
+        if (e.getSceneX() > 139 && e.getSceneX() < 180) {
             x = 0;
         }
-        else if (e.getSceneX() > 180 && e.getSceneX() <= 219) {
+        else if (e.getSceneX() > 179 && e.getSceneX() < 220) {
             x = 1;
         }
-        else if (e.getSceneX() > 220 && e.getSceneX() <= 259) {
+        else if (e.getSceneX() > 219 && e.getSceneX() < 260) {
             x = 2;
         }
-        else if (e.getSceneX() > 260 && e.getSceneX() <= 299) {
+        else if (e.getSceneX() > 259 && e.getSceneX() < 300) {
             x = 3;
         }
-        else if (e.getSceneX() > 300 && e.getSceneX() <= 339) {
+        else if (e.getSceneX() > 299 && e.getSceneX() < 340) {
             x = 4;
         }
-        else if (e.getSceneX() > 340 && e.getSceneX() <= 379) {
+        else if (e.getSceneX() > 339 && e.getSceneX() < 380) {
             x = 5;
         }
-        else if (e.getSceneX() > 380 && e.getSceneX() <= 419) {
+        else if (e.getSceneX() > 379 && e.getSceneX() < 420) {
             x = 6;
         }
-        else if (e.getSceneX() > 420 && e.getSceneX() <= 459) {
+        else if (e.getSceneX() > 419 && e.getSceneX() < 460) {
             x = 7;
         }
-        else if (e.getSceneX() > 460 && e.getSceneX() <= 499) {
+        else if (e.getSceneX() > 459 && e.getSceneX() < 500) {
             x = 8;
         }
-        else if (e.getSceneX() > 500 && e.getSceneX() <= 539) {
+        else if (e.getSceneX() > 499 && e.getSceneX() < 540) {
             x = 9;
         }
 
-        if (e.getSceneY() > 100 && e.getSceneY() <= 139) {
+        if (e.getSceneY() > 99 && e.getSceneY() < 140) {
             y = 0;
         }
-        else if (e.getSceneY() > 140 && e.getSceneY() <= 179) {
+        else if (e.getSceneY() > 139 && e.getSceneY() < 180) {
             y = 1;
         }
-        else if (e.getSceneY() > 180 && e.getSceneY() <= 219) {
+        else if (e.getSceneY() > 179 && e.getSceneY() < 220) {
             y = 2;
         }
-        else if (e.getSceneY() > 220 && e.getSceneY() <= 259) {
+        else if (e.getSceneY() > 219 && e.getSceneY() < 260) {
             y = 3;
         }
-        else if (e.getSceneY() > 260 && e.getSceneY() <= 299) {
+        else if (e.getSceneY() > 259 && e.getSceneY() < 300) {
             y = 4;
         }
-        else if (e.getSceneY() > 300 && e.getSceneY() <= 339) {
+        else if (e.getSceneY() > 299 && e.getSceneY() < 340) {
             y = 5;
         }
-        else if (e.getSceneY() > 340 && e.getSceneY() <= 379) {
+        else if (e.getSceneY() > 339 && e.getSceneY() < 380) {
             y = 6;
         }
-        else if (e.getSceneY() > 380 && e.getSceneY() <= 419) {
+        else if (e.getSceneY() > 379 && e.getSceneY() < 420) {
             y = 7;
         }
-        else if (e.getSceneY() > 420 && e.getSceneY() <= 459) {
+        else if (e.getSceneY() > 419 && e.getSceneY() < 460) {
             y = 8;
         }
-        else if (e.getSceneY() > 460 && e.getSceneY() <= 499) {
+        else if (e.getSceneY() > 459 && e.getSceneY() < 500) {
             y = 9;
         }
     }
