@@ -34,13 +34,18 @@ public class GameBoardController implements Initializable {
     private PlayerController pc = null;
     private static Gameboard gameboardP1 = null;
     private static Gameboard gameboardP2 = null;
-    private boolean turnP1 = true;
+    private boolean turnP1;
     private Parent root;
     private int x, y;
 
     private final String messageHit = "Hit!";
     private final String messageMiss = "Miss!";
     private final String messageShipDestroyed = "Destroyed\na Ship!";
+
+
+    private void setTurnP1(boolean turnP1) {
+        this.turnP1 = turnP1;
+    }
 
     //Wir Disablen/Enablen jeweils die Gameboard, damit man nicht auf das falsche Feld schießt.
     private void disableP1Board() {
@@ -309,7 +314,17 @@ public class GameBoardController implements Initializable {
         gameboardP2 = pc.getPlayer2();
         lbl_p1.setText(pc.getName1());
         lbl_p2.setText(pc.getName2());
-        lbl_information.setText(pc.getName1() + " is now shooting!");
+        if  (Math.random() < 0.5){
+            setTurnP1(true);
+            lbl_information.setText(pc.getName1() + " is now shooting!");
+            disableP1Board();
+            enableP2Board();
+        }else{
+            setTurnP1(false);
+            lbl_information.setText(pc.getName2() + " is now shooting!");
+            enableP1Board();
+            disableP2Board();
+        }
         lbl_ShipsPlayer1.setText(lbl_p1.getText() + " has\n" + (10 - gameboardP1.getDestroyedShips()) + " ship(s) left!");
         lbl_ShipsPlayer2.setText(lbl_p2.getText() + " has\n" + (10 - gameboardP2.getDestroyedShips()) + " ship(s) left!");
     }
